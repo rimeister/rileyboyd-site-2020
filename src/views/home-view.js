@@ -242,7 +242,7 @@ const HomeView = () => {
         </div>
 
         <div className="nk-box bg-dark-1">
-            <div className="bg-image bg-image-parallax" style={{backgroundImage: "url('assets/images/bg-pattern.jpg');"}}></div>
+            <div className="bg-image bg-image-parallax" style={{backgroundImage: "url('assets/images/bg-pattern.jpg')"}}></div>
             <div className="nk-gap-5 mnt-6"></div>
             <div className="nk-gap-3"></div>
             <div className="container-fluid">

@@ -3,8 +3,8 @@ import React from 'react';
 const Footer = () => (
     <footer className="nk-footer">
         <div className="bg-image">
-            <div style={{backgroundImage: "url('assets/images/footer-1.jpg');"}}></div>
-            <div className="bg-image-overlay" style={{backgroundColor: "rgba(12, 12, 12, 0.9);"}}></div>
+            <div style={{backgroundImage: "url('assets/images/footer-1.jpg')"}}></div>
+            <div className="bg-image-overlay" style={{backgroundColor: "rgba(12, 12, 12, 0.9)"}}></div>
         </div>
         <div className="nk-footer-widgets text-white">
             <div className="container">
