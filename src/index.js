@@ -1,6 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import '@fortawesome/fontawesome-free/dist/css/bootstrap.min.css';
+import 'pixeden-stroke-7-icon/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css';
+import 'flickity/dist/flickity.min.css';
+import 'photoswipe/dist/photoswipe.css';
+import 'photoswipe/dist/default-skin/default-skin.css';
 import './assets/scss/index.scss';
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

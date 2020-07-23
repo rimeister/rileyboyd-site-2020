@@ -1,5 +1,5 @@
 import Axios from "axios";
-import { RestUrls } from "./Urls";
+// import { RestUrls } from "./Urls";
 
 export class RestDataSource {
 
