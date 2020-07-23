@@ -9,8 +9,8 @@ import {
 -------------------------------------------------------------------*/
 function initNavbarFullscreen() {
     const self = this;
-    const $navbar = $('.nk-navbar-full');
-    const $navbarSocial = $navbar.find('.nk-nav-social');
+    const $navbar = $('.rb-navbar-full');
+    const $navbarSocial = $navbar.find('.rb-nav-social');
     let isOpened;
 
     self.fullscreenNavbarIsOpened = () => isOpened;
@@ -24,13 +24,13 @@ function initNavbarFullscreen() {
         }
         isOpened = 1;
 
-        let $navbarMenuItems = $navbar.find('.nk-nav .nk-drop-item.open > .dropdown:not(.closed) > li > a');
+        let $navbarMenuItems = $navbar.find('.rb-nav .rb-drop-item.open > .dropdown:not(.closed) > li > a');
         if (!$navbarMenuItems.length) {
-            $navbarMenuItems = $navbar.find('.nk-nav > li > a');
+            $navbarMenuItems = $navbar.find('.rb-nav > li > a');
         }
 
         // active all togglers
-        $('.nk-navbar-full-toggle').addClass('active');
+        $('.rb-navbar-full-toggle').addClass('active');
 
         // set top position and animate
         tween.set($navbarMenuItems, {
@@ -66,7 +66,7 @@ function initNavbarFullscreen() {
         self.bodyOverflow(1);
 
         // trigger event
-        $wnd.trigger('nk-open-full-navbar', [$navbar]);
+        $wnd.trigger('rb-open-full-navbar', [$navbar]);
     };
 
     self.closeFullscreenNavbar = (dontTouchBody) => {
@@ -76,7 +76,7 @@ function initNavbarFullscreen() {
         isOpened = 0;
 
         // disactive all togglers
-        $('.nk-navbar-full-toggle').removeClass('active');
+        $('.rb-navbar-full-toggle').removeClass('active');
 
         // set top position and animate
         tween.to($navbar, 0.5, {
@@ -95,18 +95,18 @@ function initNavbarFullscreen() {
         $navbar.removeClass('open');
 
         // trigger event
-        $wnd.trigger('nk-close-full-navbar', [$navbar]);
+        $wnd.trigger('rb-close-full-navbar', [$navbar]);
     };
 
-    $doc.on('click', '.nk-navbar-full-toggle', (e) => {
+    $doc.on('click', '.rb-navbar-full-toggle', (e) => {
         self.toggleFullscreenNavbar();
         e.preventDefault();
     });
 
-    $wnd.on('nk-open-search-block', () => {
+    $wnd.on('rb-open-search-block', () => {
         self.closeFullscreenNavbar(1);
     });
-    $wnd.on('nk-open-share-place', self.closeFullscreenNavbar);
+    $wnd.on('rb-open-share-place', self.closeFullscreenNavbar);
 }
 
 export { initNavbarFullscreen };

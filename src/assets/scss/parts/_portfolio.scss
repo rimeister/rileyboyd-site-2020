@@ -1,12 +1,12 @@
 /* List */
-.nk-portfolio-list {
-    .nk-portfolio-item {
+.rb-portfolio-list {
+    .rb-portfolio-item {
         position: relative;
         overflow: hidden;
 
         // image
-        div.nk-portfolio-item-image,
-        a.nk-portfolio-item-image {
+        div.rb-portfolio-item-image,
+        a.rb-portfolio-item-image {
             position: relative;
             display: block;
             width: 100%;
@@ -19,10 +19,10 @@
                 display: none;
             }
         }
-        img.nk-portfolio-item-image {
+        img.rb-portfolio-item-image {
             width: 100%;
         }
-        div.nk-portfolio-item-image > div {
+        div.rb-portfolio-item-image > div {
             position: absolute;
             top: 0;
             right: 0;
@@ -33,38 +33,38 @@
         }
 
         // image height
-        &.nk-portfolio-item-xxs div.nk-portfolio-item-image,
-        &.nk-portfolio-item-xxs a.nk-portfolio-item-image {
+        &.rb-portfolio-item-xxs div.rb-portfolio-item-image,
+        &.rb-portfolio-item-xxs a.rb-portfolio-item-image {
             padding-bottom: 40%;
         }
-        &.nk-portfolio-item-xs div.nk-portfolio-item-image,
-        &.nk-portfolio-item-xs a.nk-portfolio-item-image {
+        &.rb-portfolio-item-xs div.rb-portfolio-item-image,
+        &.rb-portfolio-item-xs a.rb-portfolio-item-image {
             padding-bottom: 50%;
         }
-        &.nk-portfolio-item-sm div.nk-portfolio-item-image,
-        &.nk-portfolio-item-sm a.nk-portfolio-item-image {
+        &.rb-portfolio-item-sm div.rb-portfolio-item-image,
+        &.rb-portfolio-item-sm a.rb-portfolio-item-image {
             padding-bottom: 67%;
         }
-        &.nk-portfolio-item-square div.nk-portfolio-item-image,
-        &.nk-portfolio-item-square a.nk-portfolio-item-image {
+        &.rb-portfolio-item-square div.rb-portfolio-item-image,
+        &.rb-portfolio-item-square a.rb-portfolio-item-image {
             padding-bottom: 100%;
         }
-        &.nk-portfolio-item-lg div.nk-portfolio-item-image,
-        &.nk-portfolio-item-lg a.nk-portfolio-item-image {
+        &.rb-portfolio-item-lg div.rb-portfolio-item-image,
+        &.rb-portfolio-item-lg a.rb-portfolio-item-image {
             padding-top: 30px;
             padding-bottom: 134%;
         }
-        &.nk-portfolio-item-lg-0 div.nk-portfolio-item-image,
-        &.nk-portfolio-item-lg-0 a.nk-portfolio-item-image {
+        &.rb-portfolio-item-lg-0 div.rb-portfolio-item-image,
+        &.rb-portfolio-item-lg-0 a.rb-portfolio-item-image {
             padding-bottom: 134%;
         }
-        &.nk-portfolio-item-xl div.nk-portfolio-item-image,
-        &.nk-portfolio-item-xl a.nk-portfolio-item-image {
+        &.rb-portfolio-item-xl div.rb-portfolio-item-image,
+        &.rb-portfolio-item-xl a.rb-portfolio-item-image {
             padding-bottom: 200%;
         }
 
         // link
-        .nk-portfolio-item-link {
+        .rb-portfolio-item-link {
             position: absolute;
             display: block;
             top: 0;
@@ -98,9 +98,9 @@
         }
 
         // style 1 & 2
-        &.nk-portfolio-item-info-style-1,
-        &.nk-portfolio-item-info-style-2 {
-            .nk-portfolio-item-info {
+        &.rb-portfolio-item-info-style-1,
+        &.rb-portfolio-item-info-style-2 {
+            .rb-portfolio-item-info {
                 position: absolute;
                 display: flex;
                 top: 0;
@@ -116,22 +116,22 @@
                 > div {
                     width: 100%;
                 }
-                &.nk-portfolio-item-info-center {
+                &.rb-portfolio-item-info-center {
                     align-items: center;
                     justify-content: center;
                 }
-                &.nk-portfolio-item-info-bottom {
+                &.rb-portfolio-item-info-bottom {
                     align-items: flex-end;
                 }
             }
-            &:hover .nk-portfolio-item-info,
-            &.hover .nk-portfolio-item-info {
+            &:hover .rb-portfolio-item-info,
+            &.hover .rb-portfolio-item-info {
                 opacity: 1;
             }
-            &.hover .nk-portfolio-item-info {
+            &.hover .rb-portfolio-item-info {
                 background-color: rgba(#000, .6);
             }
-            &.hover:hover .nk-portfolio-item-info {
+            &.hover:hover .rb-portfolio-item-info {
                 background-color: rgba(#000, .85);
             }
             .portfolio-item-title {
@@ -153,22 +153,22 @@
                 }
             }
         }
-        &.nk-portfolio-item-info-style-2 {
-            .nk-portfolio-item-info {
+        &.rb-portfolio-item-info-style-2 {
+            .rb-portfolio-item-info {
                 color: #000;
                 background-color: rgba(#fff, .85);
             }
-            &.hover .nk-portfolio-item-info {
+            &.hover .rb-portfolio-item-info {
                 background-color: rgba(#fff, .6);
             }
-            &.hover:hover .nk-portfolio-item-info {
+            &.hover:hover .rb-portfolio-item-info {
                 background-color: rgba(#fff, .85);
             }
         }
 
         // style 3
-        &.nk-portfolio-item-info-style-3 {
-            .nk-portfolio-item-info {
+        &.rb-portfolio-item-info-style-3 {
+            .rb-portfolio-item-info {
                 position: absolute;
                 right: 0;
                 bottom: 0;
@@ -183,8 +183,8 @@
                     width: 100%;
                 }
             }
-            &:hover .nk-portfolio-item-info,
-            &.hover .nk-portfolio-item-info {
+            &:hover .rb-portfolio-item-info,
+            &.hover .rb-portfolio-item-info {
                 transform: translateY(0%);
             }
 
@@ -194,13 +194,13 @@
         }
 
         // style 4
-        &.nk-portfolio-item-info-style-4 {
-            .nk-portfolio-item-info {
+        &.rb-portfolio-item-info-style-4 {
+            .rb-portfolio-item-info {
                 padding: 21px 0;
                 color: #000;
             }
-            &:hover .nk-portfolio-item-info,
-            &.hover .nk-portfolio-item-info {
+            &:hover .rb-portfolio-item-info,
+            &.hover .rb-portfolio-item-info {
                 transform: translateY(0%);
             }
 
@@ -208,12 +208,12 @@
                 margin-bottom: .85rem;
             }
 
-            .nk-portfolio-item-image > div {
+            .rb-portfolio-item-image > div {
                 transition: .5s transform;
             }
             &:hover,
             &.hover {
-                .nk-portfolio-item-image > div {
+                .rb-portfolio-item-image > div {
                     transform: scale(1.05);
                 }
             }
@@ -225,16 +225,16 @@
 /*
  *    Single Portfolio Item
  */
-.nk-portfolio-single {
+.rb-portfolio-single {
 
     // title
-    .nk-portfolio-title {
+    .rb-portfolio-title {
         margin-bottom: 1.9rem;
         letter-spacing: .012em;
     }
 
     // details
-    .nk-portfolio-details {
+    .rb-portfolio-details {
         width: 100%;
 
         tr td {
@@ -263,17 +263,17 @@
         }
     }
 
-    .nk-portfolio-text + .nk-portfolio-details {
+    .rb-portfolio-text + .rb-portfolio-details {
         margin-top: 46px;
     }
 
-    .nk-portfolio-text p:last-of-type {
+    .rb-portfolio-text p:last-of-type {
         margin-bottom: 0;
     }
 
     // half style
-    &.nk-portfolio-single-half {
-        .nk-portfolio-images {
+    &.rb-portfolio-single-half {
+        .rb-portfolio-images {
 
             .container-fluid & {
                 margin-right: -15px;
@@ -282,7 +282,7 @@
 
         }
 
-        .nk-portfolio-info {
+        .rb-portfolio-info {
             max-width: 540px;
             padding-top: 92px;
             padding-right: 60px;
@@ -299,11 +299,11 @@
         }
     }
 }
-.nk-portfolio-images img {
+.rb-portfolio-images img {
     width: 100%;
     height: auto;
 }
-.nk-portfolio-launch-site {
+.rb-portfolio-launch-site {
     padding-top: 48px;
     padding-bottom: 54px;
     font-family: $font_headings;
@@ -344,7 +344,7 @@
 /*
  * Single Portfolio Header
  */
-.nk-portfolio-single-header {
+.rb-portfolio-single-header {
     display: table;
     width: 100%;
     min-height: 570px;
@@ -362,7 +362,7 @@
         }
     }
 
-    .nk-portfolio-title + .lead {
+    .rb-portfolio-title + .lead {
         margin-top: 24px;
     }
 }

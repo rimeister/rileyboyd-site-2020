@@ -9,12 +9,12 @@ import {
 -------------------------------------------------------------------*/
 function initNavbarSide() {
     const self = this;
-    const $overlay = $('<div class="nk-navbar-overlay">').appendTo($body);
+    const $overlay = $('<div class="rb-navbar-overlay">').appendTo($body);
 
     // side navbars
-    const $leftSide = $('.nk-navbar-left-side');
-    const $rightSide = $('.nk-navbar-right-side');
-    const $sideNavs = $('.nk-navbar-side');
+    const $leftSide = $('.rb-navbar-left-side');
+    const $rightSide = $('.rb-navbar-right-side');
+    const $sideNavs = $('.rb-navbar-side');
 
     self.sideNavbarIsOpened = () => $sideNavs.hasClass('open');
 
@@ -37,11 +37,11 @@ function initNavbarSide() {
 
         // show sidebar
         tween.to($side, speed || 0.4, {
-            x: $side.hasClass('nk-navbar-left-side') ? '100%' : '-100%',
+            x: $side.hasClass('rb-navbar-left-side') ? '100%' : '-100%',
         });
 
         // show overlay
-        if ($side.hasClass('nk-navbar-overlay-content')) {
+        if ($side.hasClass('rb-navbar-overlay-content')) {
             tween.to($overlay, 0.3, {
                 opacity: 0.6,
                 display: 'block',
@@ -62,7 +62,7 @@ function initNavbarSide() {
             updateTogglers();
         });
 
-        if (!$sideNavs.filter('.nk-navbar-overlay-content.open').length) {
+        if (!$sideNavs.filter('.rb-navbar-overlay-content.open').length) {
             // hide overlay
             tween.to($overlay, 0.3, {
                 opacity: 0,
@@ -86,7 +86,7 @@ function initNavbarSide() {
     });
 
     // overlay
-    $doc.on('click', '.nk-navbar-overlay', () => {
+    $doc.on('click', '.rb-navbar-overlay', () => {
         self.closeSide($sideNavs);
     });
 

@@ -8,11 +8,11 @@
 }
 
 // sticky sidebar support
-.nk-sidebar-sticky-parent {
+.rb-sidebar-sticky-parent {
     display: flex;
     flex-direction: column;
 
-    > .nk-sidebar {
+    > .rb-sidebar {
         flex: 1;
     }
 }
@@ -94,7 +94,7 @@
 
 
 // Modal
-.nk-modal {
+.rb-modal {
     .modal-content {
         border: none;
         border-radius: 0;

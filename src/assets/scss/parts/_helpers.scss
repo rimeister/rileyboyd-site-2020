@@ -22,47 +22,47 @@
 /*
  * Image Fit
  */
-.nk-img-fit,
-.nk-img {
+.rb-img-fit,
+.rb-img {
     max-width: 100%;
 }
 @media #{$media_xxs} {
-    .nk-img-fit-xs-down {
+    .rb-img-fit-xs-down {
         max-width: 100%;
     }
 }
 @media #{$media_larger_xs} {
-    .nk-img-fit-sm-up {
+    .rb-img-fit-sm-up {
         max-width: 100%;
     }
 }
 @media #{$media_smaller_xs} {
-    .nk-img-fit-sm-down {
+    .rb-img-fit-sm-down {
         max-width: 100%;
     }
 }
 @media #{$media_larger_sm} {
-    .nk-img-fit-md-up {
+    .rb-img-fit-md-up {
         max-width: 100%;
     }
 }
 @media #{$media_smaller_sm} {
-    .nk-img-fit-md-down {
+    .rb-img-fit-md-down {
         max-width: 100%;
     }
 }
 @media #{$media_larger_md} {
-    .nk-img-fit-lg-up {
+    .rb-img-fit-lg-up {
         max-width: 100%;
     }
 }
 @media #{$media_smaller_md} {
-    .nk-img-fit-lg-down {
+    .rb-img-fit-lg-down {
         max-width: 100%;
     }
 }
 @media #{$media_lg} {
-    .nk-img-fit-xl-up {
+    .rb-img-fit-xl-up {
         max-width: 100%;
     }
 }
@@ -70,7 +70,7 @@
 /*
  * Image Stretch
  */
-.nk-img-stretch {
+.rb-img-stretch {
     width: 100%;
 }
 
@@ -187,7 +187,7 @@ $helper-lh: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 !default;
 /*
  * Inherit Font Family
  */
-.nk-font-inherit {
+.rb-font-inherit {
     font-family: inherit !important; // stylelint-disable-line
 }
 
@@ -417,7 +417,7 @@ $helper-mw: 100, 200, 300, 400, 500, 600, 620, 700, 800, 900, 1000 !default;
 /*
  * Keyboard Key
  */
-.nk-keyboard {
+.rb-keyboard {
     display: inline-block;
     min-width: 30px;
     height: 30px;

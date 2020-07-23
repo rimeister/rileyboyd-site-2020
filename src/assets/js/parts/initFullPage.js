@@ -6,8 +6,8 @@ import { $, $wnd, tween } from './_utility';
 
 -------------------------------------------------------------------*/
 function initFullPage() {
-    const $fullPage = $('.nk-fullpage-portfolio:eq(0)');
-    const $eachItems = $fullPage.find('.nk-fullpage-item');
+    const $fullPage = $('.rb-fullpage-portfolio:eq(0)');
+    const $eachItems = $fullPage.find('.rb-fullpage-item');
     if (!$fullPage.length || !$eachItems.length) {
         return;
     }
@@ -16,7 +16,7 @@ function initFullPage() {
         overflow: 'hidden',
         '-ms-overflow-style': 'none',
     });
-    $('.nk-main').css('overflow', 'visible');
+    $('.rb-main').css('overflow', 'visible');
 
     // parse slides
     const slides = [];
@@ -24,28 +24,28 @@ function initFullPage() {
         const $this = $(this);
         slides.push({
             $item: $this,
-            $viewBtn: $this.find('.nk-fullpage-view-button').html(),
-            $content: $this.find('.nk-fullpage-content').html(),
-            img: $this.find('.nk-fullpage-image').attr('src'),
+            $viewBtn: $this.find('.rb-fullpage-view-button').html(),
+            $content: $this.find('.rb-fullpage-content').html(),
+            img: $this.find('.rb-fullpage-image').attr('src'),
             letter: $this.attr('data-letter'),
             number: $this.attr('data-number'),
         });
     });
 
     // image blocks
-    const $image1 = $('<div class="nk-fullpage-bg-image">').appendTo($fullPage);
-    const $image2 = $('<div class="nk-fullpage-bg-image">').appendTo($fullPage);
+    const $image1 = $('<div class="rb-fullpage-bg-image">').appendTo($fullPage);
+    const $image2 = $('<div class="rb-fullpage-bg-image">').appendTo($fullPage);
 
     // content
-    const $content = $('<div class="nk-fullpage-content">');
-    const $content2 = $('<div class="nk-fullpage-content">');
-    const $contentButton = $('<div class="nk-fullpage-view-button">');
+    const $content = $('<div class="rb-fullpage-content">');
+    const $content2 = $('<div class="rb-fullpage-content">');
+    const $contentButton = $('<div class="rb-fullpage-view-button">');
     $fullPage.append($content);
     $fullPage.append($content2);
     $fullPage.append($contentButton);
 
     // bullet navigation
-    let $bullets = '<ul class="nk-fullpage-nav active">';
+    let $bullets = '<ul class="rb-fullpage-nav active">';
     for (let k = 0; k < slides.length; k++) {
         $bullets += `<li>${slides[k].letter}</li>`;
     }
@@ -55,8 +55,8 @@ function initFullPage() {
     const $bulletsItems = $bullets.children('li');
 
     // numbers
-    const $numbers = $('<div class="nk-fullpage-number">');
-    const $numbers2 = $('<div class="nk-fullpage-number">');
+    const $numbers = $('<div class="rb-fullpage-number">');
+    const $numbers2 = $('<div class="rb-fullpage-number">');
     $fullPage.append($numbers);
     $fullPage.append($numbers2);
 
@@ -216,7 +216,7 @@ function initFullPage() {
     // mouse wheel scroll
     $wnd.on('DOMMouseScroll mousewheel wheel', (e) => {
         // check if delta >= 2 and mouse under slider
-        if (Math.abs(e.originalEvent.deltaY) < 2 || !$(e.target).parents('.nk-fullpage-portfolio').length) {
+        if (Math.abs(e.originalEvent.deltaY) < 2 || !$(e.target).parents('.rb-fullpage-portfolio').length) {
             return;
         }
 
@@ -239,7 +239,7 @@ function initFullPage() {
         touchDelta = y === false ? touchDelta : touchStart - y;
 
         // check if delta >= 2 and mouse under slider
-        if (Math.abs(touchDelta) < 2 || !$(e.target).parents('.nk-fullpage-portfolio').length) {
+        if (Math.abs(touchDelta) < 2 || !$(e.target).parents('.rb-fullpage-portfolio').length) {
             return;
         }
 

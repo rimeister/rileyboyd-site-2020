@@ -6,7 +6,7 @@ body {
     color: $color_text;
     background-color: $color_bg;
 }
-.nk-main {
+.rb-main {
     position: relative;
     overflow: hidden;
     background-color: $color_bg;
@@ -14,12 +14,12 @@ body {
 }
 
 // bg gradient
-body.nk-bg-gradient .nk-main {
+body.rb-bg-gradient .rb-main {
     background: linear-gradient(to bottom, #fff, $color_bg);
 }
 
 // boxed
-body.nk-page-boxed {
+body.rb-page-boxed {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -40,7 +40,7 @@ a:hover {
 }
 
 // block for any content (most case of use - parallax and image backgrounds)
-.nk-block {
+.rb-block {
     position: relative;
     display: block;
     overflow: hidden;
@@ -113,7 +113,7 @@ a:hover {
 }
 .bg-map-row {
     z-index: auto;
-    .nk-gmaps {
+    .rb-gmaps {
         height: 100%;
         z-index: 1;
     }
@@ -125,19 +125,19 @@ a:hover {
                 position: relative;
             }
         }
-        .nk-gmaps {
+        .rb-gmaps {
             height: 300px;
         }
-        .nk-gmaps-sm {
+        .rb-gmaps-sm {
             height: 250px;
         }
-        .nk-gmaps-md {
+        .rb-gmaps-md {
             height: 450px;
         }
-        .nk-gmaps-lg {
+        .rb-gmaps-lg {
             height: 550px;
         }
-        .nk-gmaps-full {
+        .rb-gmaps-full {
             height: 700px;
             height: 100vh;
             min-height: 700px;
@@ -157,13 +157,13 @@ a:hover {
 }
 
 // gaps
-.nk-gap,
-.nk-gap-1,
-.nk-gap-2,
-.nk-gap-3,
-.nk-gap-4,
-.nk-gap-5,
-.nk-gap-6 {
+.rb-gap,
+.rb-gap-1,
+.rb-gap-2,
+.rb-gap-3,
+.rb-gap-4,
+.rb-gap-5,
+.rb-gap-6 {
     display: block;
     height: 20px;
 
@@ -174,27 +174,27 @@ a:hover {
         clear: both;
     }
 }
-.nk-gap-1 {
+.rb-gap-1 {
     height: 30px;
 }
-.nk-gap-2 {
+.rb-gap-2 {
     height: 40px;
 }
-.nk-gap-3 {
+.rb-gap-3 {
     height: 60px;
 }
-.nk-gap-4 {
+.rb-gap-4 {
     height: 80px;
 }
-.nk-gap-5 {
+.rb-gap-5 {
     height: 100px;
 }
-.nk-gap-6 {
+.rb-gap-6 {
     height: 120px;
 }
 
 // body scrollbar checker
-.nk-body-scrollbar-measure {
+.rb-body-scrollbar-measure {
     position: absolute;
     top: -9999px;
     width: 50px;
@@ -203,27 +203,27 @@ a:hover {
 }
 
 // gmaps
-.nk-gmaps {
+.rb-gmaps {
     width: 100%;
     height: 300px;
 }
-.nk-gmaps-sm {
+.rb-gmaps-sm {
     height: 250px;
 }
-.nk-gmaps-md {
+.rb-gmaps-md {
     height: 450px;
 }
-.nk-gmaps-lg {
+.rb-gmaps-lg {
     height: 570px;
 }
-.nk-gmaps-full {
+.rb-gmaps-full {
     height: 700px;
     height: 100vh;
     min-height: 700px;
 }
 
 // badges
-.nk-badge {
+.rb-badge {
     display: inline-block;
     min-width: 15px;
     height: 15px;
@@ -235,14 +235,14 @@ a:hover {
     background-color: #fff;
     border-radius: 7.5px;
 
-    .nk-navbar li > & {
+    .rb-navbar li > & {
         position: absolute;
         right: 5px;
         bottom: 0;
     }
 }
 
-.nk-scroll-top {
+.rb-scroll-top {
     cursor: pointer;
 }
 
@@ -274,7 +274,7 @@ pre[class*="language-"] {
 
 /*  DEPRECATED, added for back compatibility */
 // vertical center block (use Bootstrap 4 flexboxes)
-.nk-vertical-center {
+.rb-vertical-center {
     display: table;
     width: 100%;
     height: 100%;

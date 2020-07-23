@@ -1,17 +1,17 @@
 import React from 'react';
 
 const Header = () => (
-        <header className="nk-header">
+        <header className="rb-header">
 
-            <nav className="nk-navbar nk-navbar-top nk-navbar-sticky nk-navbar-autohide nk-navbar-transparent nk-navbar-white-text-on-top">
+            <nav className="rb-navbar rb-navbar-top rb-navbar-sticky rb-navbar-autohide rb-navbar-transparent rb-navbar-white-text-on-top">
                 <div className="container">
-                    <div className="nk-nav-table">
-                        <a href="index.html" className="nk-nav-logo">
-                            <img src="assets/images/logo-light.svg" alt="" width="85" className="nk-nav-logo-onscroll" />
+                    <div className="rb-nav-table">
+                        <a href="index.html" className="rb-nav-logo">
+                            <img src="assets/images/logo-light.svg" alt="" width="85" className="rb-nav-logo-onscroll" />
                             <img src="assets/images/logo.svg" alt="" width="85" />
                         </a>
-                        <ul className="nk-nav nk-nav-right d-none d-lg-block" data-nav-mobile="#nk-nav-mobile">
-                            <li className="active nk-drop-item">
+                        <ul className="rb-nav rb-nav-right d-none d-lg-block" data-nav-mobile="#rb-nav-mobile">
+                            <li className="active rb-drop-item">
                                 <a href="home-1.html"> Home </a>
                                 <ul className="dropdown">
                                     <li>
@@ -56,13 +56,13 @@ const Header = () => (
                                 <a href="#contact"> Contact </a>
                             </li>
                         </ul>
-                        <ul className="nk-nav nk-nav-right nk-nav-icons">
+                        <ul className="rb-nav rb-nav-right rb-nav-icons">
                             <li className="single-icon d-lg-none">
-                                <a href="#" className="nk-navbar-full-toggle">
-                                    <span className="nk-icon-burger">
-                                        <span className="nk-t-1"></span>
-                                        <span className="nk-t-2"></span>
-                                        <span className="nk-t-3"></span>
+                                <a href="#" className="rb-navbar-full-toggle">
+                                    <span className="rb-icon-burger">
+                                        <span className="rb-t-1"></span>
+                                        <span className="rb-t-2"></span>
+                                        <span className="rb-t-3"></span>
                                     </span>
                                 </a>
                             </li>

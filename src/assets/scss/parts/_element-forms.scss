@@ -20,7 +20,7 @@ select.form-control {
 }
 
 /* Validation */
-div.nk-error {
+div.rb-error {
     padding: 0;
     margin: 5px 0;
     font-weight: 400;
@@ -28,17 +28,17 @@ div.nk-error {
     background-color: transparent;
     z-index: 1;
 }
-.form-control.nk-error,
-.nk-form-style-1 .form-control.nk-error {
+.form-control.rb-error,
+.rb-form-style-1 .form-control.rb-error {
     background-color: rgba(#f00, .4);
 }
 
-.nk-form-response-success {
+.rb-form-response-success {
     display: none;
     margin-bottom: 10px;
     color: #008000;
 }
-.nk-form-response-error {
+.rb-form-response-error {
     display: none;
     margin-bottom: 10px;
     color: #f00;

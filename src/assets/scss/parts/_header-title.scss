@@ -1,12 +1,47 @@
-.nk-header-title {
+.rb-header-title {
+    background: $color_bg;    
     position: relative;
     display: block;
     overflow: hidden;
     text-align: center;
     z-index: 0;
 
+    .wave {
+
+        background: url(../../images/wave.svg) repeat-x; 
+        position: absolute;
+        bottom: 0;
+        width: 6400px;
+        height: 518px;
+        animation: wave 12s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+        transform: translate3d(0, 0, 0);
+        
+        &:nth-child(2) {
+
+        }
+
+    }
+
+        @keyframes wave {
+          0% {
+            margin-left: 0;
+          }
+          100% {
+            margin-left: -3200px;
+          }
+        }
+        /*
+        @keyframes swell {
+          0%, 100% {
+            transform: translate3d(0,-25px,0);
+          }
+          50% {
+            transform: translate3d(0,5px,0);
+          }
+        }*/
+
     // size default
-    .nk-header-table {
+    .rb-header-table {
         display: flex;
         align-items: center;
         width: 100%;
@@ -15,43 +50,43 @@
     }
 
     // size small
-    &.nk-header-title-sm .nk-header-table {
+    &.rb-header-title-sm .rb-header-table {
         min-height: 370px;
     }
 
     // size mid
-    &.nk-header-title-md .nk-header-table {
+    &.rb-header-title-md .rb-header-table {
         min-height: 570px;
     }
 
     // size large
-    &.nk-header-title-lg .nk-header-table {
+    &.rb-header-title-lg .rb-header-table {
         min-height: 670px;
     }
 
     // size x-large
-    &.nk-header-title-xl .nk-header-table {
+    &.rb-header-title-xl .rb-header-table {
         min-height: 770px;
     }
 
     // size full
-    &.nk-header-title-full .nk-header-table {
+    &.rb-header-title-full .rb-header-table {
         min-height: 100vh;
     }
 
-    .nk-header-table-cell {
+    .rb-header-table-cell {
         flex: 1;
         width: 100%;
         padding: 80px 0;
     }
 
     // text bottom
-    .nk-header-text-bottom {
+    .rb-header-text-bottom {
         padding-top: 30px;
         padding-bottom: 30px;
         background-color: rgba($color_dark_1, .4);
     }
-    &.nk-header-title-full .nk-header-text-bottom {
+    &.rb-header-title-full .rb-header-text-bottom {
         position: absolute;
         right: 0;
         bottom: 0;
@@ -59,7 +94,7 @@
     }
 
     // scroll down button
-    .nk-header-title-scroll-down {
+    .rb-header-title-scroll-down {
         position: absolute;
         display: block;
         bottom: 65px;
@@ -83,7 +118,7 @@
     }
 
     // title
-    h1.nk-title {
+    h1.rb-title {
         line-height: 1.18;
     }
 }

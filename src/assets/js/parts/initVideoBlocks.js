@@ -52,7 +52,7 @@ function initVideoBlocks() {
 
         // create fullscreen video wrapper if doesn't exist
         if (!self.FullScreenVideo) {
-            self.FullScreenVideo = $('<div class="nk-video-fullscreen"></div>').appendTo($body);
+            self.FullScreenVideo = $('<div class="rb-video-fullscreen"></div>').appendTo($body);
 
             self.closeFullScreenVideo = () => {
                 if (openedFSVideo) {
@@ -78,12 +78,12 @@ function initVideoBlocks() {
             };
 
             // close icon
-            $(`<div class="nk-video-fullscreen-close">${self.options.templates.fullscreenVideoClose}</div>`)
+            $(`<div class="rb-video-fullscreen-close">${self.options.templates.fullscreenVideoClose}</div>`)
                 .on('click', self.closeFullScreenVideo)
                 .appendTo(self.FullScreenVideo);
 
             // video container
-            self.FullScreenVideoWrapper = $('<div class="nk-video-fullscreen-cont"></div>').appendTo(self.FullScreenVideo);
+            self.FullScreenVideoWrapper = $('<div class="rb-video-fullscreen-cont"></div>').appendTo(self.FullScreenVideo);
 
             setVideoSize();
             self.debounceResize(setVideoSize);
@@ -122,7 +122,7 @@ function initVideoBlocks() {
             });
         }
     };
-    $doc.on('click', '.nk-video-fullscreen-toggle', function (e) {
+    $doc.on('click', '.rb-video-fullscreen-toggle', function (e) {
         e.preventDefault();
         self.openFullScreenVideo($(this).attr('href'));
     });
@@ -130,12 +130,12 @@ function initVideoBlocks() {
 
     // init plain video
     function addPlainPlayButton($plainCont) {
-        $plainCont.find('.nk-video-plain-toggle').html(self.options.templates.plainVideoIcon);
+        $plainCont.find('.rb-video-plain-toggle').html(self.options.templates.plainVideoIcon);
     }
     function addPlainLoadButton($plainCont) {
-        $plainCont.find('.nk-video-plain-toggle').html(self.options.templates.plainVideoLoadIcon || self.options.templates.plainVideoIcon);
+        $plainCont.find('.rb-video-plain-toggle').html(self.options.templates.plainVideoLoadIcon || self.options.templates.plainVideoIcon);
     }
-    $('.nk-plain-video[data-video]').each(function () {
+    $('.rb-plain-video[data-video]').each(function () {
         const $plainCont = $(this);
         let $plainIframe;
         const url = $(this).attr('data-video');
@@ -185,7 +185,7 @@ function initVideoBlocks() {
             });
 
             // add play button
-            $plainCont.append('<span class="nk-video-plain-toggle"></span>');
+            $plainCont.append('<span class="rb-video-plain-toggle"></span>');
             addPlainPlayButton($plainCont);
 
             // set thumb

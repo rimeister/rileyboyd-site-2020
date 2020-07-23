@@ -39,7 +39,7 @@ function initShortcuts() {
     });
 
     // Side Left Navbar
-    const $leftSide = $('.nk-navbar-left-side');
+    const $leftSide = $('.rb-navbar-left-side');
     self.key('toggleSideLeftNavbar', () => {
         self.toggleSide($leftSide);
     });
@@ -51,7 +51,7 @@ function initShortcuts() {
     });
 
     // Side Right Navbar
-    const $rightSide = $('.nk-navbar-right-side');
+    const $rightSide = $('.rb-navbar-right-side');
     self.key('toggleSideRightNavbar', () => {
         self.toggleSide($rightSide);
     });

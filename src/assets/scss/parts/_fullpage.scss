@@ -1,4 +1,4 @@
-.nk-fullpage-portfolio {
+.rb-fullpage-portfolio {
     position: fixed;
     display: block;
     top: 0;
@@ -7,11 +7,11 @@
     height: 100%;
     z-index: 1;
 
-    .nk-fullpage-item {
+    .rb-fullpage-item {
         display: none;
     }
 
-    .nk-fullpage-bg-image {
+    .rb-fullpage-bg-image {
         position: absolute;
         top: 0;
         right: 0;
@@ -23,13 +23,13 @@
     }
 
 
-    .nk-fullpage-view-button {
+    .rb-fullpage-view-button {
         position: absolute;
         bottom: 50px;
         left: 0;
         width: 100%;
     }
-    .nk-fullpage-content {
+    .rb-fullpage-content {
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -39,7 +39,7 @@
         width: 100%;
         height: 100%;
     }
-    .nk-fullpage-item-category {
+    .rb-fullpage-item-category {
         margin-bottom: 10px;
         font-size: .848rem;
         font-weight: 500;
@@ -56,7 +56,7 @@
             }
         }
     }
-    .nk-fullpage-title a {
+    .rb-fullpage-title a {
         color: inherit;
         text-decoration: none;
         transition: .5s opacity;
@@ -68,7 +68,7 @@
 }
 
 // right nav
-.nk-fullpage-nav {
+.rb-fullpage-nav {
     position: fixed;
     top: 50%;
     right: 40px;
@@ -115,7 +115,7 @@
 }
 
 // slide number
-.nk-fullpage-number {
+.rb-fullpage-number {
     position: fixed;
     display: block;
     right: 50px;

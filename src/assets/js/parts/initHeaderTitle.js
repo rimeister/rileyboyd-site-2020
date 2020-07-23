@@ -7,11 +7,11 @@ import { $ } from './_utility';
 -------------------------------------------------------------------*/
 function initHeaderTitle() {
     const self = this;
-    const $navbarHeader = $('.nk-header');
-    const isNavbarOpaque = $navbarHeader.hasClass('nk-header-opaque');
-    const isNavbarTransparent = $('.nk-navbar-top').hasClass('nk-header-transparent');
-    const $headerTitle = $('.nk-header-title > .nk-header-table');
-    const $fullHeaderTitle = $('.nk-header-title-full > .nk-header-table');
+    const $navbarHeader = $('.rb-header');
+    const isNavbarOpaque = $navbarHeader.hasClass('rb-header-opaque');
+    const isNavbarTransparent = $('.rb-navbar-top').hasClass('rb-header-transparent');
+    const $headerTitle = $('.rb-header-title > .rb-header-table');
+    const $fullHeaderTitle = $('.rb-header-title-full > .rb-header-table');
 
     // remove header title padding if navbar opaque
     if (isNavbarOpaque) {

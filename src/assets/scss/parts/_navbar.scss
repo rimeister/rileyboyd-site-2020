@@ -1,18 +1,18 @@
 /* Header */
-.nk-header {
+.rb-header {
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1000;
 
-    &.nk-header-opaque {
+    &.rb-header-opaque {
         position: relative;
     }
 }
 
 /* Navbar */
-.nk-navbar {
+.rb-navbar {
     position: relative;
     padding: 33px 0;
     font-size: .96rem;
@@ -20,18 +20,18 @@
     z-index: 1000;
     will-change: background-color;
 
-    .container-fluid .nk-nav-table {
+    .container-fluid .rb-nav-table {
         padding-right: 30px;
         padding-left: 30px;
     }
 
     // large navbar
-    &.nk-navbar-lg {
+    &.rb-navbar-lg {
         padding: 51px 0;
     }
 
     // fixed position
-    &.nk-navbar-fixed {
+    &.rb-navbar-fixed {
         position: fixed;
         top: 0;
         right: 0;
@@ -40,44 +40,44 @@
         will-change: transform, visibility, background-color;
 
         // hide on scroll
-        &.nk-onscroll-hide {
+        &.rb-onscroll-hide {
             visibility: hidden;
             transform: translateY(-100%);
         }
-        &.nk-onscroll-show {
+        &.rb-onscroll-show {
             visibility: visible;
             transform: translateY(0);
         }
     }
 
     // transparent
-    &.nk-navbar-transparent {
+    &.rb-navbar-transparent {
         background-color: transparent;
     }
 
     // solid color
     &,
-    &.nk-navbar-solid {
+    &.rb-navbar-solid {
         background-color: #fff;
     }
 
     // transparent always
-    &.nk-navbar-transparent-always {
+    &.rb-navbar-transparent-always {
         background-color: transparent;
     }
 
     // center content
-    &.nk-navbar-align-center {
+    &.rb-navbar-align-center {
         text-align: center;
     }
 
     // right content
-    &.nk-navbar-align-right {
+    &.rb-navbar-align-right {
         text-align: right;
     }
 
     // table content
-    .nk-nav-table {
+    .rb-nav-table {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -87,20 +87,20 @@
             flex: 0 0 auto;
         }
 
-        > .nk-nav,
-        > .nk-nav-row-full {
+        > .rb-nav,
+        > .rb-nav-row-full {
             flex: 1 1 100%;
         }
-        > .nk-nav-row-full {
+        > .rb-nav-row-full {
             min-height: 0;
             overflow: hidden;
             overflow-y: auto;
 
-            > .nk-nav {
+            > .rb-nav {
                 overflow: auto;
             }
         }
-        > .nk-nav-row-center {
+        > .rb-nav-row-center {
             display: flex;
             flex-direction: column;
 
@@ -109,7 +109,7 @@
                 margin-bottom: auto;
             }
         }
-        > .nk-nav-row-bottom {
+        > .rb-nav-row-bottom {
             display: flex;
 
             > * {
@@ -117,29 +117,29 @@
             }
         }
 
-        > .nk-nav-icons,
-        > .nk-nav-logo {
+        > .rb-nav-icons,
+        > .rb-nav-logo {
             display: flex;
             flex: 0 0 auto;
             align-items: center;
         }
-        > .nk-nav-icons {
+        > .rb-nav-icons {
             margin-right: -15px;
             margin-left: auto;
         }
     }
-    &.nk-navbar-top .nk-nav-table {
+    &.rb-navbar-top .rb-nav-table {
         flex-direction: row;
         align-items: center;
     }
 
     // logo img
-    .nk-nav-logo img {
+    .rb-nav-logo img {
         height: auto;
     }
 
     // right nav with icons
-    .nk-nav-icons {
+    .rb-nav-icons {
         white-space: nowrap;
         > * {
             white-space: initial;
@@ -166,7 +166,7 @@
     }
 
     // background image
-    .nk-navbar-bg {
+    .rb-navbar-bg {
         position: absolute;
         top: 0;
         right: 0;
@@ -176,7 +176,7 @@
     }
 
     // main menu items
-    .nk-nav {
+    .rb-nav {
         position: relative;
         padding-left: 20px;
 
@@ -185,7 +185,7 @@
             padding-right: 0;
         }
 
-        + .nk-nav {
+        + .rb-nav {
             padding-left: 0;
 
             > li:first-child {
@@ -193,7 +193,7 @@
             }
         }
 
-        .nk-nav {
+        .rb-nav {
             padding-right: 0;
             padding-left: 0;
         }
@@ -218,7 +218,7 @@
         }
 
         // item descriptions
-        li > a .nk-item-descr {
+        li > a .rb-item-descr {
             display: block;
             font-size: .7em;
             font-style: italic;
@@ -287,7 +287,7 @@
         }
 
         // sub-dropdown
-        .nk-drop-item .nk-drop-item {
+        .rb-drop-item .rb-drop-item {
             > a::after {
                 content: "";
                 position: absolute;
@@ -312,36 +312,36 @@
     }
 
     // white on top
-    .nk-nav-logo .nk-nav-logo-onscroll {
+    .rb-nav-logo .rb-nav-logo-onscroll {
         display: none;
     }
-    &.nk-navbar-white-text-on-top {
-        .nk-nav > li > a {
+    &.rb-navbar-white-text-on-top {
+        .rb-nav > li > a {
             color: #bfbfbf;
         }
-        .nk-nav > li > a:hover,
-        .nk-nav > li.active > a {
+        .rb-nav > li > a:hover,
+        .rb-nav > li.active > a {
             color: #fff;
         }
 
-        &.nk-navbar-solid {
-            .nk-nav > li > a {
+        &.rb-navbar-solid {
+            .rb-nav > li > a {
                 color: inherit;
             }
-            .nk-nav > li > a:hover,
-            .nk-nav > li.active > a {
+            .rb-nav > li > a:hover,
+            .rb-nav > li.active > a {
                 color: #0e0e0e;
             }
         }
 
-        .nk-nav-logo .nk-nav-logo-onscroll {
+        .rb-nav-logo .rb-nav-logo-onscroll {
             display: block;
 
             + img {
                 display: none;
             }
         }
-        &.nk-navbar-solid .nk-nav-logo .nk-nav-logo-onscroll {
+        &.rb-navbar-solid .rb-nav-logo .rb-nav-logo-onscroll {
             display: none;
 
             + img {
@@ -351,7 +351,7 @@
     }
 
     // right menu items
-    .nk-nav-right {
+    .rb-nav-right {
         text-align: right;
         > * {
             text-align: left;
@@ -359,7 +359,7 @@
     }
 
     // center menu items
-    .nk-nav-center {
+    .rb-nav-center {
         text-align: center;
         > * {
             text-align: left;
@@ -367,7 +367,7 @@
     }
 
     // right dropdown
-    .nk-drop-item.nk-drop-left {
+    .rb-drop-item.rb-drop-left {
 
         > a::after {
             border-top: 2px solid transparent;

@@ -1,36 +1,36 @@
-.nk-footer {
+.rb-footer {
     position: relative;
     overflow: hidden;
     background-color: $color_bg_footer;
     z-index: 1;
 
     // transparent
-    &.nk-footer-transparent {
+    &.rb-footer-transparent {
         background-color: transparent;
     }
 
     // container
-    .nk-footer-cont {
+    .rb-footer-cont {
         padding-top: 44px;
         padding-bottom: 25px;
     }
-    .nk-footer-cont-sm {
+    .rb-footer-cont-sm {
         padding-top: 22px;
         padding-bottom: 2px;
     }
 
     // widgets
-    .nk-footer-widgets {
+    .rb-footer-widgets {
         padding-top: 90px;
         padding-bottom: 90px;
 
-        + .nk-footer-cont {
+        + .rb-footer-cont {
             border-top: 1px solid rgba(140, 140, 140, .2);
         }
     }
 
     // social
-    .nk-footer-social {
+    .rb-footer-social {
         padding-bottom: 12px;
         color: $color_titles;
 
@@ -67,7 +67,7 @@
     }
 
     // text
-    .nk-footer-text {
+    .rb-footer-text {
         font-size: .95rem;
     }
 }

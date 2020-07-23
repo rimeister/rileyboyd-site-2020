@@ -7,7 +7,7 @@ import { $ } from './_utility';
 -------------------------------------------------------------------*/
 function initInstagram() {
     const self = this;
-    const $instagram = $('.nk-instagram');
+    const $instagram = $('.rb-instagram');
     if (!$instagram.length || !self.options.templates.instagram) {
         return;
     }

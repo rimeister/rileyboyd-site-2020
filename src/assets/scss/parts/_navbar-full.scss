@@ -1,4 +1,4 @@
-.nk-navbar-full {
+.rb-navbar-full {
     position: fixed;
     display: none;
     top: 0;
@@ -12,7 +12,7 @@
     z-index: 1002;
 
     // header
-    .nk-nav-header {
+    .rb-nav-header {
         padding: 33px 0;
         margin-right: -22px;
 
@@ -22,10 +22,10 @@
             clear: both;
         }
 
-        .nk-nav-logo {
+        .rb-nav-logo {
             float: left;
         }
-        .nk-nav-close {
+        .rb-nav-close {
             float: right;
             padding: 6px 25px;
             color: #d8d8d8;
@@ -38,7 +38,7 @@
         }
     }
 
-    .container-fluid .nk-nav-header {
+    .container-fluid .rb-nav-header {
         padding-right: 8px;
         padding-left: 30px;
         margin-right: 0;
@@ -48,7 +48,7 @@
     .nano {
         overflow-y: auto;
     }
-    .nk-nav {
+    .rb-nav {
         position: relative;
         width: 100%;
         padding: 0;
@@ -57,7 +57,7 @@
         overflow: hidden;
 
         // item descriptions
-        li > a .nk-item-descr {
+        li > a .rb-item-descr {
             font-size: .5em;
         }
 
@@ -100,14 +100,14 @@
         }
 
         // drop item icon
-        .nk-drop-item > a,
-        > .nk-drop-item > a,
+        .rb-drop-item > a,
+        > .rb-drop-item > a,
         .bropdown-back > a {
             position: relative;
         }
-        .nk-drop-item > a::after,
-        .nk-drop-item .nk-drop-item > a::after,
-        > .nk-drop-item > a::after {
+        .rb-drop-item > a::after,
+        .rb-drop-item .rb-drop-item > a::after,
+        > .rb-drop-item > a::after {
             content: "";
             position: absolute;
             display: block;
@@ -127,10 +127,10 @@
             transform: none;
             will-change: opacity;
         }
-        .nk-drop-item > a:hover::after,
-        .nk-drop-item > a.hover::after,
-        > .nk-drop-item > a:hover::after,
-        > .nk-drop-item > a.hover::after {
+        .rb-drop-item > a:hover::after,
+        .rb-drop-item > a.hover::after,
+        > .rb-drop-item > a:hover::after,
+        > .rb-drop-item > a.hover::after {
             width: 0;
             height: 0;
             opacity: 1 !important; // stylelint-disable-line
@@ -138,7 +138,7 @@
     }
 
     // dropdown
-    .nk-nav .dropdown {
+    .rb-nav .dropdown {
         display: block;
         padding: 0;
         visibility: inherit;
@@ -154,8 +154,8 @@
             display: none;
         }
     }
-    .nk-nav .nk-drop-item .dropdown,
-    .nk-nav .nk-drop-item .nk-drop-item .dropdown {
+    .rb-nav .rb-drop-item .dropdown,
+    .rb-nav .rb-drop-item .rb-drop-item .dropdown {
         top: 0;
         left: 0;
         width: 100%;
@@ -190,7 +190,7 @@
 
 
     // social
-    .nk-nav-social {
+    .rb-nav-social {
         padding: 51px 20px;
 
         > ul li {

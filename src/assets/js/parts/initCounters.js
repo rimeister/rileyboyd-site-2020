@@ -7,23 +7,23 @@ import { $, tween } from './_utility';
 -------------------------------------------------------------------*/
 function initCounters() {
     const self = this;
-    const $progressCount = $('.nk-progress.nk-count');
-    const $numberCount = $('.nk-count:not(.nk-progress)');
+    const $progressCount = $('.rb-progress.rb-count');
+    const $numberCount = $('.rb-count:not(.rb-progress)');
 
     // set default progress
     $progressCount.each(function () {
-        $(this).attr('data-nk-count', $(this).attr('data-progress'))
-            .attr('data-nk-mask', $(this).attr('data-progress-mask'))
-            .find('.nk-progress-line > div')
-            .css('width', `${$(this).attr('data-nk-count-from') || '0'}%`)
-            .find('.nk-progress-percent')
+        $(this).attr('data-rb-count', $(this).attr('data-progress'))
+            .attr('data-rb-mask', $(this).attr('data-progress-mask'))
+            .find('.rb-progress-line > div')
+            .css('width', `${$(this).attr('data-rb-count-from') || '0'}%`)
+            .find('.rb-progress-percent')
             .html('');
     });
 
     // set default numbers
     $numberCount.each(function () {
-        $(this).attr('data-nk-count', $(this).attr('data-nk-count') || parseInt($(this).text(), 10))
-            .html($(this).attr('data-nk-count-from') || '0');
+        $(this).attr('data-rb-count', $(this).attr('data-rb-count') || parseInt($(this).text(), 10))
+            .html($(this).attr('data-rb-count-from') || '0');
     });
 
     let countersNum = 1;
@@ -32,21 +32,21 @@ function initCounters() {
             return;
         }
 
-        const progress = $progressCount.filter('[data-nk-count]');
-        const numbers = $numberCount.filter('[data-nk-count]');
+        const progress = $progressCount.filter('[data-rb-count]');
+        const numbers = $numberCount.filter('[data-rb-count]');
         countersNum = progress.length + numbers.length;
 
         // progress
-        $progressCount.filter('[data-nk-count]').each(function () {
+        $progressCount.filter('[data-rb-count]').each(function () {
             const $item = $(this);
             if (self.isInViewport($item)) {
                 const count = {
-                    curr: $item.attr('data-nk-count-from') || '0',
-                    to: $item.attr('data-nk-count'),
-                    mask: $item.attr('data-nk-mask') || '{$}%',
+                    curr: $item.attr('data-rb-count-from') || '0',
+                    to: $item.attr('data-rb-count'),
+                    mask: $item.attr('data-rb-mask') || '{$}%',
                 };
-                const $itemLine = $item.find('.nk-progress-line > div');
-                const $itemLabel = $item.find('.nk-progress-percent');
+                const $itemLine = $item.find('.rb-progress-line > div');
+                const $itemLabel = $item.find('.rb-progress-percent');
 
                 tween.to($itemLine, 1, {
                     width: `${count.to}%`,
@@ -59,19 +59,19 @@ function initCounters() {
                         $itemLabel.text(count.mask.replace('{$}', count.curr));
                     },
                 });
-                $item.removeAttr('data-nk-count');
+                $item.removeAttr('data-rb-count');
             }
         });
 
         // number
-        $numberCount.filter('[data-nk-count]').each(function () {
+        $numberCount.filter('[data-rb-count]').each(function () {
             const $item = $(this);
             if (self.isInViewport($item)) {
                 const count = {
                     curr: $item.text(),
-                    to: $item.attr('data-nk-count'),
+                    to: $item.attr('data-rb-count'),
                 };
-                $item.removeAttr('data-nk-count data-nk-count-from');
+                $item.removeAttr('data-rb-count data-rb-count-from');
                 tween.to(count, 1, {
                     curr: count.to,
                     roundProps: 'curr',

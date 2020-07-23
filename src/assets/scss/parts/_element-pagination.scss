@@ -1,9 +1,9 @@
-.nk-pagination {
+.rb-pagination {
     width: 100%;
     padding: 20px 0;
     background-color: #fff;
 
-    &.nk-pagination-nobg {
+    &.rb-pagination-nobg {
         background-color: transparent;
     }
 
@@ -40,8 +40,8 @@
         }
 
         // arrows
-        .nk-pagination-prev,
-        .nk-pagination-next {
+        .rb-pagination-prev,
+        .rb-pagination-next {
             min-width: 190px;
 
             > span {
@@ -51,7 +51,7 @@
                 vertical-align: middle;
             }
         }
-        .nk-pagination-prev {
+        .rb-pagination-prev {
             padding-left: 0;
             text-align: left;
 
@@ -59,7 +59,7 @@
                 margin-left: -8px;
             }
         }
-        .nk-pagination-next {
+        .rb-pagination-next {
             padding-right: 0;
             text-align: right;
 
@@ -68,14 +68,14 @@
             }
         }
 
-        .nk-pagination-center {
+        .rb-pagination-center {
             width: 100%;
         }
 
         // mobile
         @media #{$media_smaller_sm} {
-            .nk-pagination-prev,
-            .nk-pagination-next {
+            .rb-pagination-prev,
+            .rb-pagination-next {
                 min-width: 60px;
                 font-size: 0;
 
@@ -95,13 +95,13 @@
     }
 
     // position
-    &.nk-pagination-center {
+    &.rb-pagination-center {
         text-align: center;
     }
-    &.nk-pagination-left {
+    &.rb-pagination-left {
         text-align: left;
     }
-    &.nk-pagination-right {
+    &.rb-pagination-right {
         text-align: right;
     }
 }

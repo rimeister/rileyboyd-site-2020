@@ -1,10 +1,10 @@
 
 /* Style 1 */
-.nk-ibox-1 {
+.rb-ibox-1 {
     position: relative;
     min-height: 50px;
 
-    .nk-ibox-icon {
+    .rb-ibox-icon {
         position: absolute;
         width: 50px;
         height: 50px;
@@ -14,14 +14,14 @@
         text-align: center;
     }
 
-    .nk-ibox-cont {
+    .rb-ibox-cont {
         margin-left: 72px;
     }
 
-    .nk-ibox-title {
+    .rb-ibox-title {
         font-weight: 500;
     }
-    .nk-ibox-text {
+    .rb-ibox-text {
         margin-top: -1px;
         font-size: .97rem;
         font-weight: 500;
@@ -30,14 +30,14 @@
 }
 
 /* Style 2 */
-.nk-ibox-2 {
+.rb-ibox-2 {
     position: relative;
 
-    .nk-ibox-cont {
+    .rb-ibox-cont {
         padding-top: 7px;
     }
 
-    .nk-ibox-title {
+    .rb-ibox-title {
         font-size: .96rem;
         font-weight: 500;
         color: $color_titles;
@@ -46,11 +46,11 @@
 }
 
 /* Style 3 */
-.nk-ibox-3 {
+.rb-ibox-3 {
     position: relative;
     text-align: center;
 
-    .nk-ibox-icon {
+    .rb-ibox-icon {
         width: 50px;
         height: 50px;
         margin: 0 auto;
@@ -60,19 +60,19 @@
         line-height: 50px;
         text-align: center;
     }
-    .nk-ibox-title {
+    .rb-ibox-title {
         font-size: .91rem;
         font-weight: 500;
         text-transform: uppercase;
     }
-    .nk-ibox-text {
+    .rb-ibox-text {
         margin-top: 8px;
         opacity: .75;
     }
 }
 
 /* Titles */
-.nk-ibox-title {
+.rb-ibox-title {
     font-size: 1.25rem;
 
     a {

@@ -1,4 +1,4 @@
-.nk-team-block {
+.rb-team-block {
     position: relative;
     background-color: darken($color_gray_4, 9%);
     z-index: 0;
@@ -10,12 +10,12 @@
         clear: both;
     }
 
-    .nk-team-member-photo {
+    .rb-team-member-photo {
         display: none;
     }
 
     // backgrounds (generated in JS)
-    .nk-team-block-backgrounds > div {
+    .rb-team-block-backgrounds > div {
         position: absolute;
         top: 0;
         right: 0;
@@ -35,7 +35,7 @@
     }
 
     // each member block
-    .nk-team-member {
+    .rb-team-member {
         position: relative;
         float: left;
         width: 340px;
@@ -50,7 +50,7 @@
         border-top: none;
         transition: .4s padding-top, .4s background-color;
 
-        .nk-team-member-letter {
+        .rb-team-member-letter {
             position: absolute;
             top: 51px;
             left: 38px;
@@ -61,7 +61,7 @@
             transition: .5s opacity;
         }
 
-        .nk-team-member-post {
+        .rb-team-member-post {
             position: relative;
             padding-bottom: 19px;
             margin-top: 4px;
@@ -84,18 +84,18 @@
             }
         }
 
-        .nk-team-member-name {
+        .rb-team-member-name {
             font-family: $font_headings;
             font-size: 1.69rem;
             color: $color_titles;
         }
 
-        .nk-team-member-bio {
+        .rb-team-member-bio {
             opacity: 0;
             transition: .5s opacity;
         }
 
-        .nk-team-member-social {
+        .rb-team-member-social {
             padding: 0;
             margin: 0;
             margin-top: 18px;
@@ -135,34 +135,34 @@
             padding-top: 90px;
             background-color: #ededed;
 
-            .nk-team-member-letter {
+            .rb-team-member-letter {
                 opacity: 0;
             }
-            .nk-team-member-bio,
-            .nk-team-member-social,
-            .nk-team-member-post::after {
+            .rb-team-member-bio,
+            .rb-team-member-social,
+            .rb-team-member-post::after {
                 opacity: 1;
             }
         }
     }
-    .nk-team-member:nth-child(2n + 3) {
+    .rb-team-member:nth-child(2n + 3) {
         clear: left;
     }
 
     // mobile
     @media #{$media_smaller_md} {
-        .nk-team-block-backgrounds {
+        .rb-team-block-backgrounds {
             position: relative;
             width: 100%;
             padding-top: 56%;
         }
 
-        .nk-team-member {
+        .rb-team-member {
             width: 50%;
         }
     }
     @media #{$media_smaller_sm} {
-        .nk-team-member {
+        .rb-team-member {
             width: 100%;
         }
     }

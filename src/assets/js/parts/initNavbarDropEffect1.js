@@ -7,17 +7,17 @@ import { $, tween } from './_utility';
 -------------------------------------------------------------------*/
 function initNavbarDropEffect1() {
     const self = this;
-    const $navbars = $('.nk-navbar-side, .nk-navbar-full');
+    const $navbars = $('.rb-navbar-side, .rb-navbar-full');
 
     // add back item for dropdowns
     $navbars.find('.dropdown').prepend(`<li class="bropdown-back"><a href="#">${self.options.templates.secondaryNavbarBackItem}</a></li>`);
 
     // change height of opened dropdown
     function updateSideNavDropdown($item) {
-        const $nav = $item.closest('.nk-navbar');
-        const $khNav = $nav.find('.nk-nav');
+        const $nav = $item.closest('.rb-navbar');
+        const $khNav = $nav.find('.rb-nav');
         const $nanoCont = $nav.find('.nano-content');
-        const $drop = $nav.find('.nk-drop-item.open > .dropdown:not(.closed)');
+        const $drop = $nav.find('.rb-drop-item.open > .dropdown:not(.closed)');
 
         let dropHeight = '';
         if ($drop.length) {
@@ -74,7 +74,7 @@ function initNavbarDropEffect1() {
         });
     }
 
-    $navbars.on('click', '.nk-drop-item > a', function (e) {
+    $navbars.on('click', '.rb-drop-item > a', function (e) {
         toggleSubmenu(true, $(this).parent());
         updateSideNavDropdown($(this));
         e.preventDefault();

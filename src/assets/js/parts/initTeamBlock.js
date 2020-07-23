@@ -14,17 +14,17 @@ function initTeamBlock() {
         $item.addClass('active');
 
         // add class to item background
-        $item.siblings('.nk-team-block-backgrounds:eq(0)').find(`[data-bg-id="${id}"]`).addClass('active').siblings()
+        $item.siblings('.rb-team-block-backgrounds:eq(0)').find(`[data-bg-id="${id}"]`).addClass('active').siblings()
             .removeClass('active');
     }
 
     // prepare team blocks
-    $('.nk-team-block').each(function () {
+    $('.rb-team-block').each(function () {
         const $this = $(this);
 
         // prepare backgrounds
-        const $backgrounds = $('<div class="nk-team-block-backgrounds">');
-        $this.find('.nk-team-member img.nk-team-member-photo').each(function () {
+        const $backgrounds = $('<div class="rb-team-block-backgrounds">');
+        $this.find('.rb-team-member img.rb-team-member-photo').each(function () {
             const $img = $(this);
             const $parent = $img.parent();
             const id = $parent.index();
@@ -39,15 +39,15 @@ function initTeamBlock() {
         $this.append($backgrounds);
 
         // activate item
-        let $activeMember = $this.children('.nk-team-member.active:eq(0)');
+        let $activeMember = $this.children('.rb-team-member.active:eq(0)');
         if (!$activeMember.length) {
-            $activeMember = $this.children('.nk-team-member:eq(0)');
+            $activeMember = $this.children('.rb-team-member:eq(0)');
         }
         activateMemberBlock($activeMember);
     });
 
     // hover activation
-    $body.on('click', '.nk-team-block .nk-team-member', function () {
+    $body.on('click', '.rb-team-block .rb-team-member', function () {
         activateMemberBlock($(this));
     });
 }

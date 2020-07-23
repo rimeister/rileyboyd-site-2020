@@ -126,14 +126,14 @@ let bodyOverflowEnabled;
 let isBodyOverflowing;
 let scrollbarWidth;
 let originalBodyPadding;
-const $fullNavbar = $('.nk-navbar-full');
+const $fullNavbar = $('.rb-navbar-full');
 function isBodyOverflowed() {
     return bodyOverflowEnabled;
 }
 function bodyGetScrollbarWidth() {
     // thx d.walsh
     const scrollDiv = document.createElement('div');
-    scrollDiv.className = 'nk-body-scrollbar-measure';
+    scrollDiv.className = 'rb-body-scrollbar-measure';
     $body[0].appendChild(scrollDiv);
     const result = scrollDiv.offsetWidth - scrollDiv.clientWidth;
     $body[0].removeChild(scrollDiv);

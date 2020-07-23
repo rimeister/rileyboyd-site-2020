@@ -12,9 +12,9 @@ function initForms() {
     const self = this;
 
     // Validate Forms
-    $('form:not(.nk-form-ajax):not([novalidate])').each(function () {
+    $('form:not(.rb-form-ajax):not([novalidate])').each(function () {
         $(this).validate({
-            errorClass: 'nk-error',
+            errorClass: 'rb-error',
             errorElement: 'div',
             errorPlacement(error, element) {
                 const $parent = element.parent('.input-group');
@@ -28,9 +28,9 @@ function initForms() {
         });
     });
     // ajax form
-    $('form.nk-form-ajax:not([novalidate])').each(function () {
+    $('form.rb-form-ajax:not([novalidate])').each(function () {
         $(this).validate({
-            errorClass: 'nk-error',
+            errorClass: 'rb-error',
             errorElement: 'div',
             errorPlacement(error, element) {
                 const $parent = element.parent('.input-group');
@@ -43,8 +43,8 @@ function initForms() {
             },
             // Submit the form via ajax (see: jQuery Form plugin)
             submitHandler(form) {
-                const $responseSuccess = $(form).find('.nk-form-response-success');
-                const $responseError = $(form).find('.nk-form-response-error');
+                const $responseSuccess = $(form).find('.rb-form-response-success');
+                const $responseError = $(form).find('.rb-form-response-error');
                 $(form).ajaxSubmit({
                     type: 'POST',
                     success(response) {

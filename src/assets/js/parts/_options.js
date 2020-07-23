@@ -11,14 +11,14 @@ const options = {
     templates: {
         secondaryNavbarBackItem: 'Back',
 
-        plainVideoIcon: '<span class="nk-video-icon"><span><span class="nk-play-icon"></span></span></span>',
-        plainVideoLoadIcon: '<span class="nk-loading-spinner"><i></i></span>',
-        fullscreenVideoClose: '<span class="nk-icon-close"></span>',
+        plainVideoIcon: '<span class="rb-video-icon"><span><span class="rb-play-icon"></span></span></span>',
+        plainVideoLoadIcon: '<span class="rb-loading-spinner"><i></i></span>',
+        fullscreenVideoClose: '<span class="rb-icon-close"></span>',
 
         instagram:
             `<div class="col-3">
                 <a href="{{link}}" target="_blank">
-                    <img src="{{image}}" alt="{{caption}}" class="nk-img-stretch">
+                    <img src="{{image}}" alt="{{caption}}" class="rb-img-stretch">
                 </a>
             </div>`,
         instagramLoadingText: 'Loading...',
@@ -26,9 +26,9 @@ const options = {
         instagramApiPath: 'php/instagram/instagram.php',
 
         twitter:
-            `<div class="nk-twitter">
-                <span class="nk-twitter-icon fa fa-twitter"></span>
-                <div class="nk-twitter-text">
+            `<div class="rb-twitter">
+                <span class="rb-twitter-icon fa fa-twitter"></span>
+                <div class="rb-twitter-text">
                    {{tweet}}
                 </div>
             </div>`,

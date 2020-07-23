@@ -1,5 +1,5 @@
 // burger icon
-.nk-icon-burger {
+.rb-icon-burger {
     position: relative;
     display: inline-block;
     width: 20px;
@@ -19,31 +19,31 @@
         transform-style: preserve-3d;
     }
 
-    .nk-t-1 {
+    .rb-t-1 {
         margin-top: -8px;
     }
-    .nk-t-2 {
+    .rb-t-2 {
         margin-top: -1px;
     }
-    .nk-t-3 {
+    .rb-t-3 {
         margin-top: 6px;
     }
 
     // hover animation
     &:hover,
     a:hover > & {
-        .nk-t-1 {
-            animation: nk-icon-burger-animation .4s ease-in-out;
+        .rb-t-1 {
+            animation: rb-icon-burger-animation .4s ease-in-out;
         }
-        .nk-t-2 {
-            animation: nk-icon-burger-animation .4s .1s ease-in-out;
+        .rb-t-2 {
+            animation: rb-icon-burger-animation .4s .1s ease-in-out;
         }
-        .nk-t-3 {
-            animation: nk-icon-burger-animation .4s .2s ease-in-out;
+        .rb-t-3 {
+            animation: rb-icon-burger-animation .4s .2s ease-in-out;
         }
     }
 }
-@keyframes nk-icon-burger-animation {
+@keyframes rb-icon-burger-animation {
     0%,
     100%   {
         transform: translateX(0);
@@ -55,7 +55,7 @@
 }
 
 // close icon
-.nk-icon-close {
+.rb-icon-close {
     position: relative;
     display: inline-block;
     width: 18px;
@@ -83,7 +83,7 @@
 }
 
 // squares
-.nk-icon-squares {
+.rb-icon-squares {
     position: relative;
     display: inline-block;
     width: 16px;
@@ -108,7 +108,7 @@
 }
 
 // search icon
-.nk-icon-search {
+.rb-icon-search {
     position: relative;
     display: inline-block;
     width: 22px;
@@ -176,7 +176,7 @@
 }
 
 // arrow icons
-.nk-icon-arrow {
+.rb-icon-arrow {
     &-right,
     &-left {
         position: relative;
@@ -229,7 +229,7 @@
 }
 
 // play icon
-.nk-play-icon {
+.rb-play-icon {
     display: inline-block;
     width: 0;
     height: 0;
@@ -240,10 +240,10 @@
 
 // video and gif icons
 $video_icon_size: 85px !default;
-.nk-video-icon,
-.nk-video-icon-light,
-.nk-gif-icon,
-.nk-gif-icon-light {
+.rb-video-icon,
+.rb-video-icon-light,
+.rb-gif-icon,
+.rb-gif-icon-light {
     position: relative;
     display: inline-block;
     width: $video_icon_size;
@@ -291,8 +291,8 @@ $video_icon_size: 85px !default;
         }
     }
 }
-.nk-video-icon-light,
-.nk-gif-icon-light {
+.rb-video-icon-light,
+.rb-gif-icon-light {
     color: $color_dark_1;
 
     &::before {
@@ -302,10 +302,10 @@ $video_icon_size: 85px !default;
 
 // video and gif icons style 2
 
-.nk-video-icon-2,
-.nk-video-icon-2-light,
-.nk-gif-icon-2,
-.nk-gif-icon-2-light {
+.rb-video-icon-2,
+.rb-video-icon-2-light,
+.rb-gif-icon-2,
+.rb-gif-icon-2-light {
     position: relative;
     display: inline-block;
     width: 80px;
@@ -356,8 +356,8 @@ $video_icon_size: 85px !default;
         }
     }
 }
-.nk-video-icon-2-light,
-.nk-gif-icon-2-light {
+.rb-video-icon-2-light,
+.rb-gif-icon-2-light {
     color: #fff;
 
     &::before {
@@ -369,8 +369,8 @@ $video_icon_size: 85px !default;
 $loadingSpinnerSize: 80px !default;
 $loadingSpinnerSizeInner: $loadingSpinnerSize * .35 !default;
 $loadingSpinnerWeight: 2px !default;
-.nk-loading-spinner,
-.nk-loading-spinner-light {
+.rb-loading-spinner,
+.rb-loading-spinner-light {
     position: relative;
     display: inline-block;
     width: $loadingSpinnerSize;
@@ -385,7 +385,7 @@ $loadingSpinnerWeight: 2px !default;
         height: $loadingSpinnerSizeInner;
         overflow: hidden;
         transform-origin: $loadingSpinnerSize / 2 $loadingSpinnerSize / 2;
-        animation: nk-loading-spinner .7s infinite linear;
+        animation: rb-loading-spinner .7s infinite linear;
 
         &::after {
             content: "";
@@ -397,14 +397,14 @@ $loadingSpinnerWeight: 2px !default;
         }
     }
 }
-.nk-loading-spinner-light {
+.rb-loading-spinner-light {
     box-shadow: inset 0 0 0 $loadingSpinnerWeight #fff;
 
     i::after {
         box-shadow: inset 0 0 0 $loadingSpinnerWeight rgba($color_dark_1, .8);
     }
 }
-@keyframes nk-loading-spinner {
+@keyframes rb-loading-spinner {
     100% {
         transform: rotate(360deg);
     }

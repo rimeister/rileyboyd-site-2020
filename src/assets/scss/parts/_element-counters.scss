@@ -1,24 +1,24 @@
-.nk-counter,
-.nk-counter-2,
-.nk-counter-3 {
+.rb-counter,
+.rb-counter-2,
+.rb-counter-3 {
     position: relative;
 
-    .nk-count {
+    .rb-count {
         font-family: $font_headings;
         font-weight: 600;
     }
 }
 
 /* Style 1 */
-.nk-counter {
-    .nk-count {
+.rb-counter {
+    .rb-count {
         font-size: 4rem;
     }
 }
 
 /* Style 2 */
-.nk-counter-2 {
-    .nk-count {
+.rb-counter-2 {
+    .rb-count {
         font-size: 4rem;
         line-height: 1;
         color: $color_main_1;
@@ -26,17 +26,17 @@
 }
 
 /* Style 3 */
-.nk-counter-3 {
-    .nk-counter-icon {
+.rb-counter-3 {
+    .rb-counter-icon {
         font-size: 3rem;
         line-height: 1;
         color: $color_main_1;
     }
-    .nk-count {
+    .rb-count {
         font-size: 3rem;
         line-height: 2;
     }
-    .nk-counter-title {
+    .rb-counter-title {
         font-family: $font_body;
         font-weight: 400;
         line-height: 1;

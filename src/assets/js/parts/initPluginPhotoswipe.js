@@ -2,7 +2,7 @@ import { $, $body } from './_utility';
 
 /* PhotoSwipe */
 function initPluginPhotoswipe() {
-    const $gallery = $('.nk-popup-gallery');
+    const $gallery = $('.rb-popup-gallery');
     if (typeof PhotoSwipe === 'undefined' || !$gallery.length) {
         return;
     }
@@ -44,7 +44,7 @@ function initPluginPhotoswipe() {
     // init code
     const parseThumbnailElements = function (el) {
         const items = [];
-        const thumbElements = $(el).find('a.nk-gallery-item');
+        const thumbElements = $(el).find('a.rb-gallery-item');
         let childElements;
         let descrElement;
         let size;
@@ -52,7 +52,7 @@ function initPluginPhotoswipe() {
 
         thumbElements.each(function () {
             childElements = $(this).find('img');
-            descrElement = $(this).next('.nk-gallery-item-description');
+            descrElement = $(this).next('.rb-gallery-item-description');
             size = (this.getAttribute('data-size') || '1920x1080').split('x');
 
             // create slide object
@@ -256,11 +256,11 @@ function initPluginPhotoswipe() {
         const $thisGallery = $(this);
         $thisGallery.attr('data-pswp-uid', i + 1);
 
-        $thisGallery.on('click', 'a.nk-gallery-item', function (e) {
+        $thisGallery.on('click', 'a.rb-gallery-item', function (e) {
             e.preventDefault();
             let index = 0;
             const clicked = this;
-            $thisGallery.find('a.nk-gallery-item').each(function (idx) {
+            $thisGallery.find('a.rb-gallery-item').each(function (idx) {
                 if (this === clicked) {
                     index = idx;
                     return false;

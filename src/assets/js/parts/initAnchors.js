@@ -11,14 +11,14 @@ function initAnchors() {
     const self = this;
 
     // click on anchors
-    const $leftSideNav = $('.nk-navbar-left-side');
-    const $rightSideNav = $('.nk-navbar-right-side');
+    const $leftSideNav = $('.rb-navbar-left-side');
+    const $rightSideNav = $('.rb-navbar-right-side');
     function closeNavs() {
         self.closeSide($leftSideNav);
         self.closeSide($rightSideNav);
         self.closeFullscreenNavbar();
     }
-    $doc.on('click', '.navbar a, .nk-navbar a, a.btn, a.nk-btn, a.nk-anchor, a.nk-header-title-scroll-down', function (e) {
+    $doc.on('click', '.navbar a, .rb-navbar a, a.btn, a.rb-btn, a.rb-anchor, a.rb-header-title-scroll-down', function (e) {
         const isHash = this.hash;
         const isURIsame = this.baseURI === window.location.href;
 
@@ -43,7 +43,7 @@ function initAnchors() {
     });
 
     // add active class on navbar items
-    const $anchorItems = $('.nk-navbar .nk-nav > li > a[href*="#"]');
+    const $anchorItems = $('.rb-navbar .rb-nav > li > a[href*="#"]');
     const anchorBlocks = [];
     function hashInArray(item) {
         for (let k = 0; k < anchorBlocks.length; k++) {

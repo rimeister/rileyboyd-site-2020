@@ -7,7 +7,7 @@ import { $, tween, $wnd } from './_utility';
 -------------------------------------------------------------------*/
 function initNavbar() {
     const self = this;
-    const $navbarTop = $('.nk-navbar-top');
+    const $navbarTop = $('.rb-navbar-top');
 
     // add mobile navbar
     const $mobileNavItems = $('[data-nav-mobile]');
@@ -17,28 +17,28 @@ function initNavbar() {
             const $mobileNav = $($(this).attr('data-nav-mobile'));
 
             // insert into mobile nav
-            $mobileNav.find('.nk-navbar-mobile-content > ul.nk-nav').append($nav);
+            $mobileNav.find('.rb-navbar-mobile-content > ul.rb-nav').append($nav);
         });
 
-        const $nav = $('.nk-navbar-mobile-content > ul.nk-nav');
+        const $nav = $('.rb-navbar-mobile-content > ul.rb-nav');
 
         // remove background images
         $nav.find('.bg-image, .bg-video').remove();
 
         // remove mega menus
-        $nav.find('.nk-mega-item > .dropdown').each(function () {
+        $nav.find('.rb-mega-item > .dropdown').each(function () {
             const $drop = $(this).children('ul').addClass('dropdown');
 
             // fix mega menu columns
             $drop.find('> li > label').each(function () {
                 $(this).next().addClass('dropdown');
-                $(this).parent().addClass('nk-drop-item');
+                $(this).parent().addClass('rb-drop-item');
                 $(this).replaceWith($('<a href="#"></a>').html($(this).html()));
             });
 
             $(this).replaceWith($drop);
         });
-        $nav.find('.nk-mega-item').removeClass('nk-mega-item');
+        $nav.find('.rb-mega-item').removeClass('rb-mega-item');
     }
 
     // sticky navbar
@@ -49,14 +49,14 @@ function initNavbar() {
         const stickyOn = $wnd.scrollTop() >= navbarTop;
 
         if (stickyOn) {
-            $navbarTop.addClass('nk-navbar-fixed');
+            $navbarTop.addClass('rb-navbar-fixed');
             $navbarFake.show();
         } else {
-            $navbarTop.removeClass('nk-navbar-fixed');
+            $navbarTop.removeClass('rb-navbar-fixed');
             $navbarFake.hide();
         }
     }
-    if ($navbarTop.hasClass('nk-navbar-sticky')) {
+    if ($navbarTop.hasClass('rb-navbar-sticky')) {
         $navbarTop.after($navbarFake);
         self.debounceResize(() => {
             $navbarFake.height($navbarTop.innerHeight());
@@ -68,9 +68,9 @@ function initNavbar() {
 
     // correct dropdown position
     function correctDropdown($item) {
-        if ($item.parent().is('.nk-nav')) {
+        if ($item.parent().is('.rb-nav')) {
             const $dropdown = $item.children('.dropdown');
-            const $parent = $item.parents('.nk-navbar:eq(0)');
+            const $parent = $item.parents('.rb-navbar:eq(0)');
             let $parentContainer = $parent.children('.container');
             $parentContainer = $parentContainer.length ? $parentContainer : $parent;
 
@@ -134,7 +134,7 @@ function initNavbar() {
                 opacity: 0,
                 display: 'none',
             });
-            $wnd.trigger('nk-closed-submenu', [$item]);
+            $wnd.trigger('rb-closed-submenu', [$item]);
         }
     }
     function openSubmenu($item) {
@@ -145,22 +145,22 @@ function initNavbar() {
                 display: 'block',
             });
             $item.addClass('open');
-            $wnd.trigger('nk-opened-submenu', [$item]);
+            $wnd.trigger('rb-opened-submenu', [$item]);
         }
     }
     let dropdownTimeout;
-    $navbarTop.on('mouseenter', 'li.nk-drop-item', function () {
+    $navbarTop.on('mouseenter', 'li.rb-drop-item', function () {
         const $item = $(this);
         const $openedSiblings = $item.siblings('.open')
             .add($item.siblings().find('.open'))
-            .add($item.parents('.nk-nav:eq(0)').siblings().find('.open'))
-            .add($item.parents('.nk-nav:eq(0)').siblings('.open'))
-            .add($item.parents('.nk-nav:eq(0)').parent().siblings().find('.open'));
+            .add($item.parents('.rb-nav:eq(0)').siblings().find('.open'))
+            .add($item.parents('.rb-nav:eq(0)').siblings('.open'))
+            .add($item.parents('.rb-nav:eq(0)').parent().siblings().find('.open'));
 
         clearTimeout(dropdownTimeout);
         closeSubmenu($openedSiblings);
         openSubmenu($item);
-    }).on('mouseleave', 'li.nk-drop-item', function () {
+    }).on('mouseleave', 'li.rb-drop-item', function () {
         const $item = $(this);
         clearTimeout(dropdownTimeout);
         dropdownTimeout = setTimeout(() => {
@@ -176,11 +176,11 @@ function initNavbar() {
 
     // hide / show
     // add / remove solid color
-    const $autohideNav = $navbarTop.filter('.nk-navbar-autohide');
+    const $autohideNav = $navbarTop.filter('.rb-navbar-autohide');
     self.throttleScroll((type, scroll) => {
         const start = 400;
-        const hideClass = 'nk-onscroll-hide';
-        const showClass = 'nk-onscroll-show';
+        const hideClass = 'rb-onscroll-hide';
+        const showClass = 'rb-onscroll-show';
 
         // hide / show
         if (type === 'down' && scroll > start) {
@@ -190,8 +190,8 @@ function initNavbar() {
         }
 
         // add solid color
-        if ($navbarTop.hasClass('nk-navbar-transparent') && $navbarTop.hasClass('nk-navbar-sticky')) {
-            $navbarTop[`${scroll > 70 ? 'add' : 'remove'}Class`]('nk-navbar-solid');
+        if ($navbarTop.hasClass('rb-navbar-transparent') && $navbarTop.hasClass('rb-navbar-sticky')) {
+            $navbarTop[`${scroll > 70 ? 'add' : 'remove'}Class`]('rb-navbar-solid');
         }
     });
 }

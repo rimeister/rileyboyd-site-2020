@@ -7,7 +7,7 @@ import { $ } from './_utility';
 -------------------------------------------------------------------*/
 function initTwitter() {
     const self = this;
-    const $twtFeeds = $('.nk-twitter-list');
+    const $twtFeeds = $('.rb-twitter-list');
     if (!$twtFeeds.length || !self.options.templates.twitter) {
         return;
     }

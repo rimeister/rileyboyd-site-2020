@@ -8,12 +8,12 @@ function initPluginJarallax() {
     const self = this;
 
     // header parallax
-    const $parallaxHeader = $('.nk-header-title-parallax, .nk-header-title-parallax-opacity').eq(0);
+    const $parallaxHeader = $('.rb-header-title-parallax, .rb-header-title-parallax-opacity').eq(0);
     if ($parallaxHeader.length) {
         const $headerImage = $parallaxHeader.find('> .bg-image > div:eq(0)');
         const $headerContent = $parallaxHeader.find('> .bg-image ~ *');
-        const headerParallaxScroll = $parallaxHeader.hasClass('nk-header-title-parallax');
-        const headerParallaxOpacity = $parallaxHeader.hasClass('nk-header-title-parallax-opacity');
+        const headerParallaxScroll = $parallaxHeader.hasClass('rb-header-title-parallax');
+        const headerParallaxOpacity = $parallaxHeader.hasClass('rb-header-title-parallax-opacity');
         $parallaxHeader.jarallax({
             type: 'custom',
             imgSrc: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
@@ -47,12 +47,12 @@ function initPluginJarallax() {
     }
 
     // footer parallax
-    const $parallaxFooter = $('.nk-footer-parallax, .nk-footer-parallax-opacity').eq(0);
+    const $parallaxFooter = $('.rb-footer-parallax, .rb-footer-parallax-opacity').eq(0);
     if ($parallaxFooter.length) {
         const $footerImage = $parallaxFooter.find('> .bg-image > div');
         const $footerContent = $parallaxFooter.find('> .bg-image ~ *');
-        const footerParallaxScroll = $parallaxFooter.hasClass('nk-footer-parallax');
-        const footerParallaxOpacity = $parallaxFooter.hasClass('nk-footer-parallax-opacity');
+        const footerParallaxScroll = $parallaxFooter.hasClass('rb-footer-parallax');
+        const footerParallaxOpacity = $parallaxFooter.hasClass('rb-footer-parallax-opacity');
         $parallaxFooter.jarallax({
             type: 'custom',
             imgSrc: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',

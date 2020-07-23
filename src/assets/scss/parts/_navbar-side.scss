@@ -1,4 +1,4 @@
-.nk-navbar-side {
+.rb-navbar-side {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -17,7 +17,7 @@
     }
 
     // left side
-    &.nk-navbar-left-side {
+    &.rb-navbar-left-side {
         left: 0;
         @include leftSideSize(250px);
 
@@ -27,7 +27,7 @@
     }
 
     // right side
-    &.nk-navbar-right-side {
+    &.rb-navbar-right-side {
         right: 0;
         @include rightSideSize(250px);
 
@@ -37,9 +37,9 @@
     }
 
     // large size
-    &.nk-navbar-lg {
+    &.rb-navbar-lg {
         // left side
-        &.nk-navbar-left-side {
+        &.rb-navbar-left-side {
             @include leftSideSize(450px);
             @media (max-width: 550px) {
                 @include leftSideSize(300px);
@@ -50,7 +50,7 @@
         }
 
         // right side
-        &.nk-navbar-right-side {
+        &.rb-navbar-right-side {
             @include rightSideSize(450px);
             @media (max-width: 550px) {
                 @include rightSideSize(300px);
@@ -60,8 +60,8 @@
             }
         }
 
-        .nk-nav .dropdown > li,
-        .nk-nav > li {
+        .rb-nav .dropdown > li,
+        .rb-nav > li {
             &:last-of-type > a,
             > a {
                 padding-right: 80px;
@@ -76,7 +76,7 @@
     }
 
     // close icon
-    .nk-navbar-side-close {
+    .rb-navbar-side-close {
         position: absolute;
         top: 0;
         right: 0;
@@ -93,7 +93,7 @@
         }
     }
 
-    .nk-nav-table {
+    .rb-nav-table {
         height: auto;
         min-height: 100%;
         max-height: 100%;
@@ -104,7 +104,7 @@
     .nano {
         overflow-y: auto;
     }
-    .nk-nav {
+    .rb-nav {
         position: relative;
         width: 100%;
         padding: 0;
@@ -142,9 +142,9 @@
             }
         }
 
-        .nk-drop-item .nk-drop-item > a::after,
-        .nk-drop-item > a::after,
-        > .nk-drop-item > a::after {
+        .rb-drop-item .rb-drop-item > a::after,
+        .rb-drop-item > a::after,
+        > .rb-drop-item > a::after {
             content: "";
             position: absolute;
             display: block;
@@ -164,25 +164,25 @@
             transform: none;
             will-change: opacity;
         }
-        .nk-drop-item > a:hover::after,
-        .nk-drop-item > a.hover::after,
-        > .nk-drop-item > a:hover::after,
-        > .nk-drop-item > a.hover::after {
+        .rb-drop-item > a:hover::after,
+        .rb-drop-item > a.hover::after,
+        > .rb-drop-item > a:hover::after,
+        > .rb-drop-item > a.hover::after {
             width: 0;
             height: 0;
             opacity: 1 !important; // stylelint-disable-line
         }
 
         // drop item icon
-        .nk-drop-item > a,
-        > .nk-drop-item > a,
+        .rb-drop-item > a,
+        > .rb-drop-item > a,
         .bropdown-back > a {
             position: relative;
         }
     }
 
     // dropdown
-    .nk-nav .dropdown {
+    .rb-nav .dropdown {
         display: block;
         padding: 0;
         visibility: inherit;
@@ -194,8 +194,8 @@
             content: none;
         }
     }
-    .nk-nav .nk-drop-item > .dropdown,
-    .nk-nav .nk-drop-item .nk-drop-item > .dropdown {
+    .rb-nav .rb-drop-item > .dropdown,
+    .rb-nav .rb-drop-item .rb-drop-item > .dropdown {
         top: 0;
         left: 0;
         width: 100%;
@@ -232,7 +232,7 @@
     }
 
     // social
-    .nk-nav-social {
+    .rb-nav-social {
         padding: 40px 74px;
 
         @media (max-width: 550px) {
@@ -258,7 +258,7 @@
 }
 
 // overlay
-.nk-navbar-overlay {
+.rb-navbar-overlay {
     position: fixed;
     display: none;
     top: 0;

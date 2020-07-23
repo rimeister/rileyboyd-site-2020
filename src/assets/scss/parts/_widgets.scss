@@ -1,33 +1,33 @@
-.nk-widget {
+.rb-widget {
     overflow: hidden;
 
-    ~ .nk-widget {
+    ~ .rb-widget {
         margin-top: 65px;
     }
 
-    .nk-widget-title {
+    .rb-widget-title {
         margin-bottom: 2.1rem;
         font-size: 1.4rem;
     }
 }
 
 // Twitter
-.nk-twitter {
+.rb-twitter {
     position: relative;
     padding-left: 39px;
 
-    + .nk-twitter {
+    + .rb-twitter {
         margin-top: 20px;
     }
 
-    .nk-twitter-date {
+    .rb-twitter-date {
         margin-bottom: 10px;
         font-size: .8rem;
         line-height: 1.4;
         opacity: .6;
     }
 
-    .nk-twitter-icon {
+    .rb-twitter-icon {
         position: absolute;
         top: 2px;
         left: 0;

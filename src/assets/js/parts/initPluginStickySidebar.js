@@ -10,11 +10,11 @@ function initPluginStickySidebar() {
         return;
     }
 
-    $('.nk-sidebar-sticky').each(function () {
+    $('.rb-sidebar-sticky').each(function () {
         const $this = $(this);
         const $parent = $this.parent();
 
-        $parent.addClass('nk-sidebar-sticky-parent');
+        $parent.addClass('rb-sidebar-sticky-parent');
 
         $this.wrapInner('<div>').children().stick_in_parent({
             parent: $parent,

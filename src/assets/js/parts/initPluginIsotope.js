@@ -9,10 +9,10 @@ function initPluginIsotope() {
     }
     const self = this;
 
-    $('.nk-isotope').each(function () {
+    $('.rb-isotope').each(function () {
         const $this = $(this);
         const $grid = $this.isotope({
-            itemSelector: '.nk-isotope-item',
+            itemSelector: '.rb-isotope-item',
         });
         $grid.imagesLoaded().progress(() => {
             $grid.isotope('layout');
@@ -23,10 +23,10 @@ function initPluginIsotope() {
 
         // filter
         let $filter = [];
-        if ($this.parent().hasClass('nk-portfolio-list')) {
-            $filter = $this.parent().prev('.nk-isotope-filter');
+        if ($this.parent().hasClass('rb-portfolio-list')) {
+            $filter = $this.parent().prev('.rb-isotope-filter');
         } else {
-            $filter = $this.prev('.nk-isotope-filter');
+            $filter = $this.prev('.rb-isotope-filter');
         }
         if ($filter.length) {
             $filter.on('click', '[data-filter]', function (e) {
@@ -43,10 +43,10 @@ function initPluginIsotope() {
     });
 
     // filter toggler
-    $body.on('click', '[href="#nk-toggle-filter"]:not(.busy)', function (e) {
-        const $pagination = $(this).parent('.nk-pagination');
-        const $filter = $pagination.next('.nk-isotope-filter');
-        const isActive = $filter.hasClass('nk-isotope-filter-active');
+    $body.on('click', '[href="#rb-toggle-filter"]:not(.busy)', function (e) {
+        const $pagination = $(this).parent('.rb-pagination');
+        const $filter = $pagination.next('.rb-isotope-filter');
+        const isActive = $filter.hasClass('rb-isotope-filter-active');
 
         if (!$pagination.length || !$filter.length) {
             return;
@@ -69,8 +69,8 @@ function initPluginIsotope() {
                     force3D: true,
                     display: 'none',
                     onComplete() {
-                        $pagination.removeClass('nk-isotope-filter-active');
-                        $filter.removeClass('nk-isotope-filter-active');
+                        $pagination.removeClass('rb-isotope-filter-active');
+                        $filter.removeClass('rb-isotope-filter-active');
                         $pagination.removeClass('busy');
                         debounceResize();
                     },
@@ -95,8 +95,8 @@ function initPluginIsotope() {
                         y: 0,
                         opacity: 1,
                     }, 0.04, () => {
-                        $pagination.addClass('nk-isotope-filter-active');
-                        $filter.addClass('nk-isotope-filter-active');
+                        $pagination.addClass('rb-isotope-filter-active');
+                        $filter.addClass('rb-isotope-filter-active');
                         $pagination.removeClass('busy');
                         debounceResize();
                     });
