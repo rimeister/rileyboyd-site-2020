@@ -1,4 +1,5 @@
 import React from 'react';
+// import aboutMeSignatureImg from '../assets/images/about-me-signature.png';
 
 const HomeView = () => {
 
@@ -35,7 +36,7 @@ const HomeView = () => {
                         <h2 className="display-4">About Our Agency</h2>
                         <div className="nk-gap mnt-5"></div>
                         <p>We are a new design studio based in USA. We have over 20 years of combined experience, and know a thing or two about designing websites and mobile apps. Clever use of technology and lean processes enable us to work faster and smarter. </p>
-                        <img src="assets/images/about-me-signature.png" alt="" className="nk-img-fit" />
+                        <img src={require('../assets/images/about-me-signature.png')} alt="" className="nk-img-fit" />
                         <div className="nk-gap-4 mt-25"></div>
                     </div>
                 </div>
@@ -288,56 +289,56 @@ const HomeView = () => {
                         <div>
                             <div>
                                 <div className="nk-box-1">
-                                    <img src="assets/images/partner-logo-1-dark.png" alt="" className="nk-img-fit" />
+                                    <img src={require('../assets/images/partner-logo-1-dark.png')} alt="" className="nk-img-fit" />
                                 </div>
                             </div>
                         </div>
                         <div>
                             <div>
                                 <div className="nk-box-1">
-                                    <img src="assets/images/partner-logo-2-dark.png" alt="" className="nk-img-fit" />
+                                    <img src={require('../assets/images/partner-logo-2-dark.png')} alt="" className="nk-img-fit" />
                                 </div>
                             </div>
                         </div>
                         <div>
                             <div>
                                 <div className="nk-box-1">
-                                    <img src="assets/images/partner-logo-3-dark.png" alt="" className="nk-img-fit" />
+                                    <img src={require('../assets/images/partner-logo-3-dark.png')} alt="" className="nk-img-fit" />
                                 </div>
                             </div>
                         </div>
                         <div>
                             <div>
                                 <div className="nk-box-1">
-                                    <img src="assets/images/partner-logo-4-dark.png" alt="" className="nk-img-fit" />
+                                    <img src={require('../assets/images/partner-logo-4-dark.png')} alt="" className="nk-img-fit" />
                                 </div>
                             </div>
                         </div>
                         <div>
                             <div>
                                 <div className="nk-box-1">
-                                    <img src="assets/images/partner-logo-5-dark.png" alt="" className="nk-img-fit" />
+                                    <img src={require('../assets/images/partner-logo-5-dark.png')} alt="" className="nk-img-fit" />
                                 </div>
                             </div>
                         </div>
                         <div>
                             <div>
                                 <div className="nk-box-1">
-                                    <img src="assets/images/partner-logo-6-dark.png" alt="" className="nk-img-fit" />
+                                    <img src={require('../assets/images/partner-logo-6-dark.png')} alt="" className="nk-img-fit" />
                                 </div>
                             </div>
                         </div>
                         <div>
                             <div>
                                 <div className="nk-box-1">
-                                    <img src="assets/images/partner-logo-7-dark.png" alt="" className="nk-img-fit" />
+                                    <img src={require('../assets/images/partner-logo-7-dark.png')} alt="" className="nk-img-fit" />
                                 </div>
                             </div>
                         </div>
                         <div>
                             <div>
                                 <div className="nk-box-1">
-                                    <img src="assets/images/partner-logo-8-dark.png" alt="" className="nk-img-fit" />
+                                    <img src={require('../assets/images/partner-logo-8-dark.png')} alt="" className="nk-img-fit" />
                                 </div>
                             </div>
                         </div>
@@ -367,7 +368,7 @@ const HomeView = () => {
                                     <div className="nk-blog-post">
                                         <div className="nk-post-thumb">
                                             <a href="blog-single.html">
-                                                <img src="assets/images/post-1-mid.jpg" alt="" className="nk-img-stretch" />
+                                                <img src={require('../assets/images/post-1-mid.jpg')} alt="" className="nk-img-stretch" />
                                             </a>
                                             <div className="nk-post-category"><a href="#">Nature</a></div>
                                         </div>
@@ -387,7 +388,7 @@ const HomeView = () => {
                                     <div className="nk-blog-post">
                                         <div className="nk-post-thumb">
                                             <a href="blog-single.html">
-                                                <img src="assets/images/post-3-mid.jpg" alt="" className="nk-img-stretch" />
+                                                <img src={require('../assets/images/post-3-mid.jpg')} alt="" className="nk-img-stretch" />
                                             </a>
                                             <div className="nk-post-category"><a href="#">Nature</a></div>
                                         </div>
@@ -407,7 +408,7 @@ const HomeView = () => {
                                     <div className="nk-blog-post">
                                         <div className="nk-post-thumb">
                                             <a href="blog-single.html">
-                                                <img src="assets/images/post-4-mid.jpg" alt="" className="nk-img-stretch" />
+                                                <img src={require('../assets/images/post-4-mid.jpg')} alt="" className="nk-img-stretch" />
                                             </a>
                                             <div className="nk-post-category"><a href="#">Branding</a></div>
                                         </div>
@@ -427,7 +428,7 @@ const HomeView = () => {
                                     <div className="nk-blog-post">
                                         <div className="nk-post-thumb">
                                             <a href="blog-single.html">
-                                                <img src="assets/images/post-5-mid.jpg" alt="" className="nk-img-stretch" />
+                                                <img src={require('../assets/images/post-5-mid.jpg')} alt="" className="nk-img-stretch" />
                                             </a>
                                             <div className="nk-post-category"><a href="#">Design</a></div>
                                         </div>
@@ -447,7 +448,7 @@ const HomeView = () => {
                                     <div className="nk-blog-post">
                                         <div className="nk-post-thumb">
                                             <a href="blog-single.html">
-                                                <img src="assets/images/post-6-mid.jpg" alt="" className="nk-img-stretch" />
+                                                <img src={require('../assets/images/post-6-mid.jpg')} alt="" className="nk-img-stretch" />
                                             </a>
                                             <div className="nk-post-category"><a href="#">Design</a></div>
                                         </div>
@@ -461,7 +462,7 @@ const HomeView = () => {
                                 <div className="nk-gap-1"></div>
                             </div>
                         </div>
-                    </div>
+                    </div>                
                 </div>
             </div>
             <div className="nk-gap-5 mt-20"></div>
