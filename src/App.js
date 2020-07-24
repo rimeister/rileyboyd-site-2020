@@ -13,6 +13,7 @@ import Layout from './components/Layout';
 
 import HomeView from './views/home-view';
 import PortfolioView from './views/portfolio-view';
+import CvView from './views/cv-view';
 
 function App() {
   return (
@@ -30,8 +31,14 @@ function App() {
 
       <Route
         exact
-        path="/"
+        path="/portfolio"
         component={ PortfolioView }
+      />
+
+      <Route
+        exact
+        path="/cv"
+        component={ CvView }
       />
 
     </Switch>
