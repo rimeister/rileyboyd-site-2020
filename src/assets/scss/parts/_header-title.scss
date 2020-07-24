@@ -8,28 +8,44 @@
 
     .wave {
 
-        background: url(../../images/wave.svg) repeat-x; 
+        background: url(/static/media/wave.16013133.svg) repeat-x;
         position: absolute;
-        bottom: 0;
-        width: 6400px;
+        bottom: -15%;
+        width: 12800px;
         height: 518px;
-        animation: wave 12s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+        animation: wave1 110s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
         transform: translate3d(0, 0, 0);
+        opacity: 0.8;
         
         &:nth-child(2) {
-
+            width: 12800px;
+            height: 518px;
+            top: -15%;
+            bottom: auto;
+            animation: wave2 100s cubic-bezier(0.3, 0.42, 0.7, 0.5) infinite;
+          -webkit-transform: scaleX(-1) rotate(180deg) translate(-3000px,0);
+          transform: scaleX(-1) rotate(180deg);
         }
 
     }
 
-        @keyframes wave {
-          0% {
-            margin-left: 0;
-          }
-          100% {
-            margin-left: -3200px;
-          }
-        }
+    @keyframes wave1 {
+      0% {
+        margin-left: 0;
+      }
+      100% {
+        margin-left: -6400px;
+      }
+    }
+
+    @keyframes wave2 {
+      0% {
+        margin-left: 0;
+      }
+      100% {
+        margin-left: -6400px;
+      }
+    }    
         /*
         @keyframes swell {
           0%, 100% {

@@ -7,6 +7,7 @@ const HomeView = () => {
 		<>
         <div className="rb-header-title rb-header-title-full rb-header-title-parallax-opacity">
             <div className="wave" />
+            <div className="wave" />
             <div className="rb-header-table">
                 <div className="rb-header-table-cell">
                     <div className="container">
