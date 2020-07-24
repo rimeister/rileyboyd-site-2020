@@ -12,6 +12,7 @@ import {
 import Layout from './components/Layout';
 
 import HomeView from './views/home-view';
+import PortfolioView from './views/portfolio-view';
 
 function App() {
   return (
@@ -25,6 +26,12 @@ function App() {
         exact
         path="/"
         component={ HomeView }
+      />
+
+      <Route
+        exact
+        path="/"
+        component={ PortfolioView }
       />
 
     </Switch>

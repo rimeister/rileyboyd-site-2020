@@ -30,9 +30,9 @@ const HomeView = () => {
                 <div className="row">
                     <div className="col-lg-8 offset-lg-2 text-center">
                         <div className="rb-gap-4 mt-9"></div>
-                        <h2 className="display-4">About Our Agency</h2>
+                        <h2 className="display-4">About Me Section</h2>
                         <div className="rb-gap mnt-5"></div>
-                        <p>We are a new design studio based in USA. We have over 20 years of combined experience, and know a thing or two about designing websites and mobile apps. Clever use of technology and lean processes enable us to work faster and smarter. </p>
+                        <p>I'm a front-end web specilist with nine years of professional experience.</p>
                         <img src={require('../assets/images/about-me-signature.png')} alt="" className="rb-img-fit" />
                         <div className="rb-gap-4 mt-25"></div>
                     </div>
