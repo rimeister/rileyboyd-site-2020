@@ -9,18 +9,16 @@
 
     .wave {
 
-
-        background: url('/static/media/wave.svg') repeat-x;
+        background: url('/wave.svg') repeat-x;
         width: 400%;
         padding-top: 16%;
         position: absolute;
         bottom: 0;
         // height: 518px;
         animation: wave1 20s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-        transform: translate3d(0, 0, 0);
         opacity: 0.8;
         z-index: -1;
-        
+
         &:nth-child(2) {
             display:none;
             
@@ -64,10 +62,10 @@
 */
     @keyframes wave1 {
       0% {
-        margin-left: 0;
+        transform: translate(0%)
       }
       100% {
-        margin-left: -200%;
+        transform: translate(-50%);
       }
     }
 
