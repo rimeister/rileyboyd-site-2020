@@ -6,18 +6,24 @@
     text-align: center;
     z-index: 0;
 
+
     .wave {
 
-        background: url(/static/media/wave.16013133.svg) repeat-x;
+
+        background: url('/static/media/wave.svg') repeat-x;
+        width: 400%;
+        padding-top: 16%;
         position: absolute;
-        bottom: -15%;
-        width: 12800px;
-        height: 518px;
-        animation: wave1 110s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+        bottom: 0;
+        // height: 518px;
+        animation: wave1 20s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
         transform: translate3d(0, 0, 0);
         opacity: 0.8;
+        z-index: -1;
         
         &:nth-child(2) {
+            display:none;
+            
             width: 12800px;
             height: 518px;
             top: -15%;
@@ -25,16 +31,43 @@
             animation: wave2 100s cubic-bezier(0.3, 0.42, 0.7, 0.5) infinite;
           -webkit-transform: scaleX(-1) rotate(180deg) translate(-3000px,0);
           transform: scaleX(-1) rotate(180deg);
+          
         }
 
     }
 
+/*
+    @media only screen and (min-width: 768px) {
+
+        .wave {
+
+            background: url(/static/media/wave.16013133.svg) repeat-x;
+            position: absolute;
+            bottom: -15%;
+            width: 12800px;
+            height: 518px;
+            animation: wave1 110s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+            transform: translate3d(0, 0, 0);
+            opacity: 0.8;
+            z-index: -1;
+            
+            &:nth-child(2) {
+
+            }
+        }
+
+    }
+
+    @media only screen and (min-width: 992px) {
+        
+    }
+*/
     @keyframes wave1 {
       0% {
         margin-left: 0;
       }
       100% {
-        margin-left: -6400px;
+        margin-left: -200%;
       }
     }
 
