@@ -11,8 +11,7 @@ const HomeView = () => {
             <div className="rb-header-table">
                 <div className="rb-header-table-cell">
                     <div className="container">
-                        <h2 className="rb-subtitle text-white">New Branding Agency</h2>
-                        <h1 className="rb-title display-3 text-white">We are about to change the way <br/> <em className="fw-400">you publish on the web</em></h1>
+                        <h1 className="rb-title display-3 text-white">Hello, I'm Riley Boyd. <br/> <em className="fw-400">I'm a web developer and designer.</em></h1>
                         <div className="rb-gap"></div>
                         <div className="rb-header-text text-white">
                             <div className="rb-gap-4"></div>
