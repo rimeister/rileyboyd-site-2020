@@ -1,5 +1,5 @@
 .rb-header-title {
-    background: $color_bg;    
+    background: #e31b6d;    
     position: relative;
     display: block;
     overflow: hidden;
@@ -10,51 +10,35 @@
     .wave {
 
         background: url('/wave.svg') repeat-x;
-        width: 11520px;
-        height: 466px;
+        width: 23040px;
+        height: 932px;
         // padding-top: 18%;
         position: absolute;
-        bottom: -15%;
+        bottom: -75%;
         // height: 518px;
-        animation: wave 16s cubic-bezier(0.3, 0.42, 0.7, 0.5) infinite;
-        // animation-timing-function: linear;
-        opacity: 0.8;
+        animation: wave 170s infinite;
+        animation-timing-function: linear;
+        opacity: 0.2;
         transform-origin: 50% 0%;        
         z-index: -1;
 
         &:nth-child(2) {
-            display:none;
-            
-            // width: 12800px;
-            // height: 518px;
-            top: -0%;
+            // display:none;
+            right: 0;
+            top: 20%;
             bottom: auto;
-            animation: wave2 20s cubic-bezier(0.3, 0.42, 0.7, 0.5) infinite;
-          -webkit-transform: scaleX(-1) rotate(180deg) translate(-3000px,0);
-          // transform: scaleX(-1) rotate(180deg);
+            animation: wave2 170s infinite;
+            // animation: wave2 31s cubic-bezier(0.3, 0.42, 0.7, 0.5) infinite;
           
         }
 
     }
 
-/*
+
     @media only screen and (min-width: 768px) {
 
         .wave {
-
-            background: url(/static/media/wave.16013133.svg) repeat-x;
-            position: absolute;
-            bottom: -15%;
-            width: 12800px;
-            height: 518px;
-            animation: wave1 110s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-            transform: translate3d(0, 0, 0);
-            opacity: 0.8;
-            z-index: -1;
-            
-            &:nth-child(2) {
-
-            }
+            bottom: -70%;
         }
 
     }
@@ -62,7 +46,8 @@
     @media only screen and (min-width: 992px) {
         
     }
-*/
+
+    
     @keyframes wave {
       0% {
         transform: translate(0%) rotate(0deg);
@@ -74,16 +59,21 @@
         transform: translate(-50%) rotate(0deg);
       }
     }
-/*
+
+
     @keyframes wave2 {
       0% {
-        transform: translate(-1000px) rotate(180deg);
+        transform: translate(20%) rotate(180deg);
+      }
+      50% {
+        transform: translate(45%) rotate(180deg);
       }
       100% {
-        transform: translate(-6760px) rotate(180deg);
+        transform: translate(70%) rotate(180deg);
       }
+
     }    
-    */
+    
         /*
         @keyframes swell {
           0%, 100% {
