@@ -1,7 +1,16 @@
 import React from 'react';
+import {useHistory} from 'react-router-dom';
 // import aboutMeSignatureImg from '../assets/images/about-me-signature.png';
 
+import Button from '../components/Button';
+
 const HomeView = () => {
+    
+    const history = useHistory();
+
+    const btnHandler = () => {
+        history.push('/portfolio');
+    }
 
 	return(
 		<>
@@ -12,6 +21,7 @@ const HomeView = () => {
                 <div className="rb-header-table-cell">
                     <div className="container">
                         <h1 className="rb-title display-3 text-white">Hello, I'm Riley Boyd. <br/> <em className="fw-400">I'm a web developer and designer.</em></h1>
+                        <Button text="View My Work" onClick={btnHandler} className="mt-15" />
                         <div className="rb-gap"></div>
                         <div className="rb-header-text text-white">
                             <div className="rb-gap-4"></div>
