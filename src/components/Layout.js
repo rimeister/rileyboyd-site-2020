@@ -9,7 +9,6 @@ const Layout = (props) => (
 	<Header />
     <div className="wrapper">
 		<Header />
-		<Nav />		
 		<div className="rb-main">
 			{props.children}
 		</div>

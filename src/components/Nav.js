@@ -1,50 +1,71 @@
 import React from 'react';
-const Layout = () => (
-    <nav className="rb-navbar rb-navbar-full rb-navbar-align-center" id="rb-nav-mobile">
-        <div className="rb-navbar-bg">
-            <div className="bg-image" style={{backgroundImage: "url('assets/images/bg-menu.jpg')"}}></div>
-        </div>
-        <div className="rb-nav-table">
-            <div className="rb-nav-row">
-                <div className="container">
-                    <div className="rb-nav-header">
-                        <div className="rb-nav-logo">
-                            <a href="index.html" className="rb-nav-logo">
-                                <img src="assets/images/logo-light.svg" alt="" width="85" />
-                            </a>
-                        </div>
-                        <div className="rb-nav-close rb-navbar-full-toggle">
-                            <span className="rb-icon-close"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="rb-nav-row-full rb-nav-row">
-                <div className="nano">
-                    <div className="nano-content">
-                        <div className="rb-nav-table">
-                            <div className="rb-nav-row rb-nav-row-full rb-nav-row-center rb-navbar-mobile-content">
-                                <ul className="rb-nav">
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="rb-nav-row">
-                <div className="container">
-                    <div className="rb-nav-social">
-                        <ul>
-                            <li><a href="https://twitter.com/nkdevv"><i className="fa fa-twitter"></i></a></li>
-                            <li><a href="https://www.facebook.com/unvabdesign/"><i className="fa fa-facebook"></i></a></li>
-                            <li><a href="https://dribbble.com/_nK"><i className="fa fa-dribbble"></i></a></li>
-                            <li><a href="https://www.instagram.com/unvab/"><i className="fa fa-instagram"></i></a></li>
+import {Link} from 'react-router-dom';
+
+const Nav = () => (
+    <nav className="rb-navbar rb-navbar-top rb-navbar-sticky rb-navbar-autohide rb-navbar-transparent rb-navbar-white-text-on-top">
+        <div className="container">
+            <div className="rb-nav-table">
+                <Link to="/" className="rb-nav-logo">
+                    <img src="assets/images/logo-light.svg" alt="" width="85" className="rb-nav-logo-onscroll" />
+                    <img src="assets/images/logo.svg" alt="" width="85" />
+                </Link>
+                <ul className="rb-nav rb-nav-right d-none d-lg-block" data-nav-mobile="#rb-nav-mobile">
+                    <li className="active rb-drop-item">
+                        <Link to="/"> Home </Link>
+                        {/*
+                        // Add this back in when WP sub-menus/child menus are set up
+                        <ul className="dropdown">
+                            <li>
+                                <Link to="portfolio"> Home Default </Link>
+                            </li>
+                            <li>
+                                <Link to="portfolio"> Minimal Portfolio </Link>
+                            </li>
+                            <li>
+                                <Link to="portfolio"> Slider Home </Link>
+                            </li>
+                            <li>
+                                <Link to="portfolio"> Video Home </Link>
+                            </li>
+                            <li>
+                                <Link to="portfolio"> Freelancer Portfolio </Link>
+                            </li>
+                            <li>
+                                <Link to="portfolio"> Minimal Agency </Link>
+                            </li>
+                            <li className="active">
+                                <Link to="portfolio"> One Page Agency </Link>
+                            </li>
+                            <li>
+                                <Link to="portfolio"> Digital Agency </Link>
+                            </li>
+                            <li>
+                                Link to="portfolio"> Fullscreen Slider </Link>
+                            </li>
                         </ul>
-                    </div>
-                </div>
+                        */}
+                    </li>
+                    <li>
+                        <Link to="/portfolio"> Portfolio </Link>
+                    </li>
+                    <li>
+                        <Link to="/cv"> CV </Link>
+                    </li>
+                </ul>
+                <ul className="rb-nav rb-nav-right rb-nav-icons">
+                    <li className="single-icon d-lg-none">
+                        <a href="#" className="rb-navbar-full-toggle">
+                            <span className="rb-icon-burger">
+                                <span className="rb-t-1"></span>
+                                <span className="rb-t-2"></span>
+                                <span className="rb-t-3"></span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </nav>	
+    </nav>
 );
 
-export default Layout;
+export default Nav;
