@@ -13,7 +13,7 @@ const HomeView = () => {
     }
 
 	return(
-		<>
+		<div className="page-home">
         <div className="rb-header-title rb-header-title-full rb-header-title-parallax-opacity">
             <div className="wave" />
             <div className="wave" />
@@ -50,6 +50,24 @@ const HomeView = () => {
             </div>
         </div>
 
+        {/*}
+        <div className="rb-box bg-dark-1 text-white">
+            <div className="bg-image bg-image-parallax" style={{backgroundImage: "url('assets/images/bg-pattern.jpg')"}}></div>
+            <div className="rb-gap-5 mnt-6"></div>
+            <div className="container">
+
+                <div className="row vertical-gap">
+                    <div className="col-md-6 col-lg-3">
+                        <div className="rb-ibox-1">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        */}
+
+        {/*
         <div className="rb-box bg-dark-1 text-white">
             <div className="bg-image bg-image-parallax" style={{backgroundImage: "url('assets/images/bg-pattern.jpg')"}}></div>
             <div className="rb-gap-5 mnt-6"></div>
@@ -103,8 +121,9 @@ const HomeView = () => {
             </div>
             <div className="rb-gap-5 mnt-6"></div>
         </div>
+        */}
 
-        <div className="rb-box bg-white" id="projects">
+        <div className="rb-box" id="projects">
             <div className="rb-gap-4 mt-5"></div>
             <h2 className="text-center display-4">Best Projects</h2>
             <div className="rb-gap mnt-6"></div>
@@ -249,6 +268,7 @@ const HomeView = () => {
             <div className="rb-gap-4 mt-15"></div>
         </div>
 
+        {/*
         <div className="rb-box bg-dark-1">
             <div className="bg-image bg-image-parallax" style={{backgroundImage: "url('assets/images/bg-pattern.jpg')"}}></div>
             <div className="rb-gap-5 mnt-6"></div>
@@ -288,7 +308,9 @@ const HomeView = () => {
             </div>
             <div className="rb-gap-4 mt-3"></div>
         </div>
+        */}
 
+        {/*}
         <div className="bg-white">
             <div className="container">
                 <div className="rb-carousel-2 rb-carousel-x4 rb-carousel-no-margin rb-carousel-all-visible">
@@ -353,7 +375,8 @@ const HomeView = () => {
                 </div>
             </div>
         </div>
-
+        */}
+        {/*
         <div className="rb-box bg-gray-1" id="blog">
             <div className="rb-gap-4 mt-5"></div>
             <h2 className="text-center display-4">Latest Blog</h2>
@@ -474,6 +497,8 @@ const HomeView = () => {
             </div>
             <div className="rb-gap-5 mt-20"></div>
         </div>
+        */}
+        {/*
         <div className="container" id="contact">
             <div className="rb-gap-5"></div>
             <div className="row vertical-gap">
@@ -511,7 +536,8 @@ const HomeView = () => {
             </div>
             <div className="rb-gap-5"></div>
         </div>
-        </>
+        */}
+        </div>
 	);
 }
 

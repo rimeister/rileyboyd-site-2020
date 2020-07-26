@@ -11,8 +11,8 @@ const Footer = () => (
                 <div className="row vertical-gap">
                     <div className="col-lg-4">
                         <div className="rb-widget">
-                            <h4 className="rb-widget-title text-white">About Us</h4>
-                            <p className="rb-heading-font"> Aenean mattis augue in arcu tempor bibendum. Nam euismod facilisis magna, quis pharetra turpis molestie eu. Integer feugiat arcu sit amet leo ullamcorper feugiat efficitur. </p>
+                            <h4 className="rb-widget-title text-white">About Me</h4>
+                            <p className="rb-heading-font">My name's Riley Boyd, I'm a web designer and developer with nine years of professional experience. I have an M.A. in Humanities Computing, and an Hons. B.A. in Multimedia and Fine&nbsp;Art. I live in Toronto, Ontario,&nbsp;Canada.</p>
                             <div className="rb-footer-social text-white">
                                 <ul>
                                     <li><a href="https://twitter.com/nkdevv"><i className="fa fa-twitter"></i></a></li>
@@ -41,7 +41,7 @@ const Footer = () => (
         <div className="rb-footer-cont rb-footer-cont-sm">
             <div className="container text-center">
                 <div className="rb-footer-text text-white">
-                    <p>2019 &copy; Design by Unvab. Code by nK</p>
+                    <p>&copy;2020 Riley Boyd</p>
                 </div>
             </div>
         </div>
