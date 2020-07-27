@@ -167,7 +167,7 @@ const PortfolioView = () => {
               </div>
 
           </div>
-          <div class="rb-gap-4"></div>
+          <div className="rb-gap-4"></div>
 
         </div>
 

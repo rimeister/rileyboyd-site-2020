@@ -6,7 +6,6 @@ import {
   Switch,
   Link,
   useHistory,
-  useLocation,
 } from 'react-router-dom';
 
 import Layout from './components/Layout';

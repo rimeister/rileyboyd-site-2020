@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
 
-const Nav = ({sticky}) => {
+const Nav = (props) => {
 
  const [isSticky, setSticky] = useState(false);
   const stickyRef = useRef(null)
@@ -10,8 +10,6 @@ const Nav = ({sticky}) => {
 
         if (stickyRef.current) {
     
-            console.log(stickyRef);
-
             window.pageYOffset > stickyRef.current.getBoundingClientRect().bottom
             ? setSticky(true)
             : setSticky(false);
@@ -59,7 +57,7 @@ const Nav = ({sticky}) => {
     }, [debounce, handleScroll]);
 
     return(
-    <nav ref={stickyRef} className={`rb-navbar rb-navbar-top rb-navbar-autohide rb-navbar-transparent rb-navbar-white-text-on-top rb-onscroll-show ${isSticky ? 'rb-navbar-solid rb-navbar-fixed' : ''}`}>
+    <nav ref={stickyRef} className={`rb-navbar rb-navbar-top ${props.sticky ? 'rb-navbar-autohide rb-navbar-transparent rb-navbar-white-text-on-top rb-onscroll-show' : ''} ${(props.sticky && isSticky) ? 'rb-navbar-solid rb-navbar-fixed' : ''}`}>
         <div className="container">
             <div className="rb-nav-table">
                 <Link to="/" className="rb-nav-logo">
