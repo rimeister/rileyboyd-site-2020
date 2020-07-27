@@ -1,8 +1,64 @@
-import React from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
 
-const Nav = () => (
-    <nav className="rb-navbar rb-navbar-top rb-navbar-sticky rb-navbar-autohide rb-navbar-transparent rb-navbar-white-text-on-top">
+const Nav = ({sticky}) => {
+
+ const [isSticky, setSticky] = useState(false);
+  const stickyRef = useRef(null)
+
+    const handleScroll = () => {
+
+        console.log(stickyRef);
+
+        if (stickyRef.current) {
+            window.pageYOffset > stickyRef.current.getBoundingClientRect().bottom
+            ? setSticky(true)
+            : setSticky(false);
+        }
+    };
+
+    /*
+    // This function handle the scroll performance issue
+    const debounce = (func, wait = 20, immediate = true) => {
+      let timeOut;
+      return () => {
+       
+        let context = this,
+          args = arguments;
+        const later = () => {
+          timeOut = null;
+          if (!immediate) func.apply(context, args);
+        };
+        const callNow = immediate && !timeOut;
+        clearTimeout(timeOut);
+        timeOut = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      };
+    };*/
+
+    const debounce = (func,wait = 20, immediate = true) => {
+
+        let timeout;
+
+        return function() {
+            let context = this;
+            let args = arguments;
+            clearTimeout(timeout);
+            timeout = setTimeout(function(){
+                func.apply(context,args);
+            },wait);
+        }
+    }
+      
+    useEffect(() => {
+      window.addEventListener("scroll", debounce(handleScroll))
+      return () => {
+              window.removeEventListener("scroll", () => handleScroll);
+            }  
+    }, [debounce, handleScroll]);
+
+    return(
+    <nav ref={stickyRef} className={'rb-navbar rb-navbar-top rb-navbar-autohide rb-navbar-transparent rb-navbar-white-text-on-top '+sticky ? "navbar navbar-sticky" : "navbar"}>
         <div className="container">
             <div className="rb-nav-table">
                 <Link to="/" className="rb-nav-logo">
@@ -66,6 +122,8 @@ const Nav = () => (
             </div>
         </div>
     </nav>
-);
+    );
+
+}
 
 export default Nav;
