@@ -42,12 +42,6 @@ function App() {
         component={ PortfolioView }
       />
 
-      {/*
-      <Route
-        path="/portfolio"
-        component={ PortfolioView }
-      />*/}
-
       <Route
         path="/portfolio/"
         component={ PortfolioItemView }
