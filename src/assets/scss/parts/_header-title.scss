@@ -166,10 +166,20 @@
     h1.rb-title {
 
         color: #ffffff;
+        font-size: 2.2em;
         line-height: 1.18;
 
         span {
             color: $color_dark_1;
         }
+
+        @media only screen and (min-width: 768px) {
+            font-size: 3.4em;
+        }
+
+        @media only screen and (min-width: 992px) {
+            font-size: 3.6em;
+        }
+
     }
 }

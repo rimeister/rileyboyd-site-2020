@@ -138,8 +138,13 @@
     }
 
     // logo img
-    .rb-nav-logo img {
-        height: auto;
+    .rb-nav-logo {
+        margin-left: 5px;
+
+        img {
+            height: auto;
+        }
+
     }
 
     // right nav with icons

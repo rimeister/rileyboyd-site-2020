@@ -81,8 +81,8 @@ const Nav = (props) => {
         <div className="container">
             <div className="rb-nav-table">
                 <Link to="/" className="rb-nav-logo">
-                    <img src={logoLight} alt="" width="120" className="rb-nav-logo-onscroll" />
-                    <img src={logo} alt="" width="120" />
+                    <img src={logoLight} alt="" width="140" className="rb-nav-logo-onscroll" />
+                    <img src={logo} alt="" width="140" />
                 </Link>
                 <ul className="rb-nav rb-nav-right d-none d-lg-block" data-nav-mobile="#rb-nav-mobile">
                     <li className="active rb-drop-item">
