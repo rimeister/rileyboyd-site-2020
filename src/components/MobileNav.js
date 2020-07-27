@@ -1,9 +1,9 @@
 import React, {useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
 
-import {tween, $wnd} from '../assets/js/parts/_utility';
-
+// import {tween, $wnd} from '../assets/js/parts/_utility';
 import $ from 'jquery';
+import tween from "gsap";
 
 const MobileNav = (props) => {
 
@@ -55,14 +55,17 @@ const MobileNav = (props) => {
             }
 
             // active all togglers
-            // $('.rb-navbar-full-toggle').addClass('active');
+            $('.rb-navbar-full-toggle').addClass('active');
 
             // set top position and animate
-            /*
+
+            console.log($navbarMenuItems);
+            
             tween.set($navbarMenuItems, {
                 opacity: 0,
                 force3D: true,
             });
+            
             tween.set($navbarSocial, {
                 opacity: 0,
                 force3D: true,
@@ -85,14 +88,14 @@ const MobileNav = (props) => {
                 opacity: 1,
                 delay: 0.4,
             });
-            */
+            
             $navbar.addClass('open');
 
             // prevent body scrolling
             // self.bodyOverflow(1);
 
             // trigger event
-            $wnd.trigger('rb-open-full-navbar', [$navbar]);
+            // $wnd.trigger('rb-open-full-navbar', [$navbar]);
         };
 
         const closeFullscreenNavbar = (dontTouchBody) => {
@@ -108,6 +111,7 @@ const MobileNav = (props) => {
             $('.rb-navbar-full-toggle').removeClass('active');
 
             // set top position and animate
+            
             tween.to($navbar, 0.5, {
                 opacity: 0,
                 force3D: true,
@@ -119,12 +123,12 @@ const MobileNav = (props) => {
                     }
                 },
             });
-
+            
             // open navbar block
             $navbar.removeClass('open');
 
             // trigger event
-            $wnd.trigger('rb-close-full-navbar', [$navbar]);
+            // $wnd.trigger('rb-close-full-navbar', [$navbar]);
 
 
         /*
