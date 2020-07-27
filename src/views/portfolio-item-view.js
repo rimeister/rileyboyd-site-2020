@@ -6,15 +6,29 @@ import {
 } from 'react-router-dom';
 
 const PortfolioItemView = ({ match }) => {
+  console.log(match);
     return (
       <div>
         <div className="container">
 
           <h1>PORTFOLIO ITEM</h1>
+          {/*
+          <Route 
+            path={`${match.path}/:name`} 
+            render={( { match } ) => {
+              console.log(match.params.name);
+            return (
+              <div>
+                <h3>{match.params.name}</h3>
+              </div>
+            )
+            }}
+          />
+          */}
           <div className="rb-gap-4"></div>
 
         </div>
-        <Route path={`${match.path}/:topicId`} component={PortfolioItemView}/>
+
       </div>
     );
 }
