@@ -19,7 +19,7 @@ import getPortfolioData from './data/portfolioData';
 function App() {
 
   let portfolioData = getPortfolioData();
-  console.log(portfolioData);
+  // console.log(portfolioData);
 
   return (
     <Router>

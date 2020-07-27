@@ -9,18 +9,20 @@ const Layout = (props) => {
 
 	let [fullscreenMenuIsOpened, setFullscreenMenuIsOpened] = useState(false);
 
-	const menuIconClickHandler = () => {
+	const menuIconClickHandler = (val) => {
 
 		if (fullscreenMenuIsOpened) {
+			console.log('is open');
 			setFullscreenMenuIsOpened(false);
 		} else {
+			console.log('not open');
 			setFullscreenMenuIsOpened(true);
 		}
+
 	}
 
 	return(
 	<>
-	<Header menuIconClickHandler={menuIconClickHandler} />
     <div className="wrapper">
 		<Header menuIconClickHandler={menuIconClickHandler} />
 		<div className="rb-main">

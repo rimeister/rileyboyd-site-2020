@@ -1,8 +1,19 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Link} from 'react-router-dom';
 
 
 const MobileNav = (props) => {
+
+    let showNavbarStyles = {
+        display: 'block',
+        opacity: 1,
+        transform: 'translate3d(0px, 0px, 0px)'
+    }
+
+
+    useEffect(()=>{
+        console.log(props.isOpened);
+    },[props.isOpened]);
 
     // Need to use the prop "isOpened" to show/hide
     const navBarFullScreen = () => {
@@ -113,7 +124,7 @@ const MobileNav = (props) => {
     }
 
     return(
-        <nav className="rb-navbar rb-navbar-full rb-navbar-align-center" id="rb-nav-mobile">
+        <nav className="rb-navbar rb-navbar-full rb-navbar-align-center" id="rb-nav-mobile" style={props.isOpened ? showNavbarStyles : {}}>
             <div className="rb-navbar-bg">
                 <div className="bg-image" style={{backgroundImage: "url('assets/images/bg-menu.jpg')"}}></div>
             </div>

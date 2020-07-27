@@ -26,7 +26,6 @@ const Nav = (props) => {
         event.preventDefault();
 
         if (props.menuIconClickHandler) {
-            props.menuIconClickHandler();
         }
 
     }
