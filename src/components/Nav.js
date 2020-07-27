@@ -59,7 +59,7 @@ const Nav = ({sticky}) => {
     }, [debounce, handleScroll]);
 
     return(
-    <nav ref={stickyRef} className={`rb-navbar rb-navbar-top rb-navbar-autohide rb-navbar-transparent rb-navbar-white-text-on-top ${isSticky ? 'rb-navbar-solid rb-onscroll-hide' : 'rb-onscroll-show'}`}>
+    <nav ref={stickyRef} className={`rb-navbar rb-navbar-top rb-navbar-autohide rb-navbar-transparent rb-navbar-white-text-on-top rb-onscroll-show ${isSticky ? 'rb-navbar-solid rb-navbar-fixed' : ''}`}>
         <div className="container">
             <div className="rb-nav-table">
                 <Link to="/" className="rb-nav-logo">
