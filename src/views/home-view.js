@@ -20,7 +20,7 @@ const HomeView = () => {
                     <div className="rb-header-table">
                        <div className="rb-header-table-cell">
                           <div className="container">
-                             <h1 className="rb-title display-3 text-white">Hello, I'm Riley Boyd. <br/> <em className="fw-400">I'm a web designer and developer.</em></h1>
+                             <h1 className="rb-title display-3">Hello, I'm <span>Riley&nbsp;Boyd</span>.<br/>I'm a web designer and&nbsp;developer.</h1>
                              <Button text="View My Work" onClick={btnHandler} className="mt-15" />
                              <div className="rb-gap"></div>
                              <div className="rb-header-text text-white">
@@ -41,7 +41,7 @@ const HomeView = () => {
                        <div className="row">
                           <div className="col-lg-8 offset-lg-2 text-center">
                              <div className="rb-gap-4 mt-9"></div>
-                             <h2 className="display-4">About</h2>
+                             <h2 className="display-4">About Me</h2>
                              <div className="rb-gap mnt-5"></div>
                              <p>I'm a front-end web specilist with nine years of professional experience.</p>
                              <div className="rb-gap-4 mt-25"></div>
@@ -51,8 +51,9 @@ const HomeView = () => {
                  </div>
                  <div className="rb-box" id="projects">
                     <div className="rb-gap-4 mt-5"></div>
-                    <h2 className="text-center display-4">Work</h2>
+                    <h2 className="text-center display-4">Projects I've Worked On</h2>
                     <div className="rb-gap mnt-6"></div>
+                    {/*
                     <div className="container">
                        <div className="row">
                           <div className="col-lg-8 offset-lg-2">
@@ -60,6 +61,7 @@ const HomeView = () => {
                           </div>
                        </div>
                     </div>
+                    */}
                     <div className="rb-gap-2 mt-12"></div>
                     <div className="container">
                        <div className="rb-portfolio-list rb-isotope rb-isotope-3-cols">

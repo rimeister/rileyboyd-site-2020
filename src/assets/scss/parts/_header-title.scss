@@ -164,6 +164,12 @@
 
     // title
     h1.rb-title {
+
+        color: #ffffff;
         line-height: 1.18;
+
+        span {
+            color: $color_dark_1;
+        }
     }
 }

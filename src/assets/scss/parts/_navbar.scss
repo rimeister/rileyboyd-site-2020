@@ -321,7 +321,8 @@
     }
     &.rb-navbar-white-text-on-top {
         .rb-nav > li > a {
-            color: #bfbfbf;
+            // color: $color_gray_4;
+            color:  $color_dark_3;
         }
         .rb-nav > li > a:hover,
         .rb-nav > li.active > a {
