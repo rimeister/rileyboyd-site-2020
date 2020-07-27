@@ -3,7 +3,7 @@ import Nav from './Nav';
 
  import {useLocation} from 'react-router-dom';
 
-const Header = () => {
+const Header = (props) => {
 	let location = useLocation();
 
 	// If the page is the home page (location == '/'), add sticky nav
@@ -15,9 +15,13 @@ const Header = () => {
 
 	return (
 	    <header className="rb-header">
-	        <Nav sticky={hasStickyNav} />
+	        <Nav sticky={hasStickyNav} menuIconClickHandler={props.menuIconClickHandler} />
 	    </header>
 	);
+}
+
+Header.defaultProps = {
+	menuIconClickHandler: null
 }
 
 export default Header;

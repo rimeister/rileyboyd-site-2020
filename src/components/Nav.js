@@ -1,6 +1,10 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
 
+import {
+    $, tween, $wnd, $doc,
+} from './_utility';
+
 const Nav = (props) => {
 
  const [isSticky, setSticky] = useState(false);
@@ -15,6 +19,17 @@ const Nav = (props) => {
             : setSticky(false);
         }
     };
+
+    const navbarToggleHandler = (event) => {
+
+        event.preventDefault();
+
+        if (props.menuIconClickHandler) {
+            props.menuIconClickHandler();
+        }
+
+    }
+
 
     /*
     // This function handle the scroll performance issue
@@ -109,7 +124,7 @@ const Nav = (props) => {
                 </ul>
                 <ul className="rb-nav rb-nav-right rb-nav-icons">
                     <li className="single-icon d-lg-none">
-                        <a href="#" className="rb-navbar-full-toggle">
+                        <a href="#" className="rb-navbar-full-toggle" onClick={navbarToggleHandler}>
                             <span className="rb-icon-burger">
                                 <span className="rb-t-1"></span>
                                 <span className="rb-t-2"></span>
@@ -123,6 +138,10 @@ const Nav = (props) => {
     </nav>
     );
 
+}
+
+Nav.defaultProps = {
+    menuIconClickHandler: null
 }
 
 export default Nav;
