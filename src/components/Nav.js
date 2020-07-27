@@ -1,5 +1,9 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
+
+import logo from '../assets/images/rb-logo.svg';
+import logoLight from '../assets/images/rb-logo-light.svg';
+
 /*
 import {
     $, tween, $wnd, $doc,
@@ -77,8 +81,8 @@ const Nav = (props) => {
         <div className="container">
             <div className="rb-nav-table">
                 <Link to="/" className="rb-nav-logo">
-                    <img src="assets/images/logo-light.svg" alt="" width="85" className="rb-nav-logo-onscroll" />
-                    <img src="assets/images/logo.svg" alt="" width="85" />
+                    <img src={logoLight} alt="" width="120" className="rb-nav-logo-onscroll" />
+                    <img src={logo} alt="" width="120" />
                 </Link>
                 <ul className="rb-nav rb-nav-right d-none d-lg-block" data-nav-mobile="#rb-nav-mobile">
                     <li className="active rb-drop-item">

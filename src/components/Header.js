@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react';
 import Nav from './Nav';
 
- import {useLocation} from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 
 const Header = (props) => {
 	let location = useLocation();
