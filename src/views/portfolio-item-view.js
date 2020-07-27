@@ -17,6 +17,7 @@ const PortfolioItemView = ({ match }) => {
             render={( { match } ) => {
             return (
               <div>
+                {/* Do conditional page rendering here depending on which page it is */}
                 <h3>{match.params.name}</h3>
               </div>
             )
