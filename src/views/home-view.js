@@ -29,9 +29,11 @@ const HomeView = () => {
                           </div>
                        </div>
                     </div>
+                    {/*
                     <div>
                        <a className="rb-header-title-scroll-down text-white" href="#rb-header-title-scroll-down"><span className="pe-7s-angle-down"></span></a>
                     </div>
+                    */}
                  </div>
                  <div id="rb-header-title-scroll-down"></div>
                  <div className="bg-white" id="about">
