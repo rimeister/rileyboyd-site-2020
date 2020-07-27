@@ -4,7 +4,10 @@ import React from 'react';
 const PortfolioView = () => {
     return (
         <div>
+
+
         {/* START: Carousel */}
+        {/*
         <div className="rb-carousel-3 rb-carousel-no-margin rb-carousel-all-visible" data-size={1} data-autoplay={18000} data-arrows="true">
           <div className="rb-carousel-inner">
             <div>
@@ -24,8 +27,11 @@ const PortfolioView = () => {
             </div>
           </div>
         </div>
+        */}
         {/* END: Carousel */}
         <div className="container">
+
+          <h1>Portfolio</h1>
 
           <div className="rb-portfolio-list rb-isotope rb-isotope-3-cols" style={{position: 'relative', height: '1109.95px'}}>
 

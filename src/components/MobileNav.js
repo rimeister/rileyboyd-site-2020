@@ -23,194 +23,84 @@ const MobileNav = (props) => {
         } 
     }
 
-    // Need to use the prop "isOpened" to show/hide
-
     // Reference: initNavBarFullScreen.js
-    
+    const $navbar = $(navbarFullRef.current);
+    const $navbarSocial = $navbar.find(navSociallRef.current);
+
+    const openFullscreenNavbar = () => {
+
+        let $navbarMenuItems = $navbar.find('.rb-nav .rb-drop-item.open > .dropdown:not(.closed) > li > a');
+        if (!$navbarMenuItems.length) {
+            $navbarMenuItems = $navbar.find('.rb-nav > li > a');
+        }
+
+        // active all togglers
+        $('.rb-navbar-full-toggle').addClass('active');
+
+        // set top position and animate
+
+        console.log($navbarMenuItems);
         
-        // const self = this;
-        const $navbar = $(navbarFullRef.current);
-        const $navbarSocial = $navbar.find(navSociallRef.current);
-
-        // let isOpened;
+        tween.set($navbarMenuItems, {
+            opacity: 0,
+            force3D: true,
+        });
         
-        // self.fullscreenNavbarIsOpened = () => isOpened;
+        tween.set($navbarSocial, {
+            opacity: 0,
+            force3D: true,
+        });
+        tween.to($navbar, 0.5, {
+            opacity: 1,
+            force3D: true,
+            display: 'block',
+            onComplete() {
+                // self.initPluginNano($navbar);
+            },
+        });
+        tween.staggerTo($navbarMenuItems, 0.3, {
+            y: 0,
+            opacity: 1,
+            delay: 0.2,
+        }, 0.05);
+        tween.to($navbarSocial, 0.3, {
+            y: 0,
+            opacity: 1,
+            delay: 0.4,
+        });
+        
+        $navbar.addClass('open');
 
-        /*
-        self.toggleFullscreenNavbar = () => {
-            self[isOpened ? 'closeFullscreenNavbar' : 'openFullscreenNavbar']();
-        };*/
+    };
 
-        const openFullscreenNavbar = () => {
-            /*
-            if (isOpened || !$navbar.length) {
-                return;
-            }
-            isOpened = 1;
-            */
+    const closeFullscreenNavbar = (dontTouchBody) => {
 
-            let $navbarMenuItems = $navbar.find('.rb-nav .rb-drop-item.open > .dropdown:not(.closed) > li > a');
-            if (!$navbarMenuItems.length) {
-                $navbarMenuItems = $navbar.find('.rb-nav > li > a');
-            }
+        // disactive all togglers
+        $('.rb-navbar-full-toggle').removeClass('active');
 
-            // active all togglers
-            $('.rb-navbar-full-toggle').addClass('active');
+        // set top position and animate
+        
+        tween.to($navbar, 0.5, {
+            opacity: 0,
+            force3D: true,
+            display: 'none',
+            onComplete() {
+                if (!dontTouchBody) {
+                    // restore body scrolling
+                    // self.bodyOverflow(0);
+                }
+            },
+        });
+        
+        // open navbar block
+        $navbar.removeClass('open');
 
-            // set top position and animate
-
-            console.log($navbarMenuItems);
-            
-            tween.set($navbarMenuItems, {
-                opacity: 0,
-                force3D: true,
-            });
-            
-            tween.set($navbarSocial, {
-                opacity: 0,
-                force3D: true,
-            });
-            tween.to($navbar, 0.5, {
-                opacity: 1,
-                force3D: true,
-                display: 'block',
-                onComplete() {
-                    // self.initPluginNano($navbar);
-                },
-            });
-            tween.staggerTo($navbarMenuItems, 0.3, {
-                y: 0,
-                opacity: 1,
-                delay: 0.2,
-            }, 0.05);
-            tween.to($navbarSocial, 0.3, {
-                y: 0,
-                opacity: 1,
-                delay: 0.4,
-            });
-            
-            $navbar.addClass('open');
-
-            // prevent body scrolling
-            // self.bodyOverflow(1);
-
-            // trigger event
-            // $wnd.trigger('rb-open-full-navbar', [$navbar]);
-        };
-
-        const closeFullscreenNavbar = (dontTouchBody) => {
-
-            /*
-            if (!isOpened || !$navbar.length) {
-                return;
-            }
-            isOpened = 0;
-            */
-
-            // disactive all togglers
-            $('.rb-navbar-full-toggle').removeClass('active');
-
-            // set top position and animate
-            
-            tween.to($navbar, 0.5, {
-                opacity: 0,
-                force3D: true,
-                display: 'none',
-                onComplete() {
-                    if (!dontTouchBody) {
-                        // restore body scrolling
-                        // self.bodyOverflow(0);
-                    }
-                },
-            });
-            
-            // open navbar block
-            $navbar.removeClass('open');
-
-            // trigger event
-            // $wnd.trigger('rb-close-full-navbar', [$navbar]);
+        // trigger event
+        // $wnd.trigger('rb-close-full-navbar', [$navbar]);
 
 
-        /*
-        self.openFullscreenNavbar = () => {
-            if (isOpened || !$navbar.length) {
-                return;
-            }
-            isOpened = 1;
 
-            let $navbarMenuItems = $navbar.find('.rb-nav .rb-drop-item.open > .dropdown:not(.closed) > li > a');
-            if (!$navbarMenuItems.length) {
-                $navbarMenuItems = $navbar.find('.rb-nav > li > a');
-            }
-
-            // active all togglers
-            $('.rb-navbar-full-toggle').addClass('active');
-
-            // set top position and animate
-            tween.set($navbarMenuItems, {
-                opacity: 0,
-                force3D: true,
-            });
-            tween.set($navbarSocial, {
-                opacity: 0,
-                force3D: true,
-            });
-            tween.to($navbar, 0.5, {
-                opacity: 1,
-                force3D: true,
-                display: 'block',
-                onComplete() {
-                    self.initPluginNano($navbar);
-                },
-            });
-            tween.staggerTo($navbarMenuItems, 0.3, {
-                y: 0,
-                opacity: 1,
-                delay: 0.2,
-            }, 0.05);
-            tween.to($navbarSocial, 0.3, {
-                y: 0,
-                opacity: 1,
-                delay: 0.4,
-            });
-
-            $navbar.addClass('open');
-
-            // prevent body scrolling
-            self.bodyOverflow(1);
-
-            // trigger event
-            $wnd.trigger('rb-open-full-navbar', [$navbar]);
-        };
-
-        self.closeFullscreenNavbar = (dontTouchBody) => {
-            if (!isOpened || !$navbar.length) {
-                return;
-            }
-            isOpened = 0;
-
-            // disactive all togglers
-            $('.rb-navbar-full-toggle').removeClass('active');
-
-            // set top position and animate
-            tween.to($navbar, 0.5, {
-                opacity: 0,
-                force3D: true,
-                display: 'none',
-                onComplete() {
-                    if (!dontTouchBody) {
-                        // restore body scrolling
-                        self.bodyOverflow(0);
-                    }
-                },
-            });
-
-            // open navbar block
-            $navbar.removeClass('open');
-
-            // trigger event
-            $wnd.trigger('rb-close-full-navbar', [$navbar]);
-        };
+         /*
 
         $doc.on('click', '.rb-navbar-full-toggle', (e) => {
             self.toggleFullscreenNavbar();
@@ -257,91 +147,31 @@ const MobileNav = (props) => {
                             <div className="rb-nav-table">
                                 <div className="rb-nav-row rb-nav-row-full rb-nav-row-center rb-navbar-mobile-content">
                                      <ul className="rb-nav">
-                                            <li className=" rb-drop-item">
-                                              <a href="home-1.html" style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px)'}}> Home </a>
-                                              <ul className="dropdown">
-                                                <li className="bropdown-back"><a href="#">Back</a></li>
-                                                <li>
-                                                  <a href="home-1.html"> Home Default </a>
-                                                </li>
-                                                <li>
-                                                  <a href="home-2.html"> Minimal Portfolio </a>
-                                                </li>
-                                                <li>
-                                                  <a href="home-3.html"> Slider Home </a>
-                                                </li>
-                                                <li>
-                                                  <a href="home-4.html"> Video Home </a>
-                                                </li>
-                                                <li>
-                                                  <a href="home-5.html"> Freelancer Portfolio </a>
-                                                </li>
-                                                <li>
-                                                  <a href="home-6.html"> Minimal Agency </a>
-                                                </li>
-                                                <li>
-                                                  <a href="home-7.html"> One Page Agency </a>
-                                                </li>
-                                                <li>
-                                                  <a href="home-8.html"> Digital Agency </a>
-                                                </li>
-                                                <li>
-                                                  <a href="home-9.html"> Fullscreen Slider </a>
-                                                </li>
-                                              </ul>
-                                            </li>
-                                            <li className="active rb-drop-item">
-                                              <a href="work-2-style-1.html" style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px)'}}> Work </a>
-                                              <ul className="dropdown">
-                                                <li className="bropdown-back"><a href="#">Back</a></li>
-                                                <li className=" rb-drop-item">
-                                                  <a href="work-2-style-1.html"> 2 Columns </a>
-                                                  <ul className="dropdown">
-                                                    <li className="bropdown-back"><a href="#">Back</a></li>
-                                                    <li>
-                                                      <a href="work-2-style-1.html"> Style 1 </a>
-                                                    </li>
-                                                    <li>
-                                                      <a href="work-2-style-2.html"> Style 2 </a>
-                                                    </li>
-                                                    <li>
-                                                      <a href="work-2-style-3.html"> Style 3 </a>
-                                                    </li>
-                                                    <li>
-                                                      <a href="work-2-style-4.html"> Style 4 </a>
-                                                    </li>
-                                                    <li>
-                                                      <a href="work-2-style-5.html"> Style 5 </a>
-                                                    </li>
-                                                    <li>
-                                                      <a href="work-2-wide.html"> Wide 1 </a>
-                                                    </li>
-                                                    <li>
-                                                      <a href="work-2-wide-2.html"> Wide 2 </a>
-                                                    </li>
-                                                  </ul>
-                                                </li>
-                                              </ul>
-                                            </li>
-                                            <li className=" rb-drop-item">
-                                              <a href="page-about-me.html" style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px)'}}> About </a>
-                                              <ul className="dropdown">
-                                                <li className="bropdown-back"><a href="#">Back</a></li>
-                                                <li>
-                                                  <a href="page-about-me.html"> About Me </a>
-                                                </li>
-                                                <li>
-                                                  <a href="page-about-us.html"> About Us </a>
-                                                </li>
-                                                <li>
-                                                  <a href="page-services.html"> Services </a>
-                                                </li>
-                                              </ul>
+                                        <li>
+                                          <Link to="/"> Home </Link>
+                                        </li>
+                                        <li>
+                                          <Link to="/portfolio/"> Portfolio </Link>
+                                        </li>
+                                        {/*
+                                        <li className=" rb-drop-item">
+                                          <a href="page-about-me.html"> About </a>
+                                          <ul className="dropdown">
+                                            <li className="bropdown-back"><a href="#">Back</a></li>
+                                            <li>
+                                              <a href="page-about-me.html"> About Me </a>
                                             </li>
                                             <li>
-                                              <a href="page-contact-us.html" style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px)'}}> Contact </a>
+                                              <a href="page-about-us.html"> About Us </a>
+                                            </li>
+                                            <li>
+                                              <a href="page-services.html"> Services </a>
                                             </li>
                                           </ul>
+                                        </li>
+                                          */}
+
+                                        </ul>
                                 </div>
                             </div>
                         </div>

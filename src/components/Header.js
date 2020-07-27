@@ -14,7 +14,7 @@ const Header = (props) => {
 	},[location.pathname]);
 
 	return (
-	    <header className="rb-header">
+	    <header className={`rb-header ${hasStickyNav ? 'rb-header-over':''}`}>
 	        <Nav sticky={hasStickyNav} menuIconClickHandler={props.menuIconClickHandler} />
 	    </header>
 	);
