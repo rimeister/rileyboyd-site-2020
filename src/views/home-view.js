@@ -67,7 +67,7 @@ const HomeView = () => {
                                 <div className="rb-portfolio-item rb-portfolio-item-square rb-portfolio-item-info-style-1">
                                     <a href="http://google.com" className="rb-portfolio-item-link"></a>
                                     <div className="rb-portfolio-item-image">
-                                        <div style={{ backgroundImage: `url(${require("../assets/images/portfolio-7-sm.jpg")})` }} />
+                                        <div style={{ backgroundImage: `url(${require("../assets/images/portfolio/portfolio-trending-sloth-sm.jpg")})` }} />
                                     </div>
                                     <div className="rb-portfolio-item-info rb-portfolio-item-info-center text-center">
                                         <div>
@@ -82,7 +82,7 @@ const HomeView = () => {
                                 <div className="rb-portfolio-item rb-portfolio-item-square rb-portfolio-item-info-style-1">
                                     <a href="http://google.com" className="rb-portfolio-item-link"></a>
                                     <div className="rb-portfolio-item-image">
-                                        <div style={{ backgroundImage: `url(${require("../assets/images/portfolio-7-sm.jpg")})` }} />
+                                        <div style={{ backgroundImage: `url(${require("../assets/images/portfolio/portfolio-cheestrings-sm.jpg")})` }} />
                                     </div>
                                     <div className="rb-portfolio-item-info rb-portfolio-item-info-center text-center">
                                         <div>
@@ -97,7 +97,7 @@ const HomeView = () => {
                                 <div className="rb-portfolio-item rb-portfolio-item-square rb-portfolio-item-info-style-1">
                                     <a href="http://google.com" className="rb-portfolio-item-link"></a>
                                     <div className="rb-portfolio-item-image">
-                                        <div style={{ backgroundImage: `url(${require("../assets/images/portfolio-7-sm.jpg")})` }} />
+                                        <div style={{ backgroundImage: `url(${require("../assets/images/portfolio/portfolio-communa-sm.jpg")})` }} />
                                     </div>
                                     <div className="rb-portfolio-item-info rb-portfolio-item-info-center text-center">
                                         <div>
@@ -112,7 +112,7 @@ const HomeView = () => {
                                 <div className="rb-portfolio-item rb-portfolio-item-square rb-portfolio-item-info-style-1">
                                     <a href="http://google.com" className="rb-portfolio-item-link"></a>
                                     <div className="rb-portfolio-item-image">
-                                        <div style={{ backgroundImage: `url(${require("../assets/images/portfolio-7-sm.jpg")})` }} />
+                                        <div style={{ backgroundImage: `url(${require("../assets/images/portfolio/portfolio-sony-rewards-sm.jpg")})` }} />
                                     </div>
                                     <div className="rb-portfolio-item-info rb-portfolio-item-info-center text-center">
                                         <div>
@@ -127,7 +127,7 @@ const HomeView = () => {
                                 <div className="rb-portfolio-item rb-portfolio-item-square rb-portfolio-item-info-style-1">
                                     <a href="http://google.com" className="rb-portfolio-item-link"></a>
                                     <div className="rb-portfolio-item-image">
-                                        <div style={{ backgroundImage: `url(${require("../assets/images/portfolio-7-sm.jpg")})` }} />
+                                        <div style={{ backgroundImage: `url(${require("../assets/images/portfolio/portfolio-nestle-sm.jpg")})` }} />
                                     </div>
                                     <div className="rb-portfolio-item-info rb-portfolio-item-info-center text-center">
                                         <div>
@@ -143,7 +143,7 @@ const HomeView = () => {
                                 <div className="rb-portfolio-item rb-portfolio-item-square rb-portfolio-item-info-style-1">
                                     <a href="http://google.com" className="rb-portfolio-item-link"></a>
                                     <div className="rb-portfolio-item-image">
-                                        <div style={{ backgroundImage: `url(${require("../assets/images/portfolio-7-sm.jpg")})` }} />
+                                        <div style={{ backgroundImage: `url(${require("../assets/images/portfolio/portfolio-gmc-sierra-sm.jpg")})` }} />
                                     </div>
                                     <div className="rb-portfolio-item-info rb-portfolio-item-info-center text-center">
                                         <div>
@@ -158,7 +158,7 @@ const HomeView = () => {
                                 <div className="rb-portfolio-item rb-portfolio-item-square rb-portfolio-item-info-style-1">
                                     <a href="http://google.com" className="rb-portfolio-item-link"></a>
                                     <div className="rb-portfolio-item-image">
-                                        <div style={{ backgroundImage: `url(${require("../assets/images/portfolio-7-sm.jpg")})` }} />
+                                        <div style={{ backgroundImage: `url(${require("../assets/images/portfolio/portfolio-brintellix-sm.jpg")})` }} />
                                     </div>
                                     <div className="rb-portfolio-item-info rb-portfolio-item-info-center text-center">
                                         <div>
@@ -173,7 +173,7 @@ const HomeView = () => {
                                 <div className="rb-portfolio-item rb-portfolio-item-square rb-portfolio-item-info-style-1">
                                     <a href="http://google.com" className="rb-portfolio-item-link"></a>
                                     <div className="rb-portfolio-item-image">
-                                        <div style={{ backgroundImage: `url(${require("../assets/images/portfolio-7-sm.jpg")})` }} />
+                                        <div style={{ backgroundImage: `url(${require("../assets/images/portfolio/portfolio-spark-change-sm.jpg")})` }} />
                                     </div>
                                     <div className="rb-portfolio-item-info rb-portfolio-item-info-center text-center">
                                         <div>
@@ -188,7 +188,7 @@ const HomeView = () => {
                                 <div className="rb-portfolio-item rb-portfolio-item-square rb-portfolio-item-info-style-1">
                                     <a href="http://google.com" className="rb-portfolio-item-link"></a>
                                     <div className="rb-portfolio-item-image">
-                                        <div style={{ backgroundImage: `url(${require("../assets/images/portfolio-7-sm.jpg")})` }} />
+                                        <div style={{ backgroundImage: `url(${require("../assets/images/portfolio/portfolio-astellas-perp-sm.jpg")})` }} />
                                     </div>
                                     <div className="rb-portfolio-item-info rb-portfolio-item-info-center text-center">
                                         <div>
