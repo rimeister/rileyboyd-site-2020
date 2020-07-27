@@ -11,13 +11,7 @@ const Layout = (props) => {
 
 	const menuIconClickHandler = (val) => {
 
-		if (fullscreenMenuIsOpened) {
-			console.log('is open');
-			setFullscreenMenuIsOpened(false);
-		} else {
-			console.log('not open');
-			setFullscreenMenuIsOpened(true);
-		}
+		setFullscreenMenuIsOpened(true);
 
 	}
 
