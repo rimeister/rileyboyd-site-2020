@@ -20,7 +20,7 @@ const HomeView = () => {
                     <div className="rb-header-table">
                        <div className="rb-header-table-cell">
                           <div className="container">
-                             <h1 className="rb-title display-3 text-white">Hello, I'm Riley Boyd. <br/> <em className="fw-400">I'm a web developer and designer.</em></h1>
+                             <h1 className="rb-title display-3 text-white">Hello, I'm Riley Boyd. <br/> <em className="fw-400">I'm a web designer and developer.</em></h1>
                              <Button text="View My Work" onClick={btnHandler} className="mt-15" />
                              <div className="rb-gap"></div>
                              <div className="rb-header-text text-white">

@@ -14,7 +14,7 @@ const options = {
         plainVideoIcon: '<span class="rb-video-icon"><span><span class="rb-play-icon"></span></span></span>',
         plainVideoLoadIcon: '<span class="rb-loading-spinner"><i></i></span>',
         fullscreenVideoClose: '<span class="rb-icon-close"></span>',
-
+        
         instagram:
             `<div class="col-3">
                 <a href="{{link}}" target="_blank">

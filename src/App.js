@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -15,7 +15,23 @@ import HomeView from './views/home-view';
 import PortfolioView from './views/portfolio-view';
 import CvView from './views/cv-view';
 
+
+import { options } from './assets/js/parts/_options';
+
+
+// import SNOW from './assets/js/snow';
+
 function App() {
+
+  useEffect(()=>{
+
+    if (typeof window.Snow !== 'undefined') {
+        window.Snow.setOptions(options);
+        window.Snow.init();
+    }
+
+  });
+
   return (
     <Router>
 
