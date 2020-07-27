@@ -60,7 +60,7 @@ const HomeView = () => {
                     </div>
                     <div className="rb-gap-2 mt-12"></div>
                     <div className="container">
-                       <div className="rb-portfolio-list rb-isotope rb-isotope-3-cols" style={{position: 'relative', height: '1109.95px'}}>
+                       <div className="rb-portfolio-list rb-isotope rb-isotope-3-cols">
 
 
                             <div className="rb-isotope-item" data-filter="Design">
