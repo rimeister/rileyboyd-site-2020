@@ -14,6 +14,8 @@ import HomeView from './views/home-view';
 import PortfolioView from './views/portfolio-view';
 import CvView from './views/cv-view';
 
+// import portfolioData from './data/portfolioData';
+
 function App() {
 
   return (

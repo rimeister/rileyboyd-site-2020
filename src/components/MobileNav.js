@@ -122,7 +122,7 @@ const MobileNav = (props) => {
                     <div className="container">
                         <div className="rb-nav-header">
                             <div className="rb-nav-logo">
-                                <Link href="index.html" className="rb-nav-logo">
+                                <Link to="/" className="rb-nav-logo">
                                     <img src="assets/images/logo-light.svg" alt="" width="85" />
                                 </Link>
                             </div>
@@ -148,8 +148,8 @@ const MobileNav = (props) => {
                     <div className="container">
                         <div className="rb-nav-social">
                             <ul>
-                                <li><Link href="https://twitter.com/riley_boyd"><i className="fa fa-twitter"></i></Link></li>
-                                <li><Link href="https://www.facebook.com/rileyboydstudios/"><i className="fa fa-facebook"></i></Link></li>
+                                <li><a href="https://twitter.com/riley_boyd"><i className="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.facebook.com/rileyboydstudios/"><i className="fa fa-facebook"></i></a></li>
                             </ul>
                         </div>
                     </div>
