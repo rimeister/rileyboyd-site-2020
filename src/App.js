@@ -43,7 +43,7 @@ function App() {
       />
 
       <Route
-        path="/portfolio/:name"
+        path="/portfolio"
         component={ PortfolioItemView }
       />
 

@@ -12,11 +12,9 @@ const PortfolioItemView = ({ match }) => {
         <div className="container">
 
           <h1>PORTFOLIO ITEM</h1>
-          {/*
           <Route 
             path={`${match.path}/:name`} 
             render={( { match } ) => {
-              console.log(match.params.name);
             return (
               <div>
                 <h3>{match.params.name}</h3>
@@ -24,7 +22,6 @@ const PortfolioItemView = ({ match }) => {
             )
             }}
           />
-          */}
           <div className="rb-gap-4"></div>
 
         </div>
