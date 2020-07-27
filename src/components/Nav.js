@@ -103,9 +103,11 @@ const Nav = (props) => {
                     <li>
                         <Link to="/portfolio"> Portfolio </Link>
                     </li>
+                    {/*
                     <li>
                         <Link to="/cv"> CV </Link>
                     </li>
+                    */}
                 </ul>
                 <ul className="rb-nav rb-nav-right rb-nav-icons">
                     <li className="single-icon d-lg-none">
