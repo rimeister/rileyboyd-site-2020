@@ -1,7 +1,9 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
 
-import {tween} from '../assets/js/parts/_utility';
+import {tween, $wnd} from '../assets/js/parts/_utility';
+
+import $ from 'jquery';
 
 const MobileNav = (props) => {
 
@@ -11,9 +13,8 @@ const MobileNav = (props) => {
         transform: 'translate3d(0px, 0px, 0px)'
     }
 
-    useEffect(()=>{
-        console.log(props.isOpened);
-    },[props.isOpened]);
+    const navbarFullRef = useRef();
+    const navSociallRef = useRef();
 
     const closeBtnHandler = (event) => {
         event.preventDefault();
@@ -27,17 +28,108 @@ const MobileNav = (props) => {
 
     // Reference: initNavBarFullScreen.js
     
+        
+        // const self = this;
+        const $navbar = $(navbarFullRef.current);
+        const $navbarSocial = $navbar.find(navSociallRef.current);
+
+        console.log($navbar);
+        // let isOpened;
+        
+        // self.fullscreenNavbarIsOpened = () => isOpened;
+
         /*
-        const self = this;
-        const $navbar = $('.rb-navbar-full');
-        const $navbarSocial = $navbar.find('.rb-nav-social');
-        let isOpened;
-
-        self.fullscreenNavbarIsOpened = () => isOpened;
-
         self.toggleFullscreenNavbar = () => {
             self[isOpened ? 'closeFullscreenNavbar' : 'openFullscreenNavbar']();
+        };*/
+
+        const openFullscreenNavbar = () => {
+            /*
+            if (isOpened || !$navbar.length) {
+                return;
+            }
+            isOpened = 1;
+            */
+
+            let $navbarMenuItems = $navbar.find('.rb-nav .rb-drop-item.open > .dropdown:not(.closed) > li > a');
+            if (!$navbarMenuItems.length) {
+                $navbarMenuItems = $navbar.find('.rb-nav > li > a');
+            }
+
+            // active all togglers
+            $('.rb-navbar-full-toggle').addClass('active');
+
+            // set top position and animate
+            tween.set($navbarMenuItems, {
+                opacity: 0,
+                force3D: true,
+            });
+            tween.set($navbarSocial, {
+                opacity: 0,
+                force3D: true,
+            });
+            tween.to($navbar, 0.5, {
+                opacity: 1,
+                force3D: true,
+                display: 'block',
+                onComplete() {
+                    // self.initPluginNano($navbar);
+                },
+            });
+            tween.staggerTo($navbarMenuItems, 0.3, {
+                y: 0,
+                opacity: 1,
+                delay: 0.2,
+            }, 0.05);
+            tween.to($navbarSocial, 0.3, {
+                y: 0,
+                opacity: 1,
+                delay: 0.4,
+            });
+
+            $navbar.addClass('open');
+
+            // prevent body scrolling
+            // self.bodyOverflow(1);
+
+            // trigger event
+            $wnd.trigger('rb-open-full-navbar', [$navbar]);
         };
+
+        const closeFullscreenNavbar = (dontTouchBody) => {
+
+            /*
+            if (!isOpened || !$navbar.length) {
+                return;
+            }
+            isOpened = 0;
+            */
+
+            // disactive all togglers
+            $('.rb-navbar-full-toggle').removeClass('active');
+
+            // set top position and animate
+            tween.to($navbar, 0.5, {
+                opacity: 0,
+                force3D: true,
+                display: 'none',
+                onComplete() {
+                    if (!dontTouchBody) {
+                        // restore body scrolling
+                        // self.bodyOverflow(0);
+                    }
+                },
+            });
+
+            // open navbar block
+            $navbar.removeClass('open');
+
+            // trigger event
+            $wnd.trigger('rb-close-full-navbar', [$navbar]);
+        };
+
+
+        /*
         self.openFullscreenNavbar = () => {
             if (isOpened || !$navbar.length) {
                 return;
@@ -131,8 +223,14 @@ const MobileNav = (props) => {
 
     }
 
+    useEffect(()=>{
+        if (props.isOpened) {
+            navBarFullScreen();    
+        }
+    },[props.isOpened]);
+
     return(
-        <nav className="rb-navbar rb-navbar-full rb-navbar-align-center" id="rb-nav-mobile" style={props.isOpened ? showNavbarStyles : {}}>
+        <nav ref={navbarFullRef} className="rb-navbar rb-navbar-full rb-navbar-align-center" id="rb-nav-mobile" style={props.isOpened ? showNavbarStyles : {}}>
             <div className="rb-navbar-bg">
                 <div className="bg-image" style={{backgroundImage: "url('assets/images/bg-menu.jpg')"}}></div>
             </div>
@@ -165,7 +263,7 @@ const MobileNav = (props) => {
                 </div>
                 <div className="rb-nav-row">
                     <div className="container">
-                        <div className="rb-nav-social">
+                        <div className="rb-nav-social" ref={navSociallRef}>
                             <ul>
                                 <li><a href="https://twitter.com/riley_boyd"><i className="fa fa-twitter"></i></a></li>
                                 <li><a href="https://www.facebook.com/rileyboydstudios/"><i className="fa fa-facebook"></i></a></li>
