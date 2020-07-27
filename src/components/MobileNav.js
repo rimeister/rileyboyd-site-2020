@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import {Link} from 'react-router-dom';
 
+import {tween} from '../assets/js/parts/_utility';
 
 const MobileNav = (props) => {
 
@@ -25,7 +26,8 @@ const MobileNav = (props) => {
     const navBarFullScreen = () => {
 
     // Reference: initNavBarFullScreen.js
-    /*
+    
+        /*
         const self = this;
         const $navbar = $('.rb-navbar-full');
         const $navbarSocial = $navbar.find('.rb-nav-social');

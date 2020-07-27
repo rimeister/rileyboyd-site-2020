@@ -1,3 +1,7 @@
+import Power2 from 'power2';
+import jQuery from 'jquery';
+
+
 /*------------------------------------------------------------------
 
   Utility
@@ -8,8 +12,29 @@ const tween = window.TweenMax;
 const isIOs = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/g.test(navigator.userAgent || navigator.vendor || window.opera);
 const isFireFox = typeof InstallTrigger !== 'undefined';
-const isTouch = 'ontouchstart' in window || window.DocumentTouch && document instanceof DocumentTouch;
+// const isTouch = 'ontouchstart' in window || window.DocumentTouch && document instanceof DocumentTouch;
 
+
+function is_touch_device() {
+    try {
+        let prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
+
+        let mq = function (query) {
+            return window.matchMedia(query).matches;
+        };
+
+        if (('ontouchstart' in window) || (typeof window.DocumentTouch !== "undefined" && document instanceof window.DocumentTouch)) {
+            return true;
+        }
+
+        return mq(['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join(''));
+    } catch (e) {
+        console.error('(Touch detect failed)', e);
+        return false;
+    }
+}
+
+const isTouch = is_touch_device();
 
 // add 'is-mobile' or 'is-desktop' classname to html tag
 $('html').addClass(isMobile ? 'is-mobile' : 'is-desktop');
