@@ -1,10 +1,30 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import { useHistory } from 'react-router-dom';
 // import aboutMeSignatureImg from '../assets/images/about-me-signature.png';
+
+import tween from 'gsap';
 
 import Button from '../components/Button';
 
 const HomeView = () => {
+
+    const heroTextRef = useRef();
+    const heroBtnRef = useRef();
+
+    const heroTextEle = heroTextRef.current;
+    const heroBtnEle = heroBtnRef.current;
+
+    /*
+        
+        Text animation:
+
+        Animate in text, then animate in button
+
+        How hard would it be to then animate in my "about section"
+
+        and portfolio items?
+
+    */
 
         const history = useHistory();
 
