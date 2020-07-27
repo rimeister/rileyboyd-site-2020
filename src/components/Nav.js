@@ -8,9 +8,10 @@ const Nav = ({sticky}) => {
 
     const handleScroll = () => {
 
-        console.log(stickyRef);
-
         if (stickyRef.current) {
+    
+            console.log(stickyRef);
+
             window.pageYOffset > stickyRef.current.getBoundingClientRect().bottom
             ? setSticky(true)
             : setSticky(false);
@@ -58,7 +59,7 @@ const Nav = ({sticky}) => {
     }, [debounce, handleScroll]);
 
     return(
-    <nav ref={stickyRef} className={'rb-navbar rb-navbar-top rb-navbar-autohide rb-navbar-transparent rb-navbar-white-text-on-top '+sticky ? "navbar navbar-sticky" : "navbar"}>
+    <nav ref={stickyRef} className={`rb-navbar rb-navbar-top rb-navbar-autohide rb-navbar-transparent rb-navbar-white-text-on-top ${isSticky ? 'rb-navbar-solid rb-onscroll-hide' : 'rb-onscroll-show'}`}>
         <div className="container">
             <div className="rb-nav-table">
                 <Link to="/" className="rb-nav-logo">
