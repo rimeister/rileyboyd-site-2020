@@ -12,7 +12,9 @@ import Layout from './components/Layout';
 
 import HomeView from './views/home-view';
 import PortfolioView from './views/portfolio-view';
-import CvView from './views/cv-view';
+import PortfolioItemView from './views/portfolio-item-view';
+
+// import CvView from './views/cv-view';
 
 import getPortfolioData from './data/portfolioData';
 
@@ -40,11 +42,25 @@ function App() {
         component={ PortfolioView }
       />
 
+      {/*
+      <Route
+        path="/portfolio"
+        component={ PortfolioView }
+      />*/}
+
+      <Route
+        path="/portfolio/"
+        component={ PortfolioItemView }
+      />
+
+
+      {/*
       <Route
         exact
         path="/cv"
         component={ CvView }
       />
+      */}
 
     </Switch>
 
