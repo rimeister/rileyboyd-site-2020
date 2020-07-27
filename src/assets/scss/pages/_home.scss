@@ -1,5 +1,32 @@
 .page-home {
 
+	#hero-text {
+
+
+		.hero-text-wrapper {
+			width: 100%;
+		    display: inline-block;
+		    overflow: hidden;
+			position: relative;
+		    text-align: center;
+		}
+
+		.hide-text {
+			position: absolute;
+			left: 0;
+			right: 0;
+		}
+
+		.hero-text-name {
+
+		}
+
+	}
+
+	#hero-btn {
+
+	}
+
 	#projects {
 		background-color: $color_bg;
 	}
