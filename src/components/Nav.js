@@ -1,9 +1,10 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
-
+/*
 import {
     $, tween, $wnd, $doc,
-} from './_utility';
+} from '../assets/js/parts/_utility';
+*/
 
 const Nav = (props) => {
 
