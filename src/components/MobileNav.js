@@ -24,7 +24,6 @@ const MobileNav = (props) => {
     }
 
     // Need to use the prop "isOpened" to show/hide
-    const navBarFullScreen = () => {
 
     // Reference: initNavBarFullScreen.js
     
@@ -33,7 +32,6 @@ const MobileNav = (props) => {
         const $navbar = $(navbarFullRef.current);
         const $navbarSocial = $navbar.find(navSociallRef.current);
 
-        console.log($navbar);
         // let isOpened;
         
         // self.fullscreenNavbarIsOpened = () => isOpened;
@@ -57,9 +55,10 @@ const MobileNav = (props) => {
             }
 
             // active all togglers
-            $('.rb-navbar-full-toggle').addClass('active');
+            // $('.rb-navbar-full-toggle').addClass('active');
 
             // set top position and animate
+            /*
             tween.set($navbarMenuItems, {
                 opacity: 0,
                 force3D: true,
@@ -86,7 +85,7 @@ const MobileNav = (props) => {
                 opacity: 1,
                 delay: 0.4,
             });
-
+            */
             $navbar.addClass('open');
 
             // prevent body scrolling
@@ -126,7 +125,6 @@ const MobileNav = (props) => {
 
             // trigger event
             $wnd.trigger('rb-close-full-navbar', [$navbar]);
-        };
 
 
         /*
@@ -225,7 +223,7 @@ const MobileNav = (props) => {
 
     useEffect(()=>{
         if (props.isOpened) {
-            navBarFullScreen();    
+            openFullscreenNavbar();    
         }
     },[props.isOpened]);
 
@@ -254,8 +252,92 @@ const MobileNav = (props) => {
                         <div className="nano-content">
                             <div className="rb-nav-table">
                                 <div className="rb-nav-row rb-nav-row-full rb-nav-row-center rb-navbar-mobile-content">
-                                    <ul className="rb-nav">
-                                    </ul>
+                                     <ul className="rb-nav">
+                                            <li className=" rb-drop-item">
+                                              <a href="home-1.html" style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px)'}}> Home </a>
+                                              <ul className="dropdown">
+                                                <li className="bropdown-back"><a href="#">Back</a></li>
+                                                <li>
+                                                  <a href="home-1.html"> Home Default </a>
+                                                </li>
+                                                <li>
+                                                  <a href="home-2.html"> Minimal Portfolio </a>
+                                                </li>
+                                                <li>
+                                                  <a href="home-3.html"> Slider Home </a>
+                                                </li>
+                                                <li>
+                                                  <a href="home-4.html"> Video Home </a>
+                                                </li>
+                                                <li>
+                                                  <a href="home-5.html"> Freelancer Portfolio </a>
+                                                </li>
+                                                <li>
+                                                  <a href="home-6.html"> Minimal Agency </a>
+                                                </li>
+                                                <li>
+                                                  <a href="home-7.html"> One Page Agency </a>
+                                                </li>
+                                                <li>
+                                                  <a href="home-8.html"> Digital Agency </a>
+                                                </li>
+                                                <li>
+                                                  <a href="home-9.html"> Fullscreen Slider </a>
+                                                </li>
+                                              </ul>
+                                            </li>
+                                            <li className="active rb-drop-item">
+                                              <a href="work-2-style-1.html" style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px)'}}> Work </a>
+                                              <ul className="dropdown">
+                                                <li className="bropdown-back"><a href="#">Back</a></li>
+                                                <li className=" rb-drop-item">
+                                                  <a href="work-2-style-1.html"> 2 Columns </a>
+                                                  <ul className="dropdown">
+                                                    <li className="bropdown-back"><a href="#">Back</a></li>
+                                                    <li>
+                                                      <a href="work-2-style-1.html"> Style 1 </a>
+                                                    </li>
+                                                    <li>
+                                                      <a href="work-2-style-2.html"> Style 2 </a>
+                                                    </li>
+                                                    <li>
+                                                      <a href="work-2-style-3.html"> Style 3 </a>
+                                                    </li>
+                                                    <li>
+                                                      <a href="work-2-style-4.html"> Style 4 </a>
+                                                    </li>
+                                                    <li>
+                                                      <a href="work-2-style-5.html"> Style 5 </a>
+                                                    </li>
+                                                    <li>
+                                                      <a href="work-2-wide.html"> Wide 1 </a>
+                                                    </li>
+                                                    <li>
+                                                      <a href="work-2-wide-2.html"> Wide 2 </a>
+                                                    </li>
+                                                  </ul>
+                                                </li>
+                                              </ul>
+                                            </li>
+                                            <li className=" rb-drop-item">
+                                              <a href="page-about-me.html" style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px)'}}> About </a>
+                                              <ul className="dropdown">
+                                                <li className="bropdown-back"><a href="#">Back</a></li>
+                                                <li>
+                                                  <a href="page-about-me.html"> About Me </a>
+                                                </li>
+                                                <li>
+                                                  <a href="page-about-us.html"> About Us </a>
+                                                </li>
+                                                <li>
+                                                  <a href="page-services.html"> Services </a>
+                                                </li>
+                                              </ul>
+                                            </li>
+                                            <li>
+                                              <a href="page-contact-us.html" style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px)'}}> Contact </a>
+                                            </li>
+                                          </ul>
                                 </div>
                             </div>
                         </div>
