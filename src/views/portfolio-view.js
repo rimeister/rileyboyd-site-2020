@@ -170,14 +170,7 @@ const PortfolioView = () => {
           <div class="rb-gap-4"></div>
 
         </div>
-        {/* START: Pagination */}
-        <div className="rb-pagination rb-pagination-center">
-          <div className="container">
-            <a className="rb-pagination-prev" href="work-single-1.html"><span className="pe-7s-angle-left" /> Previous Work</a>
-            <a className="rb-pagination-center" href="work-3-style-1.html"><span className="rb-icon-squares" /></a>
-            <a className="rb-pagination-next" href="work-single-3.html">Next Work <span className="pe-7s-angle-right" /> </a>
-          </div>
-        </div>
+
       </div>
     );
 }
