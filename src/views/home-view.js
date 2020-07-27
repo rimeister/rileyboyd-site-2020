@@ -1,30 +1,10 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 // import aboutMeSignatureImg from '../assets/images/about-me-signature.png';
-
-import tween from 'gsap';
 
 import Button from '../components/Button';
 
 const HomeView = () => {
-
-    const heroTextRef = useRef();
-    const heroBtnRef = useRef();
-
-    const heroTextEle = heroTextRef.current;
-    const heroBtnEle = heroBtnRef.current;
-
-    /*
-        
-        Text animation:
-
-        Animate in text, then animate in button
-
-        How hard would it be to then animate in my "about section"
-
-        and portfolio items?
-
-    */
 
         const history = useHistory();
 
@@ -40,8 +20,8 @@ const HomeView = () => {
                     <div className="rb-header-table">
                        <div className="rb-header-table-cell">
                           <div className="container">
-                             <h1 ref={heroTextRef} id="hero-text" className="rb-title display-3"><span className="hero-text-wrapper"><span className="hide-text">Hello, I'm <span className="hero-text-name">Riley&nbsp;Boyd</span>.</span></span><span className="hero-text-wrapper"><span className="hide-text">I'm a web designer and&nbsp;developer.</span></span></h1>
-                             <Button ref={heroBtnRef} id="hero-btn" text="View My Work" onClick={btnHandler} className="mt-15" />
+                             <h1 className="rb-title display-3">Hello, I'm <span>Riley&nbsp;Boyd</span>.<br/>I'm a web designer and&nbsp;developer.</h1>
+                             <Button text="View My Work" onClick={btnHandler} className="mt-15" />
                              <div className="rb-gap"></div>
                              <div className="rb-header-text text-white">
                                 <div className="rb-gap-4"></div>
