@@ -9,10 +9,12 @@ const Layout = (props) => {
 
 	let [fullscreenMenuIsOpened, setFullscreenMenuIsOpened] = useState(false);
 
-	const menuIconClickHandler = (val) => {
-
+	const menuIconClickHandler = () => {
 		setFullscreenMenuIsOpened(true);
+	}
 
+	const closeMobileMenu = () => {
+		setFullscreenMenuIsOpened(false);
 	}
 
 	return(
@@ -24,7 +26,7 @@ const Layout = (props) => {
 		</div>
 		<Footer />
 	</div>	
-	<MobileNav isOpened={fullscreenMenuIsOpened} />
+	<MobileNav isOpened={fullscreenMenuIsOpened} closeBtnHandler={closeMobileMenu} />
 	</>
 	)
 };

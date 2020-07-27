@@ -10,10 +10,16 @@ const MobileNav = (props) => {
         transform: 'translate3d(0px, 0px, 0px)'
     }
 
-
     useEffect(()=>{
         console.log(props.isOpened);
     },[props.isOpened]);
+
+    const closeBtnHandler = (event) => {
+        event.preventDefault();
+        if (props.closeBtnHandler) {
+            props.closeBtnHandler();
+        } 
+    }
 
     // Need to use the prop "isOpened" to show/hide
     const navBarFullScreen = () => {
@@ -137,7 +143,7 @@ const MobileNav = (props) => {
                                     <img src="assets/images/logo-light.svg" alt="" width="85" />
                                 </Link>
                             </div>
-                            <div className="rb-nav-close rb-navbar-full-toggle">
+                            <div className="rb-nav-close rb-navbar-full-toggle" onClick={closeBtnHandler}>
                                 <span className="rb-icon-close"></span>
                             </div>
                         </div>
@@ -171,5 +177,8 @@ const MobileNav = (props) => {
 
 }
 
+MobileNav.defaultProps = {
+    closeBtnHandler: null
+}
 
 export default MobileNav;
