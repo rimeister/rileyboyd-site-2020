@@ -14,9 +14,12 @@ import HomeView from './views/home-view';
 import PortfolioView from './views/portfolio-view';
 import CvView from './views/cv-view';
 
-// import portfolioData from './data/portfolioData';
+import getPortfolioData from './data/portfolioData';
 
 function App() {
+
+  let portfolioData = getPortfolioData();
+  console.log(portfolioData);
 
   return (
     <Router>
