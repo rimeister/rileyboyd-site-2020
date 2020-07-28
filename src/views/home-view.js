@@ -1,18 +1,29 @@
-import React, {useRef} from 'react';
+import React, {useEffect,useRef} from 'react';
 import { useHistory } from 'react-router-dom';
 // import aboutMeSignatureImg from '../assets/images/about-me-signature.png';
 
-import tween from 'gsap';
+import TweenMax from 'gsap';
+
+import TimelineMax from 'gsap/TimelineMax';
 
 import Button from '../components/Button';
 
 const HomeView = () => {
 
     const heroTextRef = useRef();
+
+    const heroTextOne = useRef();
+    const heroTextTwo = useRef();
     const heroBtnRef = useRef();
 
+
     const heroTextEle = heroTextRef.current;
+
+    const heroTextOneEle = heroTextOne.current;
+    const heroTextTwoEle = heroTextTwo.current;
     const heroBtnEle = heroBtnRef.current;
+
+    let timeline = new TimelineMax({repeat:0});
 
     /*
         
@@ -25,6 +36,16 @@ const HomeView = () => {
         and portfolio items?
 
     */
+
+        useEffect(()=>{
+        
+            timeline
+                .to('#hero-text-1', 1, {top: 0, opacity: 1},0.5)
+                .to('#hero-text-2', 1, {top: 0, opacity: 1},2)
+                .to('.hero-btn', 0.15, {top: 0, opacity: 1},3.5)
+            ;
+        
+        },[]);
 
         const history = useHistory();
 
@@ -40,8 +61,8 @@ const HomeView = () => {
                     <div className="rb-header-table">
                        <div className="rb-header-table-cell">
                           <div className="container">
-                             <h1 className="rb-title display-3">Hello, I'm <span>Riley&nbsp;Boyd</span>.<br/>I'm a web designer and&nbsp;developer.</h1>
-                             <Button text="View My Work" onClick={btnHandler} className="mt-15" />
+                             <h1 className="rb-title display-3"><span ref={heroTextOne} id="hero-text-1" className="hero-text-line">Hello, I'm <span className="hero-text-name">Riley&nbsp;Boyd</span>.</span><span id="hero-text-2" ref={heroTextTwo} className="hero-text-line">I'm a web designer and&nbsp;developer.</span></h1>
+                             <Button text="View My Work" onClick={btnHandler} className="mt-15 hero-btn" />
                              <div className="rb-gap"></div>
                              <div className="rb-header-text text-white">
                                 <div className="rb-gap-4"></div>
