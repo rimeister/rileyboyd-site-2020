@@ -13,6 +13,7 @@ import Layout from './components/Layout';
 import HomeView from './views/home-view';
 import PortfolioView from './views/portfolio-view';
 import PortfolioItemView from './views/portfolio-item-view';
+import NoMatch404View from './views/no-match-404-view';
 
 // import CvView from './views/cv-view';
 
@@ -47,6 +48,7 @@ function App() {
         component={ PortfolioItemView }
       />
 
+      <Route component={NoMatch404View} />
 
       {/*
       <Route
