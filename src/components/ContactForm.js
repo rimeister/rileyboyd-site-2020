@@ -127,16 +127,16 @@ const ContactForm = () => {
               <div className="row vertical-gap">
                 <div className="col-md-6">
                   <input type="text" className={`form-control required ${nameError ? 'rb-error': ''}`} name="name" placeholder="Your Name" ref={nameInputRef} onChange={onChangeHandlerName} />
-                  <div id="name-error" class="rb-error" style={{ display: nameError ? 'block': 'none'}}>This field is required.</div>
+                  <div id="name-error" className="rb-error" style={{ display: nameError ? 'block': 'none'}}>This field is required.</div>
                 </div>
                 <div className="col-md-6">
                   <input type="email" className={`form-control required ${emailError ? 'rb-error': ''}`} name="email" placeholder="Your Email" ref={emailInputRef} onChange={onChangeHandlerEmail} />
-                  <div id="email-error" class="rb-error" style={{ display: emailError ? 'block': 'none'}}>Please enter a valid email address.</div>
+                  <div id="email-error" className="rb-error" style={{ display: emailError ? 'block': 'none'}}>Please enter a valid email address.</div>
                 </div>
               </div>
               <div className="rb-gap-1" />
               <textarea className={`form-control required ${msgError ? 'rb-error': ''}`} name="message" rows={8} placeholder="Your Comment" aria-required="true" defaultValue={""} ref={messageInputRef} onChange={onChangeHandlerMsg} />
-              <div id="name-error" class="rb-error" style={{ display: msgError ? 'block': 'none'}}>This field is required.</div>
+              <div id="name-error" className="rb-error" style={{ display: msgError ? 'block': 'none'}}>This field is required.</div>
               <div className="rb-gap-1" />
               <div className="rb-form-response-success" style={{display : showSuccessMsg ? 'block':'none'}}>Thank You! I will be in touch.</div>
               <div className="rb-form-response-error" style={{display : showSuccessMsg ? 'block':'none'}}>Oops, something went wrong. Message not sent.</div>

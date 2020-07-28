@@ -14,6 +14,10 @@ const HomeView = () => {
 
     let timeline = new TimelineMax({repeat:0});
 
+    const breakpointCheckRef = useRef();
+
+    const aboutRef = useRef();
+
     /*
         
         Text animation:
@@ -26,25 +30,64 @@ const HomeView = () => {
 
     */
 
-        useEffect(()=>{
+    const getBreakpoint = (checkerEle) => {
 
-            window.scrollTo(0, 0);
+        let breakpoint = 'xs';
+
+        let breakpointOpacity = window.getComputedStyle(checkerEle).getPropertyValue("opacity");
+
+        if (breakpointOpacity >= 0.6) {
+            breakpoint = 'sm';
+        }
         
-            timeline
-                .to('#hero-text-1', 1, {top: 0, opacity: 1},0.5)
-                .to('#hero-text-2', 1, {top: 0, opacity: 1},1.75)
-                .to('.hero-btn', 0.15, {top: 0, opacity: 1},3)
-            ;
-        
-        },[]);
-
-        const history = useHistory();
-
-        const btnHandler = () => {
-            history.push('/portfolio');
+        if (breakpointOpacity >= 0.8) {
+            breakpoint = 'md';
         }
 
-        return (
+        if (breakpointOpacity >= 0.8) {
+            breakpoint = 'lg';
+        }
+
+        return breakpoint;
+
+    }
+
+    const scrollToRef = (ref) => {
+
+        window.scrollTo({
+            top: ref.current.offsetTop - (getBreakpoint(breakpointCheckRef.current)=='lg'? 101 : 98),
+            behavior: 'smooth'
+        });
+
+    }
+
+    // 0,ref.current.offsetTop);
+
+    const history = useHistory();
+
+    const btnHandler = () => {
+        history.push('/portfolio');
+    }
+
+    const scrollDownHandler = (event) => {
+        event.preventDefault();
+        scrollToRef(aboutRef);
+    }
+
+    useEffect(()=>{
+
+        window.scrollTo(0, 0);
+    
+        timeline
+            .to('#hero-text-1', 1, {top: 0, opacity: 1},0.5)
+            .to('#hero-text-2', 1, {top: 0, opacity: 1},1.75)
+            .to('.hero-btn', 0.15, {top: 0, opacity: 1},3)
+        ;
+    
+    },[]);
+    
+    return (
+
         <div className="page-home">
            <div className="rb-header-title rb-header-title-full rb-header-title-parallax-opacity">
                 <div className="wave" />
@@ -61,14 +104,12 @@ const HomeView = () => {
                         </div>
                     </div>
                 </div>
-                {/*
                 <div>
-                   <a className="rb-header-title-scroll-down text-white" href="#rb-header-title-scroll-down"><span className="pe-7s-angle-down"></span></a>
+                   <a onClick={scrollDownHandler} className="rb-header-title-scroll-down text-white" href="#rb-header-title-scroll-down"><span className="pe-7s-angle-down"></span></a>
                 </div>
-                */}
             </div>
             <div id="rb-header-title-scroll-down"></div>
-            <div className="bg-white" id="about">
+            <div className="bg-white" id="about" ref={aboutRef}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 offset-lg-2 text-center">
@@ -93,6 +134,8 @@ const HomeView = () => {
             </div>
                 
             <ContactForm />
+
+            <div className="breakpoint-check" ref={breakpointCheckRef} />
         </div>
 
     );
