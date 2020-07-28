@@ -1,7 +1,7 @@
 <?php
-    $from = 'nK Contact Form';
-    $to = 'nkdevinfo@gmail.com';
-    $subject = 'Message from nK contact form';
+    $from = 'Contact Form';
+    $to = 'contact@rileyboyd.com';
+    $subject = 'Message from contact form';
 
     function errorHandler ($message) {
         die(json_encode(array(
@@ -18,7 +18,7 @@
     }
 
     // remove it if your php finally configured
-    successHandler('This is demo message from PHP');
+    // successHandler('This is demo message from PHP');
 
     if ( isset( $_SERVER['HTTP_X_REQUESTED_WITH'] ) && 'XMLHttpRequest' === $_SERVER['HTTP_X_REQUESTED_WITH']) {
         $name = $_POST['name'];
