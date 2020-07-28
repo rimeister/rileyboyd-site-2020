@@ -10,19 +10,6 @@ import Button from '../components/Button';
 
 const HomeView = () => {
 
-    const heroTextRef = useRef();
-
-    const heroTextOne = useRef();
-    const heroTextTwo = useRef();
-    const heroBtnRef = useRef();
-
-
-    const heroTextEle = heroTextRef.current;
-
-    const heroTextOneEle = heroTextOne.current;
-    const heroTextTwoEle = heroTextTwo.current;
-    const heroBtnEle = heroBtnRef.current;
-
     let timeline = new TimelineMax({repeat:0});
 
     /*
@@ -61,7 +48,7 @@ const HomeView = () => {
                     <div className="rb-header-table">
                        <div className="rb-header-table-cell">
                           <div className="container">
-                             <h1 className="rb-title display-3"><span ref={heroTextOne} id="hero-text-1" className="hero-text-line">Hello, I'm <span className="hero-text-name">Riley&nbsp;Boyd</span>.</span><span id="hero-text-2" ref={heroTextTwo} className="hero-text-line">I'm a web designer and&nbsp;developer.</span></h1>
+                             <h1 className="rb-title display-3"><span id="hero-text-1" className="hero-text-line">Hello, I'm <span className="hero-text-name">Riley&nbsp;Boyd</span>.</span><span id="hero-text-2" className="hero-text-line">I'm a web designer and&nbsp;developer.</span></h1>
                              <Button text="View My Work" onClick={btnHandler} className="mt-15 hero-btn" />
                              <div className="rb-gap"></div>
                              <div className="rb-header-text text-white">
