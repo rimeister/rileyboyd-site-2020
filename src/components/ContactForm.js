@@ -139,7 +139,7 @@ const ContactForm = () => {
               <div id="name-error" className="rb-error" style={{ display: msgError ? 'block': 'none'}}>This field is required.</div>
               <div className="rb-gap-1" />
               <div className="rb-form-response-success" style={{display : showSuccessMsg ? 'block':'none'}}>Thank You! I will be in touch.</div>
-              <div className="rb-form-response-error" style={{display : showSuccessMsg ? 'block':'none'}}>Oops, something went wrong. Message not sent.</div>
+              <div className="rb-form-response-error" style={{display : showFailureMsg ? 'block':'none'}}>Oops, something went wrong. Message not sent.</div>
               <button className="rb-btn">Send Message</button>
             </form>
           </div>
