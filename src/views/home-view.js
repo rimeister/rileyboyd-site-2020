@@ -28,8 +28,8 @@ const HomeView = () => {
         
             timeline
                 .to('#hero-text-1', 1, {top: 0, opacity: 1},0.5)
-                .to('#hero-text-2', 1, {top: 0, opacity: 1},2)
-                .to('.hero-btn', 0.15, {top: 0, opacity: 1},3.5)
+                .to('#hero-text-2', 1, {top: 0, opacity: 1},1.75)
+                .to('.hero-btn', 0.15, {top: 0, opacity: 1},3)
             ;
         
         },[]);
