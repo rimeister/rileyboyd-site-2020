@@ -13,6 +13,9 @@ const ContactForm = () => {
 	const [emailError,setEmailError] = useState(false);
 	const [msgError,setMsgError] = useState(false);
 
+	const [showSuccessMsg, setShowSuccessMsg] = useState(false);
+	const [showFailureMsg, setShowFailureMsg] = useState(false);
+
 
 	const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
@@ -88,15 +91,15 @@ const ContactForm = () => {
 			    url: 'http://qa.rileyboyd.com/contact.php',
 			    data: bodyFormData,
 			    headers: {'Content-Type': 'multipart/form-data' }
-			    })
-			    .then(function (response) {
-			        //handle success
-			        console.log(response);
-			    })
-			    .catch(function (response) {
-		        //handle error
-		        console.log(response);
-		    });
+			})
+			.then(function (response) {
+		        //handle success
+		        setShowSuccessMsg(true)
+		    })
+		    .catch(function (response) {
+	        //handle error
+	        	setShowFailureMsg(true);
+	        });
 
 		}
 	} 
@@ -135,8 +138,8 @@ const ContactForm = () => {
               <textarea className={`form-control required ${msgError ? 'rb-error': ''}`} name="message" rows={8} placeholder="Your Comment" aria-required="true" defaultValue={""} ref={messageInputRef} onChange={onChangeHandlerMsg} />
               <div id="name-error" class="rb-error" style={{ display: msgError ? 'block': 'none'}}>This field is required.</div>
               <div className="rb-gap-1" />
-              <div className="rb-form-response-success">Nerror</div>
-              <div className="rb-form-response-error">Error</div>
+              <div className="rb-form-response-success" style={{display : showSuccessMsg ? 'block':'none'}}>Thank You! I will be in touch.</div>
+              <div className="rb-form-response-error" style={{display : showSuccessMsg ? 'block':'none'}}>Oops, something went wrong. Message not sent.</div>
               <button className="rb-btn">Send Message</button>
             </form>
           </div>

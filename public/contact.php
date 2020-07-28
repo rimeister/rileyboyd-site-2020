@@ -20,7 +20,8 @@
     // remove it if your php finally configured
     // successHandler('This is demo message from PHP');
 
-    if ( isset( $_SERVER['HTTP_X_REQUESTED_WITH'] ) && 'XMLHttpRequest' === $_SERVER['HTTP_X_REQUESTED_WITH']) {
+    // if ( isset( $_SERVER['HTTP_X_REQUESTED_WITH'] ) && 'XMLHttpRequest' === $_SERVER['HTTP_X_REQUESTED_WITH']) {
+    if($_SERVER['REQUEST_METHOD']==='POST' && ! empty($_POST)) {
         $name = $_POST['name'];
         $email = $_POST['email'];
         $message = $_POST['message'];
