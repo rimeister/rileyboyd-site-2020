@@ -26,7 +26,7 @@ const Layout = (props) => {
 		</div>
 		<Footer />
 	</div>	
-	<MobileNav isOpened={fullscreenMenuIsOpened} closeBtnHandler={closeMobileMenu} />
+	<MobileNav isOpened={fullscreenMenuIsOpened} closeBtnHandler={closeMobileMenu}  />
 	</>
 	)
 };

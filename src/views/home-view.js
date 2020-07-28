@@ -75,9 +75,19 @@ const HomeView = () => {
                              <div className="rb-gap-4 mt-9"></div>
                              <h2 className="display-4">About Me</h2>
                              <div className="rb-gap mnt-5"></div>
-                             <p>I'm a front-end web specilist with nine years of professional experience.</p>
-                             <div className="rb-gap-4 mt-25"></div>
                           </div>
+                         <div className="col-lg-4 offset-lg-1 text-left">
+                             {/*<img src={} /> */}
+                               <p>I'm a front-end web specilist with nine years of professional experience.</p>
+                               <p>Lorem Ipsum</p>
+                         </div>
+                         <div className="col-lg-6 text-left">
+                               <p>I'm a front-end web specilist with nine years of professional experience.</p>
+                               <p>Lorem Ipsum</p>
+                         </div>
+                         <div className="col-lg-12">
+                             <div className="rb-gap-4 mt-25"></div>
+                         </div>
                        </div>
                     </div>
                  </div>

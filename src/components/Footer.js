@@ -9,10 +9,14 @@ const Footer = () => (
         <div className="rb-footer-widgets text-white">
             <div className="container">
                 <div className="row vertical-gap">
-                    <div className="col-lg-12">
+                    <div className="col-lg-6">
                         <div className="rb-widget">
                             <h4 className="rb-widget-title text-white">About Me</h4>
                             <p className="rb-heading-font">My name's Riley Boyd, I'm a web designer and developer with nine years of professional experience. I have an M.A. in Humanities Computing, and an Hons. B.A. in Multimedia and Fine&nbsp;Art. I live in Toronto, Ontario,&nbsp;Canada.</p>
+                        </div>
+                    </div>
+                    <div className="col-lg-6">
+                        <div className="rb-widget">
                             <div className="rb-footer-social text-white">
                                 <ul>
                                     <li><a href="https://twitter.com/nkdevv"><i className="fa fa-twitter"></i></a></li>

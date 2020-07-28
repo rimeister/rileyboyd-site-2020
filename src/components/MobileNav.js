@@ -150,13 +150,13 @@ const MobileNav = (props) => {
                                 <div className="rb-nav-row rb-nav-row-full rb-nav-row-center rb-navbar-mobile-content">
                                      <ul className="rb-nav">
                                         <li>
-                                          <Link to="/"> Home </Link>
+                                          <Link to="/" onClick={props.closeBtnHandler}> Home </Link>
                                         </li>
                                         <li>
-                                          <Link to="/portfolio/"> Portfolio </Link>
+                                          <Link to="/portfolio/" onClick={props.closeBtnHandler}> Portfolio </Link>
                                         </li>
                                         <li>
-                                            <HashLink to="/#contact"> Contact </HashLink>
+                                            <HashLink to="/#contact" onClick={props.closeBtnHandler}> Contact </HashLink>
                                         </li>
                                         {/*
                                         <li className=" rb-drop-item">
