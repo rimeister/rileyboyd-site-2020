@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useHistory } from 'react-router-dom';
 
 import Button from '../components/Button';
@@ -13,6 +13,10 @@ const NoMatch404View = () => {
     const btnHandler = () => {
         history.push('/portfolio');
     }
+
+    useEffect(()=>{
+      window.scrollTo(0, 0);
+    },[]);
     
     return (
 

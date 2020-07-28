@@ -1,7 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 // import aboutMeSignatureImg from '../assets/images/about-me-signature.png';
 
 const PortfolioView = () => {
+
+    useEffect(()=>{
+      window.scrollTo(0, 0);
+    },[]);
+
     return (
         <div>
 

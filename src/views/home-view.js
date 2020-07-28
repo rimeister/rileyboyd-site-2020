@@ -8,6 +8,8 @@ import TimelineMax from 'gsap/TimelineMax';
 
 import Button from '../components/Button';
 
+import ContactForm from '../components/ContactForm';
+
 const HomeView = () => {
 
     let timeline = new TimelineMax({repeat:0});
@@ -25,6 +27,8 @@ const HomeView = () => {
     */
 
         useEffect(()=>{
+
+            window.scrollTo(0, 0);
         
             timeline
                 .to('#hero-text-1', 1, {top: 0, opacity: 1},0.5)
@@ -237,6 +241,7 @@ const HomeView = () => {
 
                </div>
             </div>
+            <ContactForm />
         </div>
 
     );

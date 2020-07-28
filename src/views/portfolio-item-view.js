@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 // import aboutMeSignatureImg from '../assets/images/about-me-signature.png';
 
 import {
@@ -6,7 +6,11 @@ import {
 } from 'react-router-dom';
 
 const PortfolioItemView = ({ match }) => {
-  console.log(match);
+
+    useEffect(()=>{
+      window.scrollTo(0, 0);
+    },[]);
+
     return (
       <>
         <div className="container-fluid">
