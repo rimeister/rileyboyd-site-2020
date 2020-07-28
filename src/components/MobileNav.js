@@ -1,5 +1,7 @@
 import React, {useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
+import {HashLink} from 'react-router-hash-link';
+
 
 // import {tween, $wnd} from '../assets/js/parts/_utility';
 import $ from 'jquery';
@@ -154,7 +156,7 @@ const MobileNav = (props) => {
                                           <Link to="/portfolio/"> Portfolio </Link>
                                         </li>
                                         <li>
-                                            <Link to="/#contact"> Contact </Link>
+                                            <HashLink to="/#contact"> Contact </HashLink>
                                         </li>
                                         {/*
                                         <li className=" rb-drop-item">

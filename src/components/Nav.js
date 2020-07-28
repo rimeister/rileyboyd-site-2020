@@ -1,6 +1,8 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
 
+import {HashLink} from 'react-router-hash-link';
+
 import logo from '../assets/images/rb-logo.svg';
 import logoLight from '../assets/images/rb-logo-light.svg';
 
@@ -124,7 +126,7 @@ const Nav = (props) => {
                         <Link to="/portfolio"> Portfolio </Link>
                     </li>
                     <li>
-                        <Link to="/#contact"> Contact </Link>
+                        <HashLink to="/#contact"> Contact </HashLink>
                     </li>
                     {/*
                     <li>
