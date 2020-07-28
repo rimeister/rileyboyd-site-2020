@@ -1,5 +1,10 @@
 .page-home {
 
+	#scroll-btn {
+		display: none;
+		opacity: 0;
+	}
+
 	#projects {
 		background-color: $color_bg;
 	}

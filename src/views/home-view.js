@@ -18,6 +18,8 @@ const HomeView = () => {
 
     const aboutRef = useRef();
 
+    const scrollBtnRef = useRef();
+
     /*
         
         Text animation:
@@ -82,6 +84,8 @@ const HomeView = () => {
             .to('#hero-text-1', 1, {top: 0, opacity: 1},0.5)
             .to('#hero-text-2', 1, {top: 0, opacity: 1},1.75)
             .to('.hero-btn', 0.15, {top: 0, opacity: 1},3)
+            .to('#scroll-btn', 0, {display:'block'},3)
+            .to('#scroll-btn', 0.15, {opacity: 1},3.5)
         ;
     
     },[]);
@@ -105,7 +109,7 @@ const HomeView = () => {
                     </div>
                 </div>
                 <div>
-                   <a onClick={scrollDownHandler} className="rb-header-title-scroll-down text-white" href="#rb-header-title-scroll-down"><span className="pe-7s-angle-down"></span></a>
+                   <a onClick={scrollDownHandler} id="scroll-btn" className="rb-header-title-scroll-down text-white" href="#rb-header-title-scroll-down"><span className="pe-7s-angle-down"></span></a>
                 </div>
             </div>
             <div id="rb-header-title-scroll-down"></div>
