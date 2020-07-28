@@ -17,12 +17,8 @@ import NoMatch404View from './views/no-match-404-view';
 
 // import CvView from './views/cv-view';
 
-import getPortfolioData from './data/portfolioData';
 
 function App() {
-
-  let portfolioData = getPortfolioData();
-  // console.log(portfolioData);
 
   return (
     <Router>
