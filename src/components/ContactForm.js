@@ -13,17 +13,7 @@ const ContactForm = () => {
 	const [emailError,setEmailError] = useState(false);
 	const [msgError,setMsgError] = useState(false);
 
-/*
-	axios.get('http://qa.rileyboyd.com/contact.php')
-  .then((response) => {
-    console.log(response.data);
-    console.log(response.status);
-    console.log(response.statusText);
-    console.log(response.headers);
-    console.log(response.config);
-  });
-*/
-	
+
 	const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 
@@ -37,8 +27,6 @@ const ContactForm = () => {
 			setNameError(true);
 			hasError = true;
 		}
-
-		console.log(emailInputRef.current.value);
 
 		// Email
 		if (emailInputRef.current.value.length === 0 && emailRegExp.test(emailInputRef.current.value)) {
@@ -80,8 +68,37 @@ const ContactForm = () => {
 	}
 
 	const contactFormSubmitHandler = (event) => {
+
 		event.preventDefault();
-		console.log('submission valid: '+validateForm());
+
+		if (validateForm()) {
+			
+			let bodyFormData = new FormData();
+
+			bodyFormData.set('name', nameInputRef.current.value);
+
+			bodyFormData.set('email', emailInputRef.current.value);
+
+			bodyFormData.set('title', 'title');
+
+			bodyFormData.set('message', messageInputRef.current.value);
+
+			axios({
+			    method: 'post',
+			    url: 'http://qa.rileyboyd.com/contact.php',
+			    data: bodyFormData,
+			    headers: {'Content-Type': 'multipart/form-data' }
+			    })
+			    .then(function (response) {
+			        //handle success
+			        console.log(response);
+			    })
+			    .catch(function (response) {
+		        //handle error
+		        console.log(response);
+		    });
+
+		}
 	} 
 
 	return(
@@ -114,7 +131,6 @@ const ContactForm = () => {
                   <div id="email-error" class="rb-error" style={{ display: emailError ? 'block': 'none'}}>Please enter a valid email address.</div>
                 </div>
               </div>
-              <input type="hidden" className="form-control required" name="title" placeholder="Your Title" value="title" />
               <div className="rb-gap-1" />
               <textarea className={`form-control required ${msgError ? 'rb-error': ''}`} name="message" rows={8} placeholder="Your Comment" aria-required="true" defaultValue={""} ref={messageInputRef} onChange={onChangeHandlerMsg} />
               <div id="name-error" class="rb-error" style={{ display: msgError ? 'block': 'none'}}>This field is required.</div>
