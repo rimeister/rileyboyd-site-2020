@@ -154,7 +154,7 @@ function getPortfolioData() {
 		year: "2016",
 		company: "Klick Health",
 		role: <>Lead Front-end Developer</>,
-		tech: "Javascript, Custom Wordpress Theme, HTML, CSS",
+		tech: "Javascript, HTML, CSS",
 		id: "astellas-patient-portal",
 		url: "http://astellasresources.com"
 	}
