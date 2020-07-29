@@ -10,7 +10,15 @@ import Button from '../components/Button';
 
 import ContactForm from '../components/ContactForm';
 
-import AboutPhoto from '../assets/images/personal-photo-about-section-md.jpg'
+import AboutPhoto from '../assets/images/personal-photo-about-section-md.jpg';
+
+import ReactIcon from '../assets/images/icons/react-brands.svg';
+import JsIcon from '../assets/images/icons/js-square-brands.svg';
+import Html5Icon from '../assets/images/icons/html5-brands.svg';
+import SassIcon from '../assets/images/icons/sass-brands.svg';
+import GitIcon from '../assets/images/icons/git-brands.svg';
+import Css3Icon from '../assets/images/icons/css3-brands.svg';
+
 
 const HomeView = () => {
 
@@ -147,62 +155,82 @@ const HomeView = () => {
             </div>
 
 
-              <div className="rb-box bg-dark-1 text-white">
+              <div className="rb-box bg-dark-1 text-white" id="skills">
                 <div className="bg-image bg-image-parallax" style={{backgroundImage: 'none'}} data-jarallax-original-styles="background-image: url('assets/images/bg-pattern.jpg');">
                   <div id="jarallax-container-1" >
                     <div style={{backgroundPosition: '50% 50%', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundImage: 'url("https://html.nkdev.info/snow/assets/images/bg-pattern.jpg")'}} />
                   </div>
                 </div>
-                <div className="rb-gap-5 mnt-6" />
+                <div className="rb-gap-3 mnt-6" />
                 <div className="container">
-                  <div className="row vertical-gap">
-                    <div className="col-md-6 col-lg-3">
-                      <div className="rb-ibox-1">
-                        <div className="rb-ibox-icon">
-                          <span className="pe-7s-portfolio" />
-                        </div>
-                        <div className="rb-ibox-cont">
-                          <div className="rb-ibox-title">548</div>
-                          <div className="rb-ibox-text">Projects Completed</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6 col-lg-3">
-                      <div className="rb-ibox-1">
-                        <div className="rb-ibox-icon">
-                          <span className="pe-7s-clock" />
-                        </div>
-                        <div className="rb-ibox-cont">
-                          <div className="rb-ibox-title">1465</div>
-                          <div className="rb-ibox-text">Working Hours</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6 col-lg-3">
-                      <div className="rb-ibox-1">
-                        <div className="rb-ibox-icon">
-                          <span className="pe-7s-star" />
-                        </div>
-                        <div className="rb-ibox-cont">
-                          <div className="rb-ibox-title">612</div>
-                          <div className="rb-ibox-text">Positive Feedbacks</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6 col-lg-3">
-                      <div className="rb-ibox-1">
-                        <div className="rb-ibox-icon">
-                          <span className="pe-7s-like" />
-                        </div>
-                        <div className="rb-ibox-cont">
-                          <div className="rb-ibox-title">735</div>
-                          <div className="rb-ibox-text">Happy Clients</div>
-                        </div>
-                      </div>
+                    <div className="row">
+                    <div className="col-12">
+                        <h1 className="text-center text-white">Skills</h1>
                     </div>
                   </div>
+                  <div className="row">
+                    <div className="col-6 col-lg-4 skill-box">
+                      <div className="rb-ibox-1">
+                        <div className="rb-ibox-cont">
+                          <div className="rb-ibox-title">Javascript</div>
+                        </div>
+                        <div className="rb-ibox-icon js-icon">
+                          <img src={JsIcon} />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-6 col-lg-4 skill-box">
+                      <div className="rb-ibox-1">
+                        <div className="rb-ibox-cont">
+                          <div className="rb-ibox-title">React</div>
+                        </div>
+                        <div className="rb-ibox-icon react-icon">
+                          <img src={ReactIcon} />
+                        </div>
+                      </div>
+                    </div>   
+                    <div className="col-6 col-lg-4 skill-box">
+                      <div className="rb-ibox-1">
+                        <div className="rb-ibox-cont">
+                          <div className="rb-ibox-title">SASS</div>
+                        </div>
+                        <div className="rb-ibox-icon sass-icon">
+                          <img src={SassIcon} />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-6 col-lg-4 skill-box">
+                      <div className="rb-ibox-1">
+                        <div className="rb-ibox-cont">
+                          <div className="rb-ibox-title">HTML5</div>
+                        </div>
+                        <div className="rb-ibox-icon html5-icon">
+                          <img src={Html5Icon} />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-6 col-lg-4 skill-box">
+                      <div className="rb-ibox-1">
+                        <div className="rb-ibox-cont">
+                          <div className="rb-ibox-title">CSS3</div>
+                        </div>
+                        <div className="rb-ibox-icon css3-icon">
+                          <img src={Css3Icon} />
+                        </div>
+                      </div>
+                    </div>                 
+                    <div className="col-6 col-lg-4 skill-box">
+                      <div className="rb-ibox-1">
+                        <div className="rb-ibox-cont">
+                          <div className="rb-ibox-title">Git</div>
+                        </div>
+                        <div className="rb-ibox-icon git-icon">
+                          <img src={GitIcon} />
+                        </div>
+                      </div>
+                    </div>                  
+                  </div>
                 </div>
-                <div className="rb-gap-5 mnt-6" />
               </div>
 
        
