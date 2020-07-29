@@ -60,6 +60,7 @@ const PortfolioItemView = ({ match }) => {
                         <div className="rb-portfolio-info">
                           <h1 className="rb-portfolio-title display-4">{portfolioData[itemIndex].title}</h1>
                           <div className="rb-portfolio-text">
+                            <h4>{portfolioData[itemIndex].subheading}</h4>
                             {portfolioData[itemIndex].description}
                           </div>
                           <table className="rb-portfolio-details">

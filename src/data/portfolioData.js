@@ -4,6 +4,7 @@ function getPortfolioData() {
 	let data = [
 	{
 		title: "Trending Sloth",
+		subheading: <>Content website, with entertaining articles, videos, and photo&nbsp;galleries.</>,
 		thumbnail: "/portfolio-items/portfolio-trending-sloth-sm.jpg",
 		images: [
 			'/portfolio-items/portfolio-trending-sloth-1.jpg',
@@ -11,7 +12,7 @@ function getPortfolioData() {
 		],
 		type: "Content website",
 		route: "/portfolio/trending-sloth/",
-		description: "",
+		description: <>As the lead designer and front-end developer on this project, I designed the layout, typography, and user experience of the site. I created HTML mockups for approval by the Marketing team, to show how the site would look on desktop, tablet, and mobile. Once the design was approved, I built the site using Javascript, HTML, SCSS, and Smarty templating to render the site’s content (provided by the&nbsp;backend).</>,
 		year: "2019",
 		company: "AwareAds",
 		role: <>Lead Designer and <nobr>Front-end Developer</nobr></>,
@@ -21,6 +22,7 @@ function getPortfolioData() {
 	},
 	{
 		title: "Cheestrings",
+		subheading: <>Scrolling adventure website to promote Cheestrings&nbsp;snacks.</>,
 		thumbnail: "/portfolio-items/portfolio-cheestrings-sm.jpg",
 		images: [
 			'/portfolio-items/portfolio-cheestrings-1.jpg',
@@ -29,7 +31,7 @@ function getPortfolioData() {
 		],
 		type: "Scrolling Adventure",
 		route: "/portfolio/cheestrings/",
-		description: "",
+		description: <>For this project, I worked with the Greensock animation library to add animated interactive elements to this underwater-themed one page scroller. The elements are animated on a timeline, and the timeline is controlled by how far the user has scrolled down the&nbsp;page.</>,
 		year: "2017",
 		company: "Isobar",
 		role: <>Front-end Developer</>,
@@ -39,6 +41,7 @@ function getPortfolioData() {
 	},
 	{
 		title: "Communa",
+		subheading: <>Market research survey&nbsp;platform.</>,
 		thumbnail: "/portfolio-items/portfolio-communa-sm.jpg",
 		images: [
 			'/portfolio-items/portfolio-communa-1.jpg',
@@ -46,7 +49,7 @@ function getPortfolioData() {
 		],
 		type: "Research Survey Platform",
 		route: "/portfolio/communa/",
-		description: "",
+		description: <>As a front-end developer/designer on this project, I do ongoing maintenance work on this site. This includes designing and adding new UI elements, updating the javascript so the site functions well, and adding user analytics&nbsp;tracking.</>,
 		year: "2018-2019",
 		company: "AwareAds",
 		role: "Front-end Developer, Design work",
@@ -56,6 +59,7 @@ function getPortfolioData() {
 	},
 	{
 		title: "Sony Rewards",
+		subheading: <>Platform where users can track and redeem rewards for their Sony&nbsp;account.</>,
 		thumbnail: "/portfolio-items/portfolio-sony-rewards-sm.jpg",
 		images: [
 			'/portfolio-items/portfolio-sony-rewards-1.jpg',
@@ -63,7 +67,7 @@ function getPortfolioData() {
 		],
 		type: "Rewards Portal",
 		route: "/portfolio/sony-rewards/",
-		description: "[...] Specifically, I worked on the user account profile & preferences section.",
+		description: <>For this project, I worked on the profile section. In this section, users add their account information, and preferences. I built a “branching” form where users could select their games, music, and movies&nbsp;preferences.</>,
 		year: "2014",
 		company: "Klick Health",
 		role: <>Front-end Developer</>,
@@ -73,6 +77,7 @@ function getPortfolioData() {
 	},
 	{
 		title: "Made with Nestle",
+		subheading: <>Website with recipes made with Nestle&nbsp;products.</>,
 		thumbnail: "/portfolio-items/portfolio-nestle-sm.jpg",
 		images: [
 			'/portfolio-items/portfolio-nestle-3.jpg',
@@ -81,7 +86,7 @@ function getPortfolioData() {
 		],
 		type: "Recipe Website",
 		route: "/portfolio/made-with-nestle/",
-		description: "",
+		description: <>As one of the front-end developers on this site, I worked on features such as the recipe pages and the home page. I did javascript work, and added styles using the Stylus CSS&nbsp;preprocessor.</>,
 		year: "2016",
 		company: "OneMethod",
 		role: <>Front-end Developer</>,
@@ -92,6 +97,7 @@ function getPortfolioData() {
 
 	{
 		title: "Toronto Sierra Elevation",
+		subheading: <>Landing page for the Toronto Sierra Elevation&nbsp;sale.</>,
 		thumbnail: "/portfolio-items/portfolio-gmc-sierra-sm.jpg",
 		images: [
 			'/portfolio-items/portfolio-gmc-sierra-1.jpg',
@@ -99,7 +105,7 @@ function getPortfolioData() {
 		],
 		type: "Dealership Sale Landing Page",
 		route: "/portfolio/toronto-gmc-sierra/",
-		description: "",
+		description: <>Traffic from paid advertisements for the GM Toronto Sierra Elevation sale went to this landing page. I was the sole developer of this landing page. I added analytics tracking to measure conversions (Google Analytics, Facebook pixels, and Floodlight pixels), I used the Youtube API to control videos in javascript, and I added a dealership map using the Google Maps&nbsp;API.</>,
 		year: "2016",
 		company: "Isobar",
 		role: <>Front-end Developer</>,
@@ -109,6 +115,7 @@ function getPortfolioData() {
 	},
 	{
 		title: "Trintellix",
+		subheading: <>Website for medication for Major Depressive&nbsp;Disorder.</>,
 		thumbnail: "/portfolio-items/portfolio-brintellix-sm.jpg",
 		images: [
 			'/portfolio-items/portfolio-brintellix-1.jpg',
@@ -116,7 +123,7 @@ function getPortfolioData() {
 		],
 		type: "Medication Website",
 		route: "/portfolio/trintellix/",
-		description: "",
+		description: <>I was one of the front-end developers that worked on this site. I added content with HTML, styling with CSS, and used Javascript where&nbsp;necessary.</>,
 		year: "2013",
 		company: "Klick Health",
 		role: <>Front-end Developer</>,
@@ -126,6 +133,7 @@ function getPortfolioData() {
 	},
 	{
 		title: "Spark Change Today",
+		subheading: <>Community website where users could nominate community members as &quot;Sparks&quot;, who would be shown on the&nbsp;site.</>,
 		thumbnail: "/portfolio-items/portfolio-spark-change-sm.jpg",
 		images: [
 			'/portfolio-items/portfolio-spark-change-1.jpg',
@@ -133,7 +141,7 @@ function getPortfolioData() {
 		],
 		type: "Community Website",
 		route: "/portfolio/spark-change/",
-		description: "Website where users could nominate community members as \"Sparks\", who would be shown on the site. Custom Wordpress theme built from scratch. Had a searchable map, that would allow users to search for Community Living Ontario locations by postal code (using the Google Maps API). Had a form used to nominate Sparks.",
+		description: <>I was the sole developer of this website for its initial launch. I built a custom Wordpress theme for this site from scratch. Using the Google Maps API, I created a searchable map that allowed users to search for Community Living Ontario locations by postal code. The site had a form used to nominate Sparks, who would then be displayed on the site (after admin approval in the Wordpress backend). Note: This site is no longer&nbsp;active.</>,
 		year: "2014",
 		company: "KPDI",
 		role: <>Lead Web Developer</>,
@@ -142,7 +150,8 @@ function getPortfolioData() {
 		url: ""
 	},
 	{
-		title: "Astellas Patient Education Resource Portal",
+		title: "Astellas Education Resource Portal",
+		subheading: <>Web portal where doctors and patients could access informational&nbsp;documents.</>,
 		thumbnail: "/portfolio-items/portfolio-astellas-perp-sm.jpg",
 		images: [
 			'/portfolio-items/portfolio-astellas-perp-1.jpg',
@@ -150,7 +159,7 @@ function getPortfolioData() {
 		],
 		type: "Patient Information Portal",
 		route: "/portfolio/astellas-patient-portal/",
-		description: "Website where patients can find infomational documents.",
+		description: <>I was the lead front-end developer for this project. Using HTML and CSS, I made the site match the designs provided by the Design department. I added functionality with Javascript, using AJAX calls to get data from the backend created by the backend developer. This site was designed for desktop only, so it is not&nbsp;responsive.</>,
 		year: "2016",
 		company: "Klick Health",
 		role: <>Lead Front-end Developer</>,
