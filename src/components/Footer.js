@@ -24,8 +24,8 @@ const Footer = () => (
                             <div className="rb-footer-social text-white">
                                 <div className="rb-gap-3 mnt-6 d-none d-lg-block" />
                                 <ul>
-                                    <li><a href="https://www.linkedin.com/in/rileyboyd/" target="_blank"><FontAwesomeIcon icon={faLinkedin} />Connect with me on LinkedIn: www.linkedin.com/in/rileyboyd</a></li>
-                                    <li><a href="https://twitter.com/riley_boyd" target="_blank"><FontAwesomeIcon icon={faTwitter} />Follow me on Twitter: @riley_boyd</a></li>
+                                    <li><a href="https://www.linkedin.com/in/rileyboyd/" target="_blank"><FontAwesomeIcon icon={faLinkedin} />Connect with me on&nbsp;LinkedIn: <span className="social-handle">www.linkedin.com/in/rileyboyd</span></a></li>
+                                    <li><a href="https://twitter.com/riley_boyd" target="_blank"><FontAwesomeIcon icon={faTwitter} />Follow me on Twitter: <span className="social-handle">@riley_boyd</span></a></li>
                                 </ul>
                             </div>
                         </div>
