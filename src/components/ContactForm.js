@@ -106,7 +106,8 @@ const ContactForm = () => {
 
 	return(
       <div className="container" id="contact">
-        <div className="rb-gap-5" />
+        <div className="rb-gap-5 d-none d-md-block" />
+        <div className="rb-gap-3 d-md-none" />
         <div className="row vertical-gap">
           <div className="col-lg-5">
             <h2 className="display-4">Contact Me</h2>

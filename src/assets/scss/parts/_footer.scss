@@ -40,10 +40,14 @@
         }
 
         > ul li {
-            display: inline-block;
+            display: block;
+
+            svg {
+                margin-right: 10px;
+            }
             > a {
                 display: block;
-                padding: 3px 6px;
+                padding: 6px 6px;                
                 font-size: 1.13rem;
                 color: inherit;
                 opacity: .4;

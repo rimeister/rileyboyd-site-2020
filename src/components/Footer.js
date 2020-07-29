@@ -19,12 +19,13 @@ const Footer = () => (
                             <p className="rb-heading-font">My name's Riley Boyd, I'm a web designer and developer with nine years of professional experience. I have an M.A. in Humanities Computing, and an Hons. B.A. in Multimedia and Fine&nbsp;Art. I live in Toronto, Ontario,&nbsp;Canada.</p>
                         </div>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-lg-5 offset-lg-1">
                         <div className="rb-widget">
                             <div className="rb-footer-social text-white">
+                                <div className="rb-gap-3 mnt-6 d-none d-lg-block" />
                                 <ul>
-                                    <li><a href="https://twitter.com/riley_boyd"><FontAwesomeIcon icon={faLinkedin} /></a></li>
-                                    <li><a href="https://twitter.com/riley_boyd"><FontAwesomeIcon icon={faTwitter} /></a></li>
+                                    <li><a href="https://www.linkedin.com/in/rileyboyd/" target="_blank"><FontAwesomeIcon icon={faLinkedin} />Connect with me on LinkedIn: www.linkedin.com/in/rileyboyd</a></li>
+                                    <li><a href="https://twitter.com/riley_boyd" target="_blank"><FontAwesomeIcon icon={faTwitter} />Follow me on Twitter: @riley_boyd</a></li>
                                 </ul>
                             </div>
                         </div>

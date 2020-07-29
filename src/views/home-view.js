@@ -139,6 +139,7 @@ const HomeView = () => {
                             </div>
                         </div>
                         <div className="col-md-4 order-md-1 pull-md-8 text-left about-me-photo-col">
+                             <div className="rb-gap-3 mnt-6 d-none d-md-block d-lg-none" />
                              <img src={AboutPhoto} alt="Photo of Riley" className="about-me-photo" />
                         </div>
                         <div className="col-md-12 text-left d-md-none">

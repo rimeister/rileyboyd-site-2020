@@ -2,6 +2,8 @@ import React, {useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
 import {HashLink} from 'react-router-hash-link';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 // import {tween, $wnd} from '../assets/js/parts/_utility';
 import $ from 'jquery';
@@ -186,8 +188,8 @@ const MobileNav = (props) => {
                     <div className="container">
                         <div className="rb-nav-social" ref={navSociallRef}>
                             <ul>
-                                <li><a href="https://twitter.com/riley_boyd"><i className="fa fa-twitter"></i></a></li>
-                                <li><a href="https://www.facebook.com/rileyboydstudios/"><i className="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/rileyboyd/" target="_blank"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+                                <li><a href="https://twitter.com/riley_boyd" target="_blank"><FontAwesomeIcon icon={faTwitter} /></a></li>
                             </ul>
                         </div>
                     </div>
