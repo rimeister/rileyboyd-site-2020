@@ -133,7 +133,6 @@ const HomeView = () => {
                             <div className="d-none d-md-block">
                             <p>I build rich user interfaces for the web using modern tools like React/Vue, SASS/CSS3, HTML5, NPM, and Git, and I can write great vanilla Javascript code. I build responsive websites and web apps that work well across browsers and devices, and are optimized to provide a great user experience for mobile, tablet, and desktop users.</p>
                             <p>I have strong design skills, and I am skilled with the Adobe Creative Suite of applications, including Photoshop, Illustrator, and InDesign.</p>
-                            <p></p>
                             <p>I have worked for a variety of agencies/companies in the digital advertising industry, and have had the opportunity to work on websites for some major brands (e.g., Sony, General Motors, Nestle, Volkswagen).</p>
                             <p>I hold a Master of Arts in Humanities Computing (University of Alberta), and an Honours Bachelor of Arts in Multimedia and Fine Art (McMaster University).</p>
                             </div>
@@ -145,8 +144,7 @@ const HomeView = () => {
                         <div className="col-md-12 text-left d-md-none">
                             <div className="rb-gap-1"></div>
                             <p>I build rich user interfaces for the web using modern tools like React/Vue, SASS/CSS3, HTML5, NPM, and Git, and I can write great vanilla Javascript code. I build responsive websites and web apps that work well across browsers and devices, and are optimized to provide a great user experience for mobile, tablet, and desktop users.</p>
-                            <p>I have strong design skills, I and am skilled with the Adobe Creative Suite of applications, including Photoshop, Illustrator, and InDesign.</p>
-                            <p></p>
+                            <p>I have strong design skills, and I am skilled with the Adobe Creative Suite of applications, including Photoshop, Illustrator, and InDesign.</p>
                             <p>I have worked for a variety of agencies/companies in the digital advertising industry, and have had the opportunity to work on websites for some major brands (e.g., Sony, General Motors, Nestle, Volkswagen).</p>
                             <p>I hold a Master of Arts in Humanities Computing (University of Alberta), and an Honours Bachelor of Arts in Multimedia and Fine Art (McMaster University).</p>
                             <div className="rb-gap-1"></div>

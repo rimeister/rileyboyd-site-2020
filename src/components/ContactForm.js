@@ -88,7 +88,7 @@ const ContactForm = () => {
 
 			axios({
 			    method: 'post',
-			    url: 'http://qa.rileyboyd.com/contact.php',
+			    url: 'http://rileyboyd.com/contact.php',
 			    data: bodyFormData,
 			    headers: {'Content-Type': 'multipart/form-data' }
 			})
