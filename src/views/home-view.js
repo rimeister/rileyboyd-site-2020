@@ -121,17 +121,26 @@ const HomeView = () => {
                         <div className="col-md-8 order-md-2 text-left about-me-text">
                             <div className="rb-gap-1"></div>
                             <h2 className="text-center">Nine Years of Professional Experience.</h2>
+                            <div className="rb-gap-1"></div>
                             <div className="d-none d-md-block">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie rutrum vulputate. Sed ac consequat velit, id molestie enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod massa magna, eu ullamcorper diam consequat nec. Proin in malesuada tortor, ut venenatis dolor. Curabitur dignissim dui condimentum auctor dapibus. Nam sed dolor non massa pharetra rhoncus.</p>
-                            <p>Phasellus sit amet dui facilisis, pellentesque ante eget, pellentesque ante. Proin a lobortis justo, eu commodo est. Quisque et purus purus. Aliquam facilisis, leo et commodo ultricies, ante tortor interdum libero, vitae dapibus lectus diam feugiat sem. Donec tincidunt commodo magna eu eleifend. Sed porttitor laoreet enim at gravida. Nullam eu vestibulum ipsum, sit amet facilisis libero. Nulla eu ante eget dui faucibus dictum. Integer eget placerat felis, a ullamcorper mauris. In nec magna non est mollis lobortis. Vivamus sit amet tellus sem. Pellentesque sit amet nunc fringilla metus tempor rutrum. Nulla facilisi. Aenean posuere diam eu ipsum dictum porta. Pellentesque nec bibendum augue.</p>
+                            <p>I build rich user interfaces for the web using modern tools like React/Vue, SASS/CSS3, HTML5, NPM, and Git, and I can write great vanilla Javascript code. I build responsive websites and web apps that work well across browsers and devices, and are optimized to provide a great user experience for mobile, tablet, and desktop users.</p>
+                            <p>I have strong design skills, and I am skilled with the Adobe Creative Suite of applications, including Photoshop, Illustrator, and InDesign.</p>
+                            <p></p>
+                            <p>I have worked for a variety of agencies/companies in the digital advertising industry, and have had the opportunity to work on websites for some major brands (e.g., Sony, General Motors, Nestle, Volkswagen).</p>
+                            <p>I hold a Master of Arts in Humanities Computing (University of Alberta), and an Honours Bachelor of Arts in Multimedia and Fine Art (McMaster University).</p>
                             </div>
                         </div>
                         <div className="col-md-4 order-md-1 pull-md-8 text-left about-me-photo-col">
                              <img src={AboutPhoto} alt="Photo of Riley" className="about-me-photo" />
                         </div>
                         <div className="col-md-12 text-left d-md-none">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie rutrum vulputate. Sed ac consequat velit, id molestie enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod massa magna, eu ullamcorper diam consequat nec. Proin in malesuada tortor, ut venenatis dolor. Curabitur dignissim dui condimentum auctor dapibus. Nam sed dolor non massa pharetra rhoncus.</p>
-                            <p>Phasellus sit amet dui facilisis, pellentesque ante eget, pellentesque ante. Proin a lobortis justo, eu commodo est. Quisque et purus purus. Aliquam facilisis, leo et commodo ultricies, ante tortor interdum libero, vitae dapibus lectus diam feugiat sem. Donec tincidunt commodo magna eu eleifend. Sed porttitor laoreet enim at gravida. Nullam eu vestibulum ipsum, sit amet facilisis libero. Nulla eu ante eget dui faucibus dictum. Integer eget placerat felis, a ullamcorper mauris. In nec magna non est mollis lobortis. Vivamus sit amet tellus sem. Pellentesque sit amet nunc fringilla metus tempor rutrum. Nulla facilisi. Aenean posuere diam eu ipsum dictum porta. Pellentesque nec bibendum augue.</p>
+                            <div className="rb-gap-1"></div>
+                            <p>I build rich user interfaces for the web using modern tools like React/Vue, SASS/CSS3, HTML5, NPM, and Git, and I can write great vanilla Javascript code. I build responsive websites and web apps that work well across browsers and devices, and are optimized to provide a great user experience for mobile, tablet, and desktop users.</p>
+                            <p>I have strong design skills, I and am skilled with the Adobe Creative Suite of applications, including Photoshop, Illustrator, and InDesign.</p>
+                            <p></p>
+                            <p>I have worked for a variety of agencies/companies in the digital advertising industry, and have had the opportunity to work on websites for some major brands (e.g., Sony, General Motors, Nestle, Volkswagen).</p>
+                            <p>I hold a Master of Arts in Humanities Computing (University of Alberta), and an Honours Bachelor of Arts in Multimedia and Fine Art (McMaster University).</p>
+                            <div className="rb-gap-1"></div>
                         </div>
                     </div>
                 </div>
