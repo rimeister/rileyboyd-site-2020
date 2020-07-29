@@ -1,18 +1,23 @@
+import React from 'react';
+
 function getPortfolioData() {
 	let data = [
 	{
 		title: "Trending Sloth",
 		thumbnail: "/portfolio-items/portfolio-trending-sloth-sm.jpg",
 		images: [
-			''
+			'/portfolio-items/portfolio-single-1-1.jpg',
+			'/portfolio-items/portfolio-single-1-1.jpg',
+			'/portfolio-items/portfolio-single-1-1.jpg'
 		],
 		type: "Content website",
 		route: "/portfolio/trending-sloth/",
 		description: "",
 		year: "2019",
 		company: "AwareAds",
-		role: "Lead Designer and Front-end Developer",
-		tech: "Javascript, HTML, SCSS, Smarty Templating"
+		role: <>Lead Designer and <nobr>Front-end Developer</nobr></>,
+		tech: <>Javascript, HTML, SCSS, Smarty&nbsp;Templating</>,
+		id: "trending-sloth"
 	},
 	{
 		title: "Cheestrings",
@@ -25,8 +30,9 @@ function getPortfolioData() {
 		description: "",
 		year: "2017",
 		company: "Isobar",
-		role: "Front-end Development",
-		tech: "Javascript, HTML, CSS"
+		role: <>Front-end Development</>,
+		tech: "Javascript, HTML, CSS",
+		id: "cheestrings"
 	},
 	{
 		title: "Communa",
@@ -40,7 +46,8 @@ function getPortfolioData() {
 		year: "2018-2019",
 		company: "AwareAds",
 		role: "Front-end Development, Design work",
-		tech: "Javascript, HTML, CSS"
+		tech: "Javascript, HTML, CSS",
+		id: "communa"
 	}
 	];
 

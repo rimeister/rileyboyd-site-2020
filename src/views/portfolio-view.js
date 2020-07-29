@@ -7,8 +7,6 @@ const PortfolioView = () => {
 
   let portfolioData = getPortfolioData();
 
-  console.log(portfolioData);
-
     useEffect(()=>{
       window.scrollTo(0, 0);
     },[]);
@@ -44,7 +42,6 @@ const PortfolioView = () => {
                 </div>)
               })
             }
-
 
           </div>
           <div className="rb-gap-4"></div>

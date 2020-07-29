@@ -237,12 +237,18 @@
     .rb-portfolio-details {
         width: 100%;
 
+        tr {
+        }
+
         tr td {
-            width: 1%;
+            width: 100px;
+            padding-bottom: 5px;
+
             padding-right: 7px;
+            vertical-align: top;
         }
         tr td + td {
-            width: 100%;
+            width: auto;
             padding-right: 0;
         }
         tr + tr td {
