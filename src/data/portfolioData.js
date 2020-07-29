@@ -49,7 +49,7 @@ function getPortfolioData() {
 		description: "",
 		year: "2018-2019",
 		company: "AwareAds",
-		role: "Front-end Development, Design work",
+		role: "Front-end Developer, Design work",
 		tech: "Javascript, HTML, CSS",
 		id: "communa",
 		url: "http://communa.com"
@@ -106,6 +106,57 @@ function getPortfolioData() {
 		tech: "Javascript, HTML, CSS",
 		id: "toronto-gmc-sierra",
 		url: "http://torontosierraelevation.com"
+	},
+	{
+		title: "Trintellix",
+		thumbnail: "/portfolio-items/portfolio-brintellix-sm.jpg",
+		images: [
+			'/portfolio-items/portfolio-brintellix-1.jpg',
+			'/portfolio-items/portfolio-brintellix-2.jpg'
+		],
+		type: "Medication Website",
+		route: "/portfolio/trintellix/",
+		description: "",
+		year: "2013",
+		company: "Klick Health",
+		role: <>Front-end Developer</>,
+		tech: "Javascript, HTML, CSS",
+		id: "trintellix",
+		url: "http://us.trintellix.com"
+	},
+	{
+		title: "Spark Change Today",
+		thumbnail: "/portfolio-items/portfolio-spark-change-sm.jpg",
+		images: [
+			'/portfolio-items/portfolio-spark-change-1.jpg',
+			'/portfolio-items/portfolio-spark-change-2.jpg'
+		],
+		type: "Community Website",
+		route: "/portfolio/spark-change/",
+		description: "Website where users could nominate community members as \"Sparks\", who would be shown on the site. Custom Wordpress theme built from scratch. Had a searchable map, that would allow users to search for Community Living Ontario locations by postal code (using the Google Maps API). Had a form used to nominate Sparks.",
+		year: "2014",
+		company: "KPDI",
+		role: <>Lead Web Developer</>,
+		tech: "Javascript, Custom Wordpress Theme, HTML, CSS",
+		id: "spark-change",
+		url: ""
+	},
+	{
+		title: "Astellas Patient Education Resource Portal",
+		thumbnail: "/portfolio-items/portfolio-astellas-perp-sm.jpg",
+		images: [
+			'/portfolio-items/portfolio-astellas-perp-1.jpg',
+			'/portfolio-items/portfolio-astellas-perp-2.jpg'
+		],
+		type: "Patient Information Portal",
+		route: "/portfolio/astellas-patient-portal/",
+		description: "Website where patients can find infomational documents.",
+		year: "2016",
+		company: "Klick Health",
+		role: <>Lead Front-end Developer</>,
+		tech: "Javascript, Custom Wordpress Theme, HTML, CSS",
+		id: "astellas-patient-portal",
+		url: "http://astellasresources.com"
 	}
 		];
 
