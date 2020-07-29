@@ -118,13 +118,20 @@ const HomeView = () => {
             <div className="bg-white" id="about" ref={aboutRef}>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-8 text-left about-me-text">
+                        <div className="col-md-8 order-md-2 text-left about-me-text">
                             <div className="rb-gap-1"></div>
                             <h2 className="text-center">Nine Years of Professional Experience.</h2>
-                            <p>Lorem Ipsum</p>
+                            <div className="d-none d-md-block">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie rutrum vulputate. Sed ac consequat velit, id molestie enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod massa magna, eu ullamcorper diam consequat nec. Proin in malesuada tortor, ut venenatis dolor. Curabitur dignissim dui condimentum auctor dapibus. Nam sed dolor non massa pharetra rhoncus.</p>
+                            <p>Phasellus sit amet dui facilisis, pellentesque ante eget, pellentesque ante. Proin a lobortis justo, eu commodo est. Quisque et purus purus. Aliquam facilisis, leo et commodo ultricies, ante tortor interdum libero, vitae dapibus lectus diam feugiat sem. Donec tincidunt commodo magna eu eleifend. Sed porttitor laoreet enim at gravida. Nullam eu vestibulum ipsum, sit amet facilisis libero. Nulla eu ante eget dui faucibus dictum. Integer eget placerat felis, a ullamcorper mauris. In nec magna non est mollis lobortis. Vivamus sit amet tellus sem. Pellentesque sit amet nunc fringilla metus tempor rutrum. Nulla facilisi. Aenean posuere diam eu ipsum dictum porta. Pellentesque nec bibendum augue.</p>
+                            </div>
                         </div>
-                        <div className="col-lg-4 text-left about-me-photo-col">
+                        <div className="col-md-4 order-md-1 pull-md-8 text-left about-me-photo-col">
                              <img src={AboutPhoto} alt="Photo of Riley" className="about-me-photo" />
+                        </div>
+                        <div className="col-md-12 text-left d-md-none">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie rutrum vulputate. Sed ac consequat velit, id molestie enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras euismod massa magna, eu ullamcorper diam consequat nec. Proin in malesuada tortor, ut venenatis dolor. Curabitur dignissim dui condimentum auctor dapibus. Nam sed dolor non massa pharetra rhoncus.</p>
+                            <p>Phasellus sit amet dui facilisis, pellentesque ante eget, pellentesque ante. Proin a lobortis justo, eu commodo est. Quisque et purus purus. Aliquam facilisis, leo et commodo ultricies, ante tortor interdum libero, vitae dapibus lectus diam feugiat sem. Donec tincidunt commodo magna eu eleifend. Sed porttitor laoreet enim at gravida. Nullam eu vestibulum ipsum, sit amet facilisis libero. Nulla eu ante eget dui faucibus dictum. Integer eget placerat felis, a ullamcorper mauris. In nec magna non est mollis lobortis. Vivamus sit amet tellus sem. Pellentesque sit amet nunc fringilla metus tempor rutrum. Nulla facilisi. Aenean posuere diam eu ipsum dictum porta. Pellentesque nec bibendum augue.</p>
                         </div>
                     </div>
                 </div>

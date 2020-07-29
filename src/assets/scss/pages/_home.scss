@@ -7,6 +7,12 @@
 
 	#about {
 
+		padding: 30px 0;
+
+		@media only screen and (min-width: 992px) {
+			padding: 60px 0;			
+		}
+
 		.about-me-photo-col {
 
 			padding: 0;
@@ -18,7 +24,9 @@
 		}
 
 		.about-me-text {
-			padding-left: 30px;
+			@media only screen and (min-width: 992px) {
+				padding-left: 60px;
+			}
 		}
 	}
 
