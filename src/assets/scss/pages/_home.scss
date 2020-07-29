@@ -5,6 +5,23 @@
 		opacity: 0;
 	}
 
+	#about {
+
+		.about-me-photo-col {
+
+			padding: 0;
+
+			.about-me-photo {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		.about-me-text {
+			padding-left: 30px;
+		}
+	}
+
 	#projects {
 		background-color: $color_bg;
 	}

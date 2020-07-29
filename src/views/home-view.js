@@ -10,6 +10,8 @@ import Button from '../components/Button';
 
 import ContactForm from '../components/ContactForm';
 
+import AboutPhoto from '../assets/images/personal-photo-about-section-md.jpg'
+
 const HomeView = () => {
 
     let timeline = new TimelineMax({repeat:0});
@@ -116,22 +118,13 @@ const HomeView = () => {
             <div className="bg-white" id="about" ref={aboutRef}>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-8 offset-lg-2 text-center">
-                             <div className="rb-gap-4 mt-9"></div>
-                             <h2 className="display-4">About Me</h2>
-                             <div className="rb-gap mnt-5"></div>
+                        <div className="col-lg-8 text-left about-me-text">
+                            <div className="rb-gap-1"></div>
+                            <h2 className="text-center">Nine Years of Professional Experience.</h2>
+                            <p>Lorem Ipsum</p>
                         </div>
-                        <div className="col-lg-4 offset-lg-1 text-left">
-                             {/*<img src={} /> */}
-                               <p>I'm a front-end web specilist with nine years of professional experience.</p>
-                               <p>Lorem Ipsum</p>
-                        </div>
-                        <div className="col-lg-6 text-left">
-                               <p>I'm a front-end web specilist with nine years of professional experience.</p>
-                               <p>Lorem Ipsum</p>
-                        </div>
-                        <div className="col-lg-12">
-                             <div className="rb-gap-4 mt-25"></div>
+                        <div className="col-lg-4 text-left about-me-photo-col">
+                             <img src={AboutPhoto} alt="Photo of Riley" className="about-me-photo" />
                         </div>
                     </div>
                 </div>
