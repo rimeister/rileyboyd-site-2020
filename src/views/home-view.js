@@ -145,7 +145,67 @@ const HomeView = () => {
                     </div>
                 </div>
             </div>
-                
+
+
+              <div className="rb-box bg-dark-1 text-white">
+                <div className="bg-image bg-image-parallax" style={{backgroundImage: 'none'}} data-jarallax-original-styles="background-image: url('assets/images/bg-pattern.jpg');">
+                  <div id="jarallax-container-1" >
+                    <div style={{backgroundPosition: '50% 50%', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundImage: 'url("https://html.nkdev.info/snow/assets/images/bg-pattern.jpg")'}} />
+                  </div>
+                </div>
+                <div className="rb-gap-5 mnt-6" />
+                <div className="container">
+                  <div className="row vertical-gap">
+                    <div className="col-md-6 col-lg-3">
+                      <div className="rb-ibox-1">
+                        <div className="rb-ibox-icon">
+                          <span className="pe-7s-portfolio" />
+                        </div>
+                        <div className="rb-ibox-cont">
+                          <div className="rb-ibox-title">548</div>
+                          <div className="rb-ibox-text">Projects Completed</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6 col-lg-3">
+                      <div className="rb-ibox-1">
+                        <div className="rb-ibox-icon">
+                          <span className="pe-7s-clock" />
+                        </div>
+                        <div className="rb-ibox-cont">
+                          <div className="rb-ibox-title">1465</div>
+                          <div className="rb-ibox-text">Working Hours</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6 col-lg-3">
+                      <div className="rb-ibox-1">
+                        <div className="rb-ibox-icon">
+                          <span className="pe-7s-star" />
+                        </div>
+                        <div className="rb-ibox-cont">
+                          <div className="rb-ibox-title">612</div>
+                          <div className="rb-ibox-text">Positive Feedbacks</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6 col-lg-3">
+                      <div className="rb-ibox-1">
+                        <div className="rb-ibox-icon">
+                          <span className="pe-7s-like" />
+                        </div>
+                        <div className="rb-ibox-cont">
+                          <div className="rb-ibox-title">735</div>
+                          <div className="rb-ibox-text">Happy Clients</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="rb-gap-5 mnt-6" />
+              </div>
+
+       
             <ContactForm />
 
             <div className="breakpoint-check" ref={breakpointCheckRef} />
