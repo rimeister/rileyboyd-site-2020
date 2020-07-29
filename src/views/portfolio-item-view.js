@@ -43,7 +43,6 @@ const PortfolioItemView = ({ match }) => {
   let [portfolioData, setPortfolioData] = useState(getPortfolioData());
 
   return (
-
       <Route 
         
         path={`${match.path}/:name`} 

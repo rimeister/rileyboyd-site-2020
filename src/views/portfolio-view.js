@@ -12,11 +12,11 @@ const PortfolioView = () => {
     },[]);
 
     return (
-        <div>
+      <div className="page-portfolio">
 
         <div className="container">
 
-          <h1 className="text-center m-60">Portfolio</h1>
+          <h1 className="text-center mt-60 mb-50">Portfolio</h1>
 
           <div className="rb-portfolio-list rb-isotope rb-isotope-3-cols" style={{position: 'relative', height: '1109.95px'}}>
 
