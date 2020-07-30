@@ -26,9 +26,12 @@
             vertical-align: middle;
             transition: .5s opacity;
 
-            &:hover {
-                opacity: .6;
+            @media only screen and (min-width: 992px) {
+                &:hover {
+                    opacity: .6;
+                }                
             }
+
         }
         > span {
             display: inline-block;
