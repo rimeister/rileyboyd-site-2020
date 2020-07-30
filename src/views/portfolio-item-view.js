@@ -115,9 +115,9 @@ const PortfolioItemView = ({ match }) => {
               </div>
               <div className="rb-pagination rb-pagination-center">
                 <div className="container">
-                  <a href="#" className="rb-pagination-prev" onClick={(event)=>goToItemHandler(event,(itemIndex>0)?portfolioData[itemIndex-1].route:'/')} style={{display: itemIndex>0?'block':'none'}}><span className="pe-7s-angle-left"></span> Previous Work</a>
+                  <a href="#" className="rb-pagination-prev" onClick={(event)=>goToItemHandler(event,(itemIndex>0)?portfolioData[itemIndex-1].route:'/')} style={{display: itemIndex>0?'block':'none'}}><span className="pe-7s-angle-left arrow"></span> Prev<span className="hide-text">ious Work</span></a>
                   {/*<a className="rb-pagination-center" href="work-3-style-1.html"><span className="rb-icon-squares" /></a>*/}
-                  <a href="#" className="rb-pagination-next" onClick={(event)=>goToItemHandler(event,(portfolioData.length > itemIndex+1)?portfolioData[itemIndex+1].route:'/')} style={{display: (portfolioData.length > itemIndex+1)?'block':'none'}}>Next Work <span className="pe-7s-angle-right" /> </a>
+                  <a href="#" className="rb-pagination-next" onClick={(event)=>goToItemHandler(event,(portfolioData.length > itemIndex+1)?portfolioData[itemIndex+1].route:'/')} style={{display: (portfolioData.length > itemIndex+1)?'block':'none'}}>Next<span className="hide-text"> Work </span><span className="pe-7s-angle-right arrow" /> </a>
                 </div>
               </div>
             </>
