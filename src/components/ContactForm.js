@@ -8,6 +8,7 @@ const ContactForm = () => {
 	const emailInputRef = useRef();
 	const titleInputRef = useRef();
 	const messageInputRef = useRef();
+	const successMsgRef = useRef();
 
 	const [nameError,setNameError] = useState(false);
 	const [emailError,setEmailError] = useState(false);
@@ -94,7 +95,11 @@ const ContactForm = () => {
 			})
 			.then(function (response) {
 		        //handle success
-		        setShowSuccessMsg(true)
+		        if (response.data.type == "success") {
+			        successMsgRef.current.innerHTML = response.data.response;
+			        setShowSuccessMsg(true);
+		        }
+
 		    })
 		    .catch(function (response) {
 	        //handle error
@@ -139,9 +144,10 @@ const ContactForm = () => {
               <textarea className={`form-control required ${msgError ? 'rb-error': ''}`} name="message" rows={8} placeholder="Your Comment" aria-required="true" defaultValue={""} ref={messageInputRef} onChange={onChangeHandlerMsg} />
               <div id="name-error" className="rb-error" style={{ display: msgError ? 'block': 'none'}}>This field is required.</div>
               <div className="rb-gap-1" />
-              <div className="rb-form-response-success" style={{display : showSuccessMsg ? 'block':'none'}}>Thank You! I will be in touch.</div>
-              <div className="rb-form-response-error" style={{display : showFailureMsg ? 'block':'none'}}>Oops, something went wrong. Message not sent.</div>
-              <button className="rb-btn">Send Message</button>
+              <button className="rb-btn" id="form-submit-btn">Send Message</button>
+              <div className="rb-form-response rb-form-response-success" style={{display : showSuccessMsg ? 'block':'none'}} ref={successMsgRef}>Message sent!</div>
+              <div className="rb-form-response rb-form-response-error" style={{display : showFailureMsg ? 'block':'none'}}>Oops, something went wrong. Message not sent.</div>
+              <div className="clear" />
             </form>
           </div>
         </div>

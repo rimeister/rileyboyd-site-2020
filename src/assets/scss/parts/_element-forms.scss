@@ -33,13 +33,25 @@ div.rb-error {
     background-color: rgba(#f00, .4);
 }
 
+.rb-form-response {
+
+    @media only screen and (min-width: 768px) {
+
+        float: left;
+        height: 53px;
+        line-height: 53px;
+        margin: 0 0 0 15px;
+
+    }
+
+}
+
 .rb-form-response-success {
     display: none;
-    margin-bottom: 10px;
     color: #008000;
 }
+
 .rb-form-response-error {
     display: none;
-    margin-bottom: 10px;
     color: #f00;
 }
