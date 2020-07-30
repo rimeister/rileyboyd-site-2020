@@ -123,7 +123,7 @@ const Nav = (props) => {
                         */}
                     </li>
                     <li>
-                        <Link to="/portfolio"> Portfolio </Link>
+                        <Link to="/portfolio/"> Portfolio </Link>
                     </li>
                     <li>
                         <HashLink to="/contact/"> Contact </HashLink>

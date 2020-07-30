@@ -111,7 +111,7 @@ const HomeView = () => {
     },[]);
     
     useEffect(()=>{
-        if (location.pathname == '/contact/') {
+        if (location.pathname == '/contact/' || location.pathname == '/contact') {
             scrollToRef(contactRef);
         } else {
             scrollToTop();
