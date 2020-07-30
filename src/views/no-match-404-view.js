@@ -11,7 +11,7 @@ const NoMatch404View = () => {
     const history = useHistory();
 
     const btnHandler = () => {
-        history.push('/portfolio');
+        history.push('/');
     }
 
     useEffect(()=>{

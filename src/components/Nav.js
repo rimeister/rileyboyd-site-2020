@@ -6,6 +6,8 @@ import {HashLink} from 'react-router-hash-link';
 import logo from '../assets/images/rb-logo.svg';
 import logoLight from '../assets/images/rb-logo-light.svg';
 
+import {useLocation} from 'react-router-dom';
+
 /*
 import {
     $, tween, $wnd, $doc,
@@ -14,8 +16,9 @@ import {
 
 const Nav = (props) => {
 
- const [isSticky, setSticky] = useState(false);
-  const stickyRef = useRef(null)
+    const [isSticky, setSticky] = useState(false);
+    const stickyRef = useRef(null);
+    const location = useLocation();
 
     const handleScroll = () => {
 
@@ -37,25 +40,19 @@ const Nav = (props) => {
 
     }
 
+    const getSelectedNavIndex = () => {
+        let selectedIndex = 3;
+        if (location.pathname == '/') {
+            selectedIndex = 0; 
+        } else if (location.pathname.substring(0,10) == '/portfolio') {
+            selectedIndex = 1; 
+        } else if (location.pathname == '/contact/' || location.pathname == '/contact') {
+            selectedIndex = 2;     
+        }
+        return selectedIndex;
+    }
 
-    /*
-    // This function handle the scroll performance issue
-    const debounce = (func, wait = 20, immediate = true) => {
-      let timeOut;
-      return () => {
-       
-        let context = this,
-          args = arguments;
-        const later = () => {
-          timeOut = null;
-          if (!immediate) func.apply(context, args);
-        };
-        const callNow = immediate && !timeOut;
-        clearTimeout(timeOut);
-        timeOut = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-      };
-    };*/
+    const [selectedNavIndex,setSelectedNavIndex] = useState(getSelectedNavIndex());
 
     const debounce = (func,wait = 20, immediate = true) => {
 
@@ -78,6 +75,10 @@ const Nav = (props) => {
             }  
     }, [debounce, handleScroll]);
 
+    useEffect(()=>{
+        setSelectedNavIndex(getSelectedNavIndex());
+    },[location.pathname]);
+
     return(
     <nav ref={stickyRef} className={`rb-navbar rb-navbar-top ${props.sticky ? 'rb-navbar-autohide rb-navbar-transparent rb-navbar-white-text-on-top rb-onscroll-show' : ''} ${(props.sticky && isSticky) ? 'rb-navbar-solid rb-navbar-fixed' : ''}`}>
         <div className="container">
@@ -87,7 +88,7 @@ const Nav = (props) => {
                     <img src={logo} alt="" width="140" />
                 </Link>
                 <ul className="rb-nav rb-nav-right d-none d-lg-block" data-nav-mobile="#rb-nav-mobile">
-                    <li className="active rb-drop-item">
+                    <li className={`rb-drop-item ${selectedNavIndex==0?'active':''}`}>
                         <Link to="/"> Home </Link>
                         {/*
                         // Add this back in when WP sub-menus/child menus are set up
@@ -122,10 +123,10 @@ const Nav = (props) => {
                         </ul>
                         */}
                     </li>
-                    <li>
+                    <li className={`rb-drop-item ${selectedNavIndex==1?'active':''}`}>
                         <Link to="/portfolio/"> Portfolio </Link>
                     </li>
-                    <li>
+                    <li className={`rb-drop-item ${selectedNavIndex==2?'active':''}`}>
                         <HashLink to="/contact/"> Contact </HashLink>
                     </li>
                     {/*
