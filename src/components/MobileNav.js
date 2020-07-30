@@ -158,7 +158,7 @@ const MobileNav = (props) => {
                                           <Link to="/portfolio/" onClick={props.closeBtnHandler}> Portfolio </Link>
                                         </li>
                                         <li>
-                                            <HashLink to="/#contact" onClick={props.closeBtnHandler}> Contact </HashLink>
+                                            <HashLink to="/contact/" onClick={props.closeBtnHandler}> Contact </HashLink>
                                         </li>
                                         {/*
                                         <li className=" rb-drop-item">

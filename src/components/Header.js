@@ -10,7 +10,7 @@ const Header = (props) => {
 	const [hasStickyNav,setHasStickyNav] = useState();
 
 	useEffect(()=>{
-		setHasStickyNav((location.pathname == '/'));
+		setHasStickyNav((location.pathname == '/' || location.pathname == '/contact/'));
 	},[location.pathname]);
 
 	return (

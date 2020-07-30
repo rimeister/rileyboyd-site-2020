@@ -1,5 +1,5 @@
 import React, {useEffect,useRef} from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 // import aboutMeSignatureImg from '../assets/images/about-me-signature.png';
 
 import TweenMax from 'gsap';
@@ -29,6 +29,8 @@ const HomeView = () => {
     const aboutRef = useRef();
 
     const scrollBtnRef = useRef();
+
+    const contactRef = useRef();    
 
     /*
         
@@ -76,6 +78,7 @@ const HomeView = () => {
     // 0,ref.current.offsetTop);
 
     const history = useHistory();
+    let location = useLocation();
 
     const btnHandler = () => {
         history.push('/portfolio');
@@ -88,7 +91,12 @@ const HomeView = () => {
 
     useEffect(()=>{
 
-        window.scrollTo(0, 0);
+        if (location.pathname == '/contact/') {
+            console.log(contactRef.current);
+            scrollToRef(contactRef);
+        } else {
+            window.scrollTo(0, 0);
+        }
     
         timeline
             .to('#hero-text-1', 1, {top: 0, opacity: 1},0.5)
@@ -233,7 +241,7 @@ const HomeView = () => {
               </div>
 
        
-            <ContactForm />
+            <ContactForm ref={contactRef} />
 
             <div className="breakpoint-check" ref={breakpointCheckRef} />
         </div>

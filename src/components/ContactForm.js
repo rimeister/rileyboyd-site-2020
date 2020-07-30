@@ -1,8 +1,8 @@
-import React, {useState,useRef} from 'react';
+import React, {useState,useRef,forwardRef} from 'react';
 
 import axios from 'axios';
 
-const ContactForm = () => {
+let ContactForm = (props,ref) => {
 
 	const nameInputRef = useRef();
 	const emailInputRef = useRef();
@@ -20,6 +20,7 @@ const ContactForm = () => {
 
 	const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
+	// const contactRef = useRef();
 
 	const validateForm = () => {
 		
@@ -110,7 +111,7 @@ const ContactForm = () => {
 	} 
 
 	return(
-      <div className="container" id="contact">
+      <div className="container" id="contact" ref={ref}>
         <div className="rb-gap-5 d-none d-md-block" />
         <div className="rb-gap-3 d-md-none" />
         <div className="row vertical-gap">
@@ -156,5 +157,7 @@ const ContactForm = () => {
 	);
 
 }
+
+ContactForm = forwardRef(ContactForm);
 
 export default ContactForm;

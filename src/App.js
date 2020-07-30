@@ -35,6 +35,12 @@ function App() {
 
       <Route
         exact
+        path="/contact"
+        component={ HomeView }
+      />
+
+      <Route
+        exact
         path="/portfolio"
         component={ PortfolioView }
       />
