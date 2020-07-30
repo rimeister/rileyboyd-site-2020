@@ -75,6 +75,15 @@ const HomeView = () => {
 
     }
 
+    const scrollToTop = () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+    }
+
     // 0,ref.current.offsetTop);
 
     const history = useHistory();
@@ -90,13 +99,6 @@ const HomeView = () => {
     }
 
     useEffect(()=>{
-
-        if (location.pathname == '/contact/') {
-            console.log(contactRef.current);
-            scrollToRef(contactRef);
-        } else {
-            window.scrollTo(0, 0);
-        }
     
         timeline
             .to('#hero-text-1', 1, {top: 0, opacity: 1},0.5)
@@ -108,6 +110,14 @@ const HomeView = () => {
     
     },[]);
     
+    useEffect(()=>{
+        if (location.pathname == '/contact/') {
+            scrollToRef(contactRef);
+        } else {
+            scrollToTop();
+        }
+    },[location.pathname]);
+
     return (
 
         <div className="page-home">
