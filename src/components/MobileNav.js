@@ -4,8 +4,6 @@ import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-// import {tween, $wnd} from '../assets/js/parts/_utility';
-// import $ from 'jquery';
 import tween from "gsap";
 
 const MobileNav = (props) => {
@@ -15,8 +13,6 @@ const MobileNav = (props) => {
         opacity: 1,
         transform: 'translate3d(0px, 0px, 0px)'
     }
-
-    const [navbarToggleIsActive, setNavbarToggleIsActive] = useState(false);
 
     const navbarFullRef = useRef();
     const navSociallRef = useRef();
@@ -31,13 +27,10 @@ const MobileNav = (props) => {
     const navbar = navbarFullRef.current;
     const navbarSocial = navSociallRef.current;
 
-    const openFullscreenNavbar = () => {
-        
-        let navbarMenuItems = document.querySelectorAll('.rb-nav > li > a');
+    let navbarMenuItems = document.querySelectorAll('.rb-navbar-mobile-content >.rb-nav > li > a');
 
-        // Add active class to close button
-        setNavbarToggleIsActive(true);
-        
+    const openFullscreenNavbar = () => {
+                
         tween.set(navbarMenuItems, {
             opacity: 0,
             force3D: true,
@@ -56,7 +49,7 @@ const MobileNav = (props) => {
             },
         });
 
-        tween.staggerTo(navbarMenuItems, 0.3, {
+        tween.staggerTo(navbarMenuItems, 0.2, {
             y: 0,
             opacity: 1,
             delay: 0.2,
@@ -71,31 +64,21 @@ const MobileNav = (props) => {
     };
 
     const closeFullscreenNavbar = (dontTouchBody) => {
-
-        // Remove active class from close button
-        setNavbarToggleIsActive(true);
         
-        tween.to(navbar, 0.5, {
+        console.log(navbarMenuItems);
+
+        tween.set([navbarMenuItems,navbarSocial], {
             opacity: 0,
             force3D: true,
-            display: 'none',
-            onComplete() {
-                if (!dontTouchBody) {
-                    // restore body scrolling
-                    // self.bodyOverflow(0);
-                }
-            },
         });
-        
-        // open navbar block
-        navbar.classList.remove('open');
-
 
     }
 
     useEffect(()=>{
         if (props.isOpened) {
             openFullscreenNavbar();    
+        } else {
+            closeFullscreenNavbar();
         }
     },[props.isOpened]);
 
@@ -113,7 +96,7 @@ const MobileNav = (props) => {
                                     <img src="assets/images/logo-light.svg" alt="" width="85" />
                                 </Link>
                             </div>
-                            <div className={`rb-nav-close rb-navbar-full-toggle ${navbarToggleIsActive?'active':''}`} onClick={closeBtnHandler}>
+                            <div className={`rb-nav-close rb-navbar-full-toggle ${props.isOpened?'active':''}`} onClick={closeBtnHandler}>
                                 <span className="rb-icon-close"></span>
                             </div>
                         </div>
