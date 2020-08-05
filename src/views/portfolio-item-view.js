@@ -9,6 +9,7 @@ import {
 
 const PortfolioItemView = ({ match }) => {
 
+  // When the page loads, start the scroll at the top of the page
   useEffect(()=>{
     window.scrollTo(0, 0);
   },[]);
@@ -17,7 +18,7 @@ const PortfolioItemView = ({ match }) => {
 
     let _index = 0;
     
-    for (let i =0; i < portfolioData.length; i++) {
+    for (let i=0; i < portfolioData.length; i++) {
       if (portfolioData[i].id == id) {
         _index = i;
         break;
@@ -85,18 +86,6 @@ const PortfolioItemView = ({ match }) => {
                                 <td><strong>URL</strong></td>
                                 <td><a href={portfolioData[itemIndex].url} target="_blank">{portfolioData[itemIndex].url}</a></td>
                               </tr>
-                              {/*
-                              <tr>
-                                <td><strong>Share:</strong></td>
-                                <td>
-                                  <a href="#" title="Share page on Facebook" data-share="facebook">Facebook</a>, <a href="#" title="Share page on Twitter" data-share="twitter">Twitter</a>, <a href="#" title="Share page on Pinterest" data-share="pinterest">Pinterest</a>
-                                    <a href="#" title="Share page on Google Plus" data-share="google-plus">Google Plus</a>,
-                                    <a href="#" title="Share page on LinkedIn" data-share="linkedin">LinkedIn</a>,
-                                    <a href="#" title="Share page on Vkontakte" data-share="vk">Vkontakte</a>
-                                    *
-                                </td>
-                              </tr>
-                              */}
                             </tbody></table>
                         </div>
                       </div>
@@ -116,7 +105,6 @@ const PortfolioItemView = ({ match }) => {
               <div className="rb-pagination rb-pagination-center">
                 <div className="container">
                   <a href="#" className="rb-pagination-prev" onClick={(event)=>goToItemHandler(event,(itemIndex>0)?portfolioData[itemIndex-1].route:'/')} style={{display: itemIndex>0?'block':'none'}}><span className="pe-7s-angle-left arrow"></span> Prev<span className="hide-text">ious Work</span></a>
-                  {/*<a className="rb-pagination-center" href="work-3-style-1.html"><span className="rb-icon-squares" /></a>*/}
                   <a href="#" className="rb-pagination-next" onClick={(event)=>goToItemHandler(event,(portfolioData.length > itemIndex+1)?portfolioData[itemIndex+1].route:'/')} style={{display: (portfolioData.length > itemIndex+1)?'block':'none'}}>Next<span className="hide-text"> Work </span><span className="pe-7s-angle-right arrow" /> </a>
                 </div>
               </div>

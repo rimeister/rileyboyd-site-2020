@@ -32,17 +32,6 @@ const HomeView = () => {
 
     const contactRef = useRef();    
 
-    /*
-        
-        Text animation:
-
-        Animate in text, then animate in button
-
-        How hard would it be to then animate in my "about section"
-
-        and portfolio items?
-
-    */
 
     const getBreakpoint = (checkerEle) => {
 
@@ -84,7 +73,6 @@ const HomeView = () => {
 
     }
 
-    // 0,ref.current.offsetTop);
 
     const history = useHistory();
     let location = useLocation();
@@ -98,6 +86,15 @@ const HomeView = () => {
         scrollToRef(aboutRef);
     }
 
+
+    /*
+        
+        Hero text animation:
+
+        Animate in text, then animate in button
+
+    */
+
     useEffect(()=>{
     
         timeline
@@ -110,6 +107,7 @@ const HomeView = () => {
     
     },[]);
     
+    // If the URL is for the contact form (which is on the home page), scroll down the page to the form
     useEffect(()=>{
         if (location.pathname == '/contact/' || location.pathname == '/contact') {
             scrollToRef(contactRef);
