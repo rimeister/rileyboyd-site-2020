@@ -1,12 +1,11 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import {Link} from 'react-router-dom';
-import {HashLink} from 'react-router-hash-link';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 // import {tween, $wnd} from '../assets/js/parts/_utility';
-import $ from 'jquery';
+// import $ from 'jquery';
 import tween from "gsap";
 
 const MobileNav = (props) => {
@@ -16,6 +15,8 @@ const MobileNav = (props) => {
         opacity: 1,
         transform: 'translate3d(0px, 0px, 0px)'
     }
+
+    const [navbarToggleIsActive, setNavbarToggleIsActive] = useState(false);
 
     const navbarFullRef = useRef();
     const navSociallRef = useRef();
@@ -27,64 +28,54 @@ const MobileNav = (props) => {
         } 
     }
 
-    // Reference: initNavBarFullScreen.js
-    const $navbar = $(navbarFullRef.current);
-    const $navbarSocial = $navbar.find(navSociallRef.current);
+    const navbar = navbarFullRef.current;
+    const navbarSocial = navSociallRef.current;
 
     const openFullscreenNavbar = () => {
-
-        let $navbarMenuItems = $navbar.find('.rb-nav .rb-drop-item.open > .dropdown:not(.closed) > li > a');
-        if (!$navbarMenuItems.length) {
-            $navbarMenuItems = $navbar.find('.rb-nav > li > a');
-        }
-
-        // active all togglers
-        $('.rb-navbar-full-toggle').addClass('active');
-
-        // set top position and animate
-
-        console.log($navbarMenuItems);
         
-        tween.set($navbarMenuItems, {
+        let navbarMenuItems = document.querySelectorAll('.rb-nav > li > a');
+
+        // Add active class to close button
+        setNavbarToggleIsActive(true);
+        
+        tween.set(navbarMenuItems, {
             opacity: 0,
             force3D: true,
         });
         
-        tween.set($navbarSocial, {
+        tween.set(navbarSocial, {
             opacity: 0,
             force3D: true,
         });
-        tween.to($navbar, 0.5, {
+
+        tween.to(navbar, 0.5, {
             opacity: 1,
             force3D: true,
             display: 'block',
             onComplete() {
-                // self.initPluginNano($navbar);
             },
         });
-        tween.staggerTo($navbarMenuItems, 0.3, {
+
+        tween.staggerTo(navbarMenuItems, 0.3, {
             y: 0,
             opacity: 1,
             delay: 0.2,
         }, 0.05);
-        tween.to($navbarSocial, 0.3, {
+
+        tween.to(navbarSocial, 0.3, {
             y: 0,
             opacity: 1,
             delay: 0.4,
         });
         
-        $navbar.addClass('open');
-
     };
 
     const closeFullscreenNavbar = (dontTouchBody) => {
 
-        // disactive all togglers
-        $('.rb-navbar-full-toggle').removeClass('active');
-
-        // set top position and animate
+        // Remove active class from close button
+        setNavbarToggleIsActive(true);
         
-        tween.to($navbar, 0.5, {
+        tween.to(navbar, 0.5, {
             opacity: 0,
             force3D: true,
             display: 'none',
@@ -97,25 +88,8 @@ const MobileNav = (props) => {
         });
         
         // open navbar block
-        $navbar.removeClass('open');
+        navbar.classList.remove('open');
 
-        // trigger event
-        // $wnd.trigger('rb-close-full-navbar', [$navbar]);
-
-
-
-         /*
-
-        $doc.on('click', '.rb-navbar-full-toggle', (e) => {
-            self.toggleFullscreenNavbar();
-            e.preventDefault();
-        });
-
-        $wnd.on('rb-open-search-block', () => {
-            self.closeFullscreenNavbar(1);
-        });
-        $wnd.on('rb-open-share-place', self.closeFullscreenNavbar);
-        */
 
     }
 
@@ -139,7 +113,7 @@ const MobileNav = (props) => {
                                     <img src="assets/images/logo-light.svg" alt="" width="85" />
                                 </Link>
                             </div>
-                            <div className="rb-nav-close rb-navbar-full-toggle" onClick={closeBtnHandler}>
+                            <div className={`rb-nav-close rb-navbar-full-toggle ${navbarToggleIsActive?'active':''}`} onClick={closeBtnHandler}>
                                 <span className="rb-icon-close"></span>
                             </div>
                         </div>
@@ -158,26 +132,8 @@ const MobileNav = (props) => {
                                           <Link to="/portfolio/" onClick={props.closeBtnHandler}> Portfolio </Link>
                                         </li>
                                         <li>
-                                            <HashLink to="/contact/" onClick={props.closeBtnHandler}> Contact </HashLink>
+                                            <Link to="/contact/" onClick={props.closeBtnHandler}> Contact </Link>
                                         </li>
-                                        {/*
-                                        <li className=" rb-drop-item">
-                                          <a href="page-about-me.html"> About </a>
-                                          <ul className="dropdown">
-                                            <li className="bropdown-back"><a href="#">Back</a></li>
-                                            <li>
-                                              <a href="page-about-me.html"> About Me </a>
-                                            </li>
-                                            <li>
-                                              <a href="page-about-us.html"> About Us </a>
-                                            </li>
-                                            <li>
-                                              <a href="page-services.html"> Services </a>
-                                            </li>
-                                          </ul>
-                                        </li>
-                                          */}
-
                                         </ul>
                                 </div>
                             </div>

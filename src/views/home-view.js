@@ -1,6 +1,5 @@
 import React, {useEffect,useRef} from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
-// import aboutMeSignatureImg from '../assets/images/about-me-signature.png';
 
 import TweenMax from 'gsap';
 
@@ -87,16 +86,11 @@ const HomeView = () => {
     }
 
 
-    /*
-        
-        Hero text animation:
-
-        Animate in text, then animate in button
-
-    */
-
     useEffect(()=>{
-    
+            
+        // Hero text animation:
+        // Animate in text, then animate in button
+
         timeline
             .to('#hero-text-1', 1, {top: 0, opacity: 1},0.5)
             .to('#hero-text-2', 1, {top: 0, opacity: 1},1.75)
