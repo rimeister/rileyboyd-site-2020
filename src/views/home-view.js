@@ -165,11 +165,6 @@ const HomeView = () => {
 
 
               <div className="rb-box bg-dark-1 text-white" id="skills">
-                <div className="bg-image bg-image-parallax" style={{backgroundImage: 'none'}} data-jarallax-original-styles="background-image: url('assets/images/bg-pattern.jpg');">
-                  <div id="jarallax-container-1" >
-                    <div style={{backgroundPosition: '50% 50%', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundImage: 'url("https://html.nkdev.info/snow/assets/images/bg-pattern.jpg")'}} />
-                  </div>
-                </div>
                 <div className="rb-gap-3 mnt-6" />
                 <div className="container">
                     <div className="row">
