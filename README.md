@@ -6,7 +6,7 @@ This is my portfolio site, to showcase some of the projects I've worked on.
 
 ## Available Scripts
 
-I started this project with create-react-app, so all the usual commands apply:
+This site is built with React. I started this project with create-react-app, so all the usual commands apply:
 
 ### `yarn start`
 
