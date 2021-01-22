@@ -82,10 +82,13 @@ const PortfolioItemView = ({ match }) => {
                                 <td><strong>Year</strong></td>
                                 <td>{portfolioData[itemIndex].year}</td>
                               </tr>
+                              {
+                                typeof portfolioData[itemIndex].url !== 'undefined' && 
                               <tr style={{display: portfolioData[itemIndex].url.length?'table-row':'none'}}>
                                 <td><strong>URL</strong></td>
                                 <td><a href={portfolioData[itemIndex].url} target="_blank">{portfolioData[itemIndex].url}</a></td>
                               </tr>
+                              }
                             </tbody></table>
                         </div>
                       </div>
