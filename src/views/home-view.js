@@ -119,7 +119,7 @@ const HomeView = () => {
                 <div className="rb-header-table">
                     <div className="rb-header-table-cell">
                         <div className="container">
-                            <h1 className="rb-title display-3"><span id="hero-text-1" className="hero-text-line">Hello, I'm <span className="hero-text-name">Riley&nbsp;Boyd</span>.</span><span id="hero-text-2" className="hero-text-line">I'm a web designer and&nbsp;developer.</span></h1>
+                            <h1 className="rb-title display-3"><span id="hero-text-1" className="hero-text-line">Hello, I'm <span className="hero-text-name">Riley&nbsp;Boyd</span>.</span><span id="hero-text-2" className="hero-text-line">I'm a senior front-end<br/>web&nbsp;developer.</span></h1>
                             <Button text="View My Work" onClick={btnHandler} className="mt-15 hero-btn" />
                             <div className="rb-gap"></div>
                             <div className="rb-header-text text-white">
