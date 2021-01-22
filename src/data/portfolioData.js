@@ -18,6 +18,7 @@ function getPortfolioData() {
 		role: <>Lead Designer and <nobr>Front-end Developer</nobr></>,
 		tech: <>Javascript, HTML, SCSS, Smarty&nbsp;Templating</>,
 		id: "trending-sloth",
+		url: ""
 	},
 	{
 		title: "Cheestrings",
