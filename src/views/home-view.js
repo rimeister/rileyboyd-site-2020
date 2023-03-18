@@ -1,22 +1,22 @@
-import React, { useEffect, useRef } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
+import React, { useEffect, useRef } from "react";
+import { useHistory, useLocation } from "react-router-dom";
 
-import TweenMax from 'gsap';
+import TweenMax from "gsap";
 
-import TimelineMax from 'gsap/TimelineMax';
+import TimelineMax from "gsap/TimelineMax";
 
-import Button from '../components/Button';
+import Button from "../components/Button";
 
-import ContactForm from '../components/ContactForm';
+import ContactSection from "../components/ContactSection";
 
-import AboutPhoto from '../assets/images/personal-photo-about-section-md.jpg';
+import AboutPhoto from "../assets/images/personal-photo-about-section-md.jpg";
 
-import ReactIcon from '../assets/images/icons/react-brands.svg';
-import JsIcon from '../assets/images/icons/js-square-brands.svg';
-import Html5Icon from '../assets/images/icons/html5-brands.svg';
-import SassIcon from '../assets/images/icons/sass-brands.svg';
-import GitIcon from '../assets/images/icons/git-brands.svg';
-import Css3Icon from '../assets/images/icons/css3-brands.svg';
+import ReactIcon from "../assets/images/icons/react-brands.svg";
+import JsIcon from "../assets/images/icons/js-square-brands.svg";
+import Html5Icon from "../assets/images/icons/html5-brands.svg";
+import SassIcon from "../assets/images/icons/sass-brands.svg";
+import GitIcon from "../assets/images/icons/git-brands.svg";
+import Css3Icon from "../assets/images/icons/css3-brands.svg";
 
 const HomeView = () => {
   let timeline = new TimelineMax({ repeat: 0 });
@@ -25,27 +25,25 @@ const HomeView = () => {
 
   const aboutRef = useRef();
 
-  const scrollBtnRef = useRef();
-
   const contactRef = useRef();
 
   const getBreakpoint = (checkerEle) => {
-    let breakpoint = 'xs';
+    let breakpoint = "xs";
 
     let breakpointOpacity = window
       .getComputedStyle(checkerEle)
-      .getPropertyValue('opacity');
+      .getPropertyValue("opacity");
 
     if (breakpointOpacity >= 0.6) {
-      breakpoint = 'sm';
+      breakpoint = "sm";
     }
 
     if (breakpointOpacity >= 0.8) {
-      breakpoint = 'md';
+      breakpoint = "md";
     }
 
     if (breakpointOpacity >= 0.8) {
-      breakpoint = 'lg';
+      breakpoint = "lg";
     }
 
     return breakpoint;
@@ -55,15 +53,15 @@ const HomeView = () => {
     window.scrollTo({
       top:
         ref.current.offsetTop -
-        (getBreakpoint(breakpointCheckRef.current) == 'lg' ? 101 : 98),
-      behavior: 'smooth',
+        (getBreakpoint(breakpointCheckRef.current) == "lg" ? 101 : 98),
+      behavior: "smooth",
     });
   };
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
@@ -71,7 +69,7 @@ const HomeView = () => {
   let location = useLocation();
 
   const btnHandler = () => {
-    history.push('/portfolio');
+    history.push("/portfolio");
   };
 
   const scrollDownHandler = (event) => {
@@ -84,16 +82,16 @@ const HomeView = () => {
     // Animate in text, then animate in button
 
     timeline
-      .to('#hero-text-1', 1, { top: 0, opacity: 1 }, 0.5)
-      .to('#hero-text-2', 1, { top: 0, opacity: 1 }, 1.75)
-      .to('.hero-btn', 0.15, { top: 0, opacity: 1 }, 3)
-      .to('#scroll-btn', 0, { display: 'block' }, 3)
-      .to('#scroll-btn', 0.15, { opacity: 1 }, 3.5);
+      .to("#hero-text-1", 1, { top: 0, opacity: 1 }, 0.5)
+      .to("#hero-text-2", 1, { top: 0, opacity: 1 }, 1.75)
+      .to(".hero-btn", 0.15, { top: 0, opacity: 1 }, 3)
+      .to("#scroll-btn", 0, { display: "block" }, 3)
+      .to("#scroll-btn", 0.15, { opacity: 1 }, 3.5);
   }, []);
 
   // If the URL is for the contact form (which is on the home page), scroll down the page to the form
   useEffect(() => {
-    if (location.pathname == '/contact/' || location.pathname == '/contact') {
+    if (location.pathname == "/contact/" || location.pathname == "/contact") {
       scrollToRef(contactRef);
     } else {
       scrollToTop();
@@ -110,7 +108,7 @@ const HomeView = () => {
             <div className="container">
               <h1 className="rb-title display-3">
                 <span id="hero-text-1" className="hero-text-line">
-                  Hello, I'm{' '}
+                  Hello, I'm{" "}
                   <span className="hero-text-name">Riley&nbsp;Boyd</span>.
                 </span>
                 <span id="hero-text-2" className="hero-text-line">
@@ -292,7 +290,7 @@ const HomeView = () => {
         </div>
       </div>
 
-      <ContactForm ref={contactRef} />
+      <ContactSection ref={contactRef} />
 
       <div className="breakpoint-check" ref={breakpointCheckRef} />
     </div>

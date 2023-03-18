@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -6,64 +6,31 @@ import {
   Switch,
   Link,
   useHistory,
-} from 'react-router-dom';
+} from "react-router-dom";
 
-import Layout from './components/Layout';
+import Layout from "./components/Layout";
 
-import HomeView from './views/home-view';
-import PortfolioView from './views/portfolio-view';
-import PortfolioItemView from './views/portfolio-item-view';
-import NoMatch404View from './views/no-match-404-view';
-
-// import CvView from './views/cv-view';
-
+import HomeView from "./views/home-view";
+import PortfolioView from "./views/portfolio-view";
+import PortfolioItemView from "./views/portfolio-item-view";
+import NoMatch404View from "./views/no-match-404-view";
 
 function App() {
-
   return (
     <Router>
+      <Layout>
+        <Switch>
+          <Route exact path="/" component={HomeView} />
 
-    <Layout>
+          <Route exact path="/contact" component={HomeView} />
 
-    <Switch>
+          <Route exact path="/portfolio" component={PortfolioView} />
 
-      <Route
-        exact
-        path="/"
-        component={ HomeView }
-      />
+          <Route path="/portfolio" component={PortfolioItemView} />
 
-      <Route
-        exact
-        path="/contact"
-        component={ HomeView }
-      />
-
-      <Route
-        exact
-        path="/portfolio"
-        component={ PortfolioView }
-      />
-
-      <Route
-        path="/portfolio"
-        component={ PortfolioItemView }
-      />
-
-      <Route component={NoMatch404View} />
-
-      {/*
-      <Route
-        exact
-        path="/cv"
-        component={ CvView }
-      />
-      */}
-
-    </Switch>
-
-    </Layout>
-
+          <Route component={NoMatch404View} />
+        </Switch>
+      </Layout>
     </Router>
   );
 }
